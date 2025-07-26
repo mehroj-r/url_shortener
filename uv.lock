@@ -60,6 +60,23 @@ wheels = [
 ]
 
 [[package]]
+name = "django-phonenumber-field"
+version = "8.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/95/4b/edec2f3e4b8f8048540d7d1844bc576a0bdb711e1f6a4cde364c505c865d/django_phonenumber_field-8.1.0.tar.gz", hash = "sha256:f19450625574ad3a2de047c409527d0e57699496849e71e53b53e8679ff67b27", size = 43854, upload-time = "2025-04-10T16:09:29.363Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/89/98/0413e47d7d1fab0e5a81eda6caacdcba69d50f74f64b65febf943cbd1f1e/django_phonenumber_field-8.1.0-py3-none-any.whl", hash = "sha256:9ba66873bf47401b13fc57797fbf85e785864a6bfdc8b9daa3a9012886567045", size = 65208, upload-time = "2025-04-10T16:09:27.843Z" },
+]
+
+[package.optional-dependencies]
+phonenumbers = [
+    { name = "phonenumbers" },
+]
+
+[[package]]
 name = "django-query-analyzer"
 version = "0.0.17"
 source = { registry = "https://pypi.org/simple" }
@@ -90,6 +107,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/7d/97/112c5a72e6917949b6d8a18ad6c6e72c46da4290c8f36ee5f1c1dcbc9901/djangorestframework-3.16.0.tar.gz", hash = "sha256:f022ff46613584de994c0c6a4aebbace5fd700555fbe9d33b865ebf173eba6c9", size = 1068408, upload-time = "2025-03-28T14:18:42.065Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/eb/3e/2448e93f4f87fc9a9f35e73e3c05669e0edd0c2526834686e949bb1fd303/djangorestframework-3.16.0-py3-none-any.whl", hash = "sha256:bea7e9f6b96a8584c5224bfb2e4348dfb3f8b5e34edbecb98da258e892089361", size = 1067305, upload-time = "2025-03-28T14:18:39.489Z" },
+]
+
+[[package]]
+name = "phonenumbers"
+version = "9.0.10"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d0/b3/0092ef7813f663a06cc0474adfaee5e9c327a2fde416a7926d958fd6cd8a/phonenumbers-9.0.10.tar.gz", hash = "sha256:c2d15a6a9d0534b14a7764f51246ada99563e263f65b80b0251d1a760ac4a1ba", size = 2297752, upload-time = "2025-07-18T08:47:39.477Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/93/44/4a200f2e06f6ece2de33ff09978cdccc03e2df8007fadcc706f846167dec/phonenumbers-9.0.10-py2.py3-none-any.whl", hash = "sha256:13b12d269be1f2b363c9bc2868656a7e2e8b50f1a1cef629c75005da6c374c6b", size = 2583494, upload-time = "2025-07-18T08:47:35.808Z" },
 ]
 
 [[package]]
@@ -173,6 +199,7 @@ dependencies = [
     { name = "django" },
     { name = "django-debug-toolbar" },
     { name = "django-extensions" },
+    { name = "django-phonenumber-field", extra = ["phonenumbers"] },
     { name = "django-query-analyzer" },
     { name = "django-rest-framework" },
     { name = "psycopg2-binary" },
@@ -185,6 +212,7 @@ requires-dist = [
     { name = "django", specifier = ">=5.2.4" },
     { name = "django-debug-toolbar", specifier = ">=6.0.0" },
     { name = "django-extensions", specifier = ">=4.1" },
+    { name = "django-phonenumber-field", extras = ["phonenumbers"], specifier = ">=8.1.0" },
     { name = "django-query-analyzer", specifier = ">=0.0.17" },
     { name = "django-rest-framework", specifier = ">=0.1.0" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },

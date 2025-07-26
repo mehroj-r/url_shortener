@@ -18,11 +18,14 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-
+    "phonenumber_field",
 ]
 
 LOCAL_APPS = [
-
+    'core',
+    'apps.account',
+    'apps.shortener',
+    'apps.analytics',
 ]
 
 
@@ -128,6 +131,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Logging
+LOG_DIR = BASE_DIR.parent / 'logs'
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -143,7 +148,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'logs' / f'django-{timezone.now().date()}.log',
+            'filename': LOG_DIR / f'django-{timezone.now().date()}.log',
             "formatter": "detailed",
         },
         'console': {
@@ -166,5 +171,10 @@ LOGGING = {
     },
 }
 
-if not os.path.exists(BASE_DIR / 'logs'):
-    os.makedirs(BASE_DIR / 'logs')
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
+
+# Phone number field settings
+PHONENUMBER_DEFAULT_REGION = 'UZ'
+PHONENUMBER_DEFAULT_FORMAT = 'E164'
+PHONENUMBER_DB_FORMAT = 'E164'
