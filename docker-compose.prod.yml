@@ -1,0 +1,48 @@
+services:
+  db:
+    container_name: url-shortener-db-prod
+    image: postgres:17.5-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - url_shortener_net
+    restart: unless-stopped
+    env_file:
+      - .env
+
+  web:
+    container_name: url-shortener-web-prod
+    build: .
+    entrypoint: /app/scripts/entrypoint.sh
+    volumes:
+      - ./src/staticfiles:/app/staticfiles
+      - ./src/media:/app/media
+      - ./src/logs:/app/logs
+    depends_on:
+      - db
+    networks:
+      - url_shortener_net
+    restart: unless-stopped
+    env_file:
+      - .env
+
+  nginx:
+    container_name: url-shortener-nginx-prod
+    build: src/nginx
+    ports:
+      - "127.0.0.1:1050:1050"
+    volumes:
+      - ./src/staticfiles:/app/staticfiles
+      - ./src/media:/app/media
+    depends_on:
+      - web
+    networks:
+      - url_shortener_net
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  url_shortener_net:
+    driver: bridge
