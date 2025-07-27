@@ -3,8 +3,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+app_name = 'config'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/', include('apps.url_router', namespace='api-v1')),
 ]
 
 if settings.DEBUG:

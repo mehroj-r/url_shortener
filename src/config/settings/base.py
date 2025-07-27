@@ -1,4 +1,5 @@
 import os
+from datetime import timedelta
 from pathlib import Path
 from decouple import config
 from django.utils import timezone
@@ -18,6 +19,8 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'rest_framework',
+    'rest_framework_simplejwt',
     "phonenumber_field",
 ]
 
@@ -81,14 +84,18 @@ DATABASES = {
 # Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20,
+    'PAGE_SIZE': 10,
 }
+
+if not DEBUG:
+    REST_FRAMEWORK['EXCEPTION_HANDLER'] = 'core.api.exceptions.custom_exception_handler'
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -178,3 +185,15 @@ if not os.path.exists(LOG_DIR):
 PHONENUMBER_DEFAULT_REGION = 'UZ'
 PHONENUMBER_DEFAULT_FORMAT = 'E164'
 PHONENUMBER_DB_FORMAT = 'E164'
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=3),
+
+    "AUTH_HEADER_TYPES": ("Bearer",),
+    "AUTH_HEADER_NAME": "HTTP_AUTHORIZATION",
+    "USER_ID_FIELD": "id",
+    "USER_ID_CLAIM": "user_id",
+}
+
+AUTH_USER_MODEL = 'account.User' # noqa

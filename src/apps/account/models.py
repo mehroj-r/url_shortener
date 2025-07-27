@@ -1,5 +1,6 @@
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.db import models
+from django.db.models.functions import Lower
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
@@ -14,21 +15,27 @@ class User(AbstractBaseUser, TimestampedModel, SoftDeleteModel):
     first_name = models.CharField(max_length=30, verbose_name=_('First Name'))
     last_name = models.CharField(max_length=30, verbose_name=_('Last Name'))
 
+    username = models.CharField(
+        max_length=150,
+        verbose_name=_('Username'),
+        null=True,
+    )
+
     phone = PhoneNumberField(
         max_length=15,
         unique=True,
         verbose_name=_('Phone Number'),
         null=True,
-        blank=True,
     )
 
     email = models.EmailField(
-        unique=True,
         verbose_name=_('Email'),
+        unique=True,
     )
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'email']
+    REQUIRED_FIELDS = ['first_name', 'last_name']
+    LOGIN_FIELDS = ['email', 'username', 'phone']
 
     # For Django Admin
     is_staff = models.BooleanField(default=False, verbose_name=_('Is staff'))
@@ -40,6 +47,16 @@ class User(AbstractBaseUser, TimestampedModel, SoftDeleteModel):
     class Meta:
         verbose_name = _('User')
         verbose_name_plural = _('Users')
+        constraints = [
+            models.UniqueConstraint(
+                Lower('email'),
+                name='unique_email_constraint'
+            ),
+            models.UniqueConstraint(
+                Lower('username'),
+                name='unique_username_constraint'
+            ),
+        ]
 
     def __str__(self):
         return self.get_full_name()
