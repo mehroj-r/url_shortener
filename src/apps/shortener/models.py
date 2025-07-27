@@ -39,6 +39,11 @@ class URL(TimestampedModel, SoftDeleteModel):
         null=True,
         blank=True,
     )
+    user = models.ForeignKey(
+        "account.User",         # noqa
+        on_delete=models.CASCADE,
+        related_name='urls',
+    )
 
     class Meta:
         verbose_name = _("URL")

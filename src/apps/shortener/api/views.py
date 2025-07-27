@@ -1,7 +1,6 @@
 from rest_framework import viewsets
-from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
+from rest_framework_extensions.mixins import NestedViewSetMixin
 
 from apps.shortener.api.serializers import URLSerializer, URLCollectionSerializer, ShortURLSerializer
 from apps.shortener.models import URL, URLCollection, ShortURL
@@ -13,7 +12,6 @@ class URLViewSet(BaseAPIView, viewsets.ModelViewSet):
     serializer_class = URLSerializer
     permission_classes = [IsAuthenticated]
 
-
 class URLCollectionViewSet(BaseAPIView, viewsets.ModelViewSet):
     queryset = URLCollection.objects.all()
     serializer_class = URLCollectionSerializer
@@ -24,3 +22,9 @@ class ShortURLViewSet(BaseAPIView, viewsets.ModelViewSet):
     queryset = ShortURL.objects.all()
     serializer_class = ShortURLSerializer
     permission_classes = [IsAuthenticated]
+
+class URLNestedViewSet(NestedViewSetMixin, URLViewSet):
+    ...
+
+class ShortURLNestedViewSet(NestedViewSetMixin, ShortURLViewSet):
+    ...

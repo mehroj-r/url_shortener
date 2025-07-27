@@ -1,16 +1,19 @@
 from rest_framework import serializers
 
 from django.utils.translation import gettext_lazy as _
+from rest_framework.fields import CurrentUserDefault
 
 from apps.shortener.models import URL, URLCollection, ShortURL
 
 
 class URLSerializer(serializers.ModelSerializer):
+
+    user = serializers.HiddenField(default=CurrentUserDefault())
     allowed_prefixes = ('http://', 'https://') # noqa
 
     class Meta:
         model = URL
-        fields = ['id', 'name', 'url', 'collection', 'created_at']
+        fields = ['id', 'name', 'url', 'user', 'collection', 'created_at']
         read_only_fields = ['id', 'created_at', 'updated_at']
 
     def validate_url(self, value):
