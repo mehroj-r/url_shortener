@@ -11,20 +11,26 @@ class URLViewSet(BaseAPIView, viewsets.ModelViewSet):
     queryset = URL.objects.all()
     serializer_class = URLSerializer
     permission_classes = [IsAuthenticated]
+    user_field = 'user'
+
 
 class URLCollectionViewSet(BaseAPIView, viewsets.ModelViewSet):
     queryset = URLCollection.objects.all()
     serializer_class = URLCollectionSerializer
     permission_classes = [IsAuthenticated]
+    user_field = 'user'
 
 
 class ShortURLViewSet(BaseAPIView, viewsets.ModelViewSet):
     queryset = ShortURL.objects.all()
     serializer_class = ShortURLSerializer
     permission_classes = [IsAuthenticated]
+    user_field = 'url__user'
+
 
 class URLNestedViewSet(NestedViewSetMixin, URLViewSet):
     ...
+
 
 class ShortURLNestedViewSet(NestedViewSetMixin, ShortURLViewSet):
     ...
