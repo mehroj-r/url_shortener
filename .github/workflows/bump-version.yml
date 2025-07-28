@@ -29,3 +29,10 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trigger Deploy Workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: ${{ github.repository }}
+          event-type: trigger-deploy
