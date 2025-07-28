@@ -13,15 +13,14 @@ class URLClickView(BaseAPIView):
 
         path = request.path.strip('/')
         remote_addr = request._request.META.get('HTTP_X_REAL_IP', None)
-        remote_addr2 = request._request.META.get('REMOTE_ADDR', None)
         user_agent = request._request.META.get('HTTP_USER_AGENT', None)
-        referer = request._request.META.get('HTTP_REFERER', None)
+        referer = request._request.META.get('HTTP_X_REFERER', None)
 
         short_url = ShortURL.objects.get(short_url=path)
 
         data = {
             'url': short_url.id,
-            'ipv4_address': remote_addr or remote_addr2,
+            'ipv4_address': remote_addr,
             'ipv6_address': None,
             'user_agent': user_agent,
             'referer': referer
