@@ -6,7 +6,7 @@ from apps.shortener.api.serializers import (
     URLSerializer,
     URLCollectionSerializer,
     ShortURLSerializer,
-    URLNestedSerializer
+    URLNestedSerializer, ShortURLNestedSerializer
 )
 from apps.shortener.models import URL, URLCollection, ShortURL
 from core.api.views import BaseAPIView
@@ -38,4 +38,4 @@ class URLNestedViewSet(NestedViewSetMixin, URLViewSet):
 
 
 class ShortURLNestedViewSet(NestedViewSetMixin, ShortURLViewSet):
-    ...
+    serializer_class = ShortURLNestedSerializer

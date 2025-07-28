@@ -3,7 +3,7 @@ from rest_framework import serializers
 from django.utils.translation import gettext_lazy as _
 from rest_framework.fields import CurrentUserDefault
 
-from apps.shortener.api.defaults import CurrentCollectionDefault
+from apps.shortener.api.defaults import CurrentCollectionDefault, CurrentURLDefault
 from apps.shortener.models import URL, URLCollection, ShortURL
 
 
@@ -43,3 +43,11 @@ class ShortURLSerializer(serializers.ModelSerializer):
         model = ShortURL
         fields = ['id', 'url', 'short_url', 'is_active', 'created_at']
         read_only_fields = ['id', 'created_at', 'updated_at']
+
+
+class ShortURLNestedSerializer(ShortURLSerializer):
+    url = serializers.HiddenField(default=CurrentURLDefault())
+
+    class Meta(ShortURLSerializer.Meta):
+        fields = ShortURLSerializer.Meta.fields + ['url']
+        read_only_fields = ShortURLSerializer.Meta.read_only_fields + ['url']
