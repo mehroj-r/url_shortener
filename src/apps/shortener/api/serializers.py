@@ -3,6 +3,7 @@ from rest_framework import serializers
 from django.utils.translation import gettext_lazy as _
 from rest_framework.fields import CurrentUserDefault
 
+from apps.shortener.api.defaults import CurrentCollectionDefault
 from apps.shortener.models import URL, URLCollection, ShortURL
 
 
@@ -20,6 +21,13 @@ class URLSerializer(serializers.ModelSerializer):
         if not value.startswith(self.allowed_prefixes):
             raise serializers.ValidationError(_(f"URL must start with any of the following prefixes: {",".join(self.allowed_prefixes)}"))
         return value
+
+class URLNestedSerializer(URLSerializer):
+    collection = serializers.HiddenField(default=CurrentCollectionDefault())
+
+    class Meta(URLSerializer.Meta):
+        fields = URLSerializer.Meta.fields + ['collection']
+        read_only_fields = URLSerializer.Meta.read_only_fields + ['collection']
 
 
 class URLCollectionSerializer(serializers.ModelSerializer):
