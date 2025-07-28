@@ -7,10 +7,17 @@ from apps.analytics.api.views import URLClickView
 
 app_name = 'config'
 
+# Define reserved paths
+RESERVED_PATHS = ['admin', 'api', 'static', 'media']
+
+# Create the regex pattern dynamically
+reserved_pattern = '|'.join([f'{path}$' for path in RESERVED_PATHS])
+url_click_pattern = f'^(?!{reserved_pattern})[a-zA-Z0-9]+$'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('apps.url_router', namespace='api-v1')),
-    re_path(r'^[a-zA-Z0-9]+$', URLClickView.as_view(), name='url-click'),
+    re_path(url_click_pattern, URLClickView.as_view(), name='url-click'),
 ]
 
 if settings.DEBUG:
