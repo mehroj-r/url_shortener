@@ -70,3 +70,9 @@ class User(AbstractBaseUser, TimestampedModel, SoftDeleteModel):
 
     def get_full_name(self):
         return f"{self.first_name} {self.last_name}"
+
+    def has_module_perms(self, app_label):
+        return self.is_staff and self.is_active and self.is_superuser and not self.deleted_at
+
+    def has_perm(self, perm, obj=None):
+        return self.is_staff and self.is_active and self.is_superuser and not self.deleted_at
