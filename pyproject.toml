@@ -8,6 +8,7 @@ dependencies = [
     "django-cors-headers>=4.7.0",
     "django-debug-toolbar>=6.0.0",
     "django-extensions>=4.1",
+    "django-filter>=25.1",
     "django-phonenumber-field[phonenumbers]>=8.1.0",
     "django-query-analyzer>=0.0.17",
     "django-rest-framework>=0.1.0",

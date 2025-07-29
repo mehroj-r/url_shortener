@@ -5,8 +5,8 @@ from core.models import TimestampedModel, SoftDeleteModel
 
 class URLClick(TimestampedModel, SoftDeleteModel):
 
-    url = models.ForeignKey(
-        "shortener.URL",  # noqa
+    short_url = models.ForeignKey(
+        "shortener.ShortURL",  # noqa
         on_delete=models.CASCADE,
         related_name='clicks',
     )

@@ -8,6 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = 'django-insecure-uvxsir2#ag+5$+t)a3fo-q-jh$*7(@hqe-@cbn1mffe)!zl1hy'
 DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+DEFAULT_REDIRECT_URL = config('DEFAULT_REDIRECT_URL', default='https://url.mekhroj.uz')
 
 DJANGO_APPS = [
     'corsheaders',

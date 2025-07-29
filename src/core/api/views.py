@@ -64,6 +64,10 @@ class UserFilterMixin:
 
     def get_queryset(self):
         qs = super().get_queryset()
+
+        if not self.user_field:
+            return qs
+
         filter_kwargs = {
             self.user_field: self.request.user # noqa
         }

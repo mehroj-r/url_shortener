@@ -7,5 +7,5 @@ class URLClickSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = URLClick
-        fields = ['id', 'url',  'ipv4_address', 'ipv6_address', 'user_agent']
+        fields = ['id', 'short_url',  'ipv4_address', 'ipv6_address', 'user_agent']
         read_only_fields = ['id', 'created_at', 'updated_at']

@@ -11,8 +11,8 @@ app_name = 'config'
 RESERVED_PATHS = ['admin', 'api', 'static', 'media']
 
 # Create the regex pattern dynamically
-reserved_pattern = '|'.join([f'{path}$' for path in RESERVED_PATHS])
-url_click_pattern = f'^(?!{reserved_pattern})[a-zA-Z0-9]+$'
+reserved_pattern = '|'.join([f'{path}/?$' for path in RESERVED_PATHS])
+url_click_pattern = f'^(?!({reserved_pattern}))[a-zA-Z0-9]+/?$'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
