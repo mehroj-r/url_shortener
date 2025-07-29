@@ -73,6 +73,19 @@ class UserFilterMixin:
         }
         return qs.filter(**filter_kwargs)
 
+class ViewSetMixin:
+    """
+    Mixin to only allow filtering on the 'list' action.
+    """
+
+    def filter_queryset(self, queryset):
+        if self.action == 'list':   # noqa
+            return super().filter_queryset(queryset)
+        return queryset
+
 
 class BaseAPIView(UserFilterMixin, CustomResponseMixin, generics.GenericAPIView):
+    ...
+
+class BaseAPIViewSet(ViewSetMixin, BaseAPIView):
     ...

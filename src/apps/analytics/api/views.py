@@ -1,21 +1,21 @@
 from django.conf import settings
 from django.shortcuts import redirect
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from django_filters import rest_framework as filters
 from apps.analytics.api.filters import URLClickFilterSet
 from apps.analytics.api.serializers import URLClickSerializer
 from apps.analytics.models import URLClick
 from apps.shortener.models import ShortURL
-from core.api.views import BaseAPIView
+from core.api.views import BaseAPIView, BaseAPIViewSet
 
 
-class URLClickView(BaseAPIView):
+class URLClickView(BaseAPIView, generics.RetrieveAPIView):
     serializer_class = URLClickSerializer
     permission_classes = []
     authentication_classes = []
     user_field = None
 
-    def get(self, request, *args, **kwargs):
+    def retrieve(self, request, *args, **kwargs):
 
         path = request.path.strip('/')
         remote_addr = request._request.META.get('HTTP_X_REAL_IP', None)
@@ -45,7 +45,7 @@ class URLClickView(BaseAPIView):
         return response
 
 
-class URLClickViewSet(BaseAPIView, viewsets.ReadOnlyModelViewSet):
+class URLClickViewSet(BaseAPIViewSet, viewsets.ReadOnlyModelViewSet):
     queryset = URLClick.objects.all()
     serializer_class = URLClickSerializer
     filter_backends = (filters.DjangoFilterBackend,)

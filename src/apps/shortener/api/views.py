@@ -9,24 +9,24 @@ from apps.shortener.api.serializers import (
     URLNestedSerializer, ShortURLNestedSerializer
 )
 from apps.shortener.models import URL, URLCollection, ShortURL
-from core.api.views import BaseAPIView
+from core.api.views import BaseAPIViewSet
 
 
-class URLViewSet(BaseAPIView, viewsets.ModelViewSet):
+class URLViewSet(BaseAPIViewSet, viewsets.ModelViewSet):
     queryset = URL.objects.all()
     serializer_class = URLSerializer
     permission_classes = [IsAuthenticated]
     user_field = 'user'
 
 
-class URLCollectionViewSet(BaseAPIView, viewsets.ModelViewSet):
+class URLCollectionViewSet(BaseAPIViewSet, viewsets.ModelViewSet):
     queryset = URLCollection.objects.all()
     serializer_class = URLCollectionSerializer
     permission_classes = [IsAuthenticated]
     user_field = 'user'
 
 
-class ShortURLViewSet(BaseAPIView, viewsets.ModelViewSet):
+class ShortURLViewSet(BaseAPIViewSet, viewsets.ModelViewSet):
     queryset = ShortURL.objects.all()
     serializer_class = ShortURLSerializer
     permission_classes = [IsAuthenticated]
