@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-React + Vite + TypeScript single-page app in `frontend/`, built to static files and served by the project's nginx on the same origin as the API (`url.mekhroj.com`), so there is no CORS and no extra host configuration. The Django REST API lives in `backend/` of the same repository.
+React + Vite + TypeScript single-page app in `frontend/`, built to static files and served by the Django app on the same origin as the API (`url.mekhroj.com`), so there is no CORS and no extra host configuration. The Django REST API lives in `backend/` of the same repository.
 
 ## Users
 

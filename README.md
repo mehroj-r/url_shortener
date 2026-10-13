@@ -4,9 +4,8 @@ A link shortener for its owner and the people they invite. Visiting `https://url
 
 | Directory | What |
 |---|---|
-| `backend/` | Django 6.1 REST API, Python 3.14, PostgreSQL 18, gunicorn. Managed with [uv](https://docs.astral.sh/uv/). |
+| `backend/` | Django 6.1 REST API, Python 3.14, PostgreSQL 18, gunicorn. Managed with [uv](https://docs.astral.sh/uv/). In production it also serves the built frontend and static files (WhiteNoise). |
 | `frontend/` | React 19 + Vite + TypeScript single-page app, served under `/app/`. |
-| `nginx/` | The edge container: serves the built frontend and proxies `/api/`, `/admin/` and short links to Django. |
 | `scripts/` | Host-side operations (database backups). |
 
 `PRODUCT.md` and `DESIGN.md` describe who the product is for and its visual system.
@@ -60,7 +59,8 @@ Short codes may use letters, digits, `-` and `_`. Codes are never reused, even a
 
 Every push to `master` runs the backend and frontend checks, bumps the patch version in `backend/pyproject.toml`, then deploys over SSH:
 `git pull` on the server followed by `docker compose -f docker-compose.prod.yml up -d --build`.
-Migrations and `collectstatic` run when the web container starts; the nginx image builds the frontend.
+The web image builds the frontend into itself (`backend/Dockerfile`, built from the repository root), and migrations and `collectstatic` run when the container starts.
+It listens on `127.0.0.1:1050`. The host's reverse proxy terminates TLS and forwards there, and it must send `X-Forwarded-Proto: https` and append the visitor's address to `X-Forwarded-For` (nginx: `proxy_set_header X-Forwarded-Proto $scheme;` and `proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;`).
 
 Repository secrets: `SSH_HOST`, `SSH_USERNAME`, `SSH_PRIVATE_KEY`.
 

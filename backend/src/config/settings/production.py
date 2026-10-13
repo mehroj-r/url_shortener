@@ -8,7 +8,9 @@ SECRET_KEY = config('SECRET_KEY')
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_SECONDS = config('SECURE_HSTS_SECONDS', default=60 * 60 * 24 * 365, cast=int)
-SECURE_SSL_REDIRECT = True
+# The host's reverse proxy terminates TLS and must send X-Forwarded-Proto: https.
+# SECURE_SSL_REDIRECT=False lets the stack run over plain http on a local machine.
+SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True

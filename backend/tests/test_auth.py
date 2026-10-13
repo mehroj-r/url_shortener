@@ -135,17 +135,18 @@ class TestLogin:
     def test_is_rate_limited_per_client_ip(self, api_client, alice):
         def attempt(ip):
             return api_client.post(
-                LOGIN, {'email': alice.email, 'password': 'wrong'}, format='json', HTTP_X_REAL_IP=ip,
+                LOGIN, {'email': alice.email, 'password': 'wrong'}, format='json', HTTP_X_FORWARDED_FOR=ip,
             )
 
         statuses = [attempt('203.0.113.1').status_code for _ in range(11)]
 
         assert statuses[:10] == [400] * 10
         assert statuses[10] == 429
-        # Rotating X-Forwarded-For doesn't help; another client IP is unaffected
+        # A client-sent X-Forwarded-For doesn't help (the proxy appends the real address);
+        # another client IP is unaffected
         assert api_client.post(
             LOGIN, {'email': alice.email, 'password': 'wrong'}, format='json',
-            HTTP_X_REAL_IP='203.0.113.1', HTTP_X_FORWARDED_FOR='198.51.100.7',
+            HTTP_X_FORWARDED_FOR='198.51.100.7, 203.0.113.1',
         ).status_code == 429
         assert attempt('203.0.113.2').status_code == 400
 

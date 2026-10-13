@@ -9,3 +9,6 @@ PASSWORD_HASHERS = ['django.contrib.auth.hashers.MD5PasswordHasher']
 DEBUG = False
 REST_FRAMEWORK['EXCEPTION_HANDLER'] = 'core.api.exceptions.custom_exception_handler'
 REST_FRAMEWORK['TEST_REQUEST_DEFAULT_FORMAT'] = 'json'
+
+# No collectstatic in tests, so no manifest of hashed names
+STORAGES = {**STORAGES, 'staticfiles': {'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage'}}

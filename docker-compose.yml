@@ -17,7 +17,10 @@ services:
 
   web:
     build:
-      context: ./backend
+      context: .
+      dockerfile: backend/Dockerfile
+      # The API only; the frontend service below serves the app
+      target: base
       args:
         INSTALL_DEV: "true"
     container_name: url-shortener-web

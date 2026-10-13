@@ -22,7 +22,10 @@ class TestRedirect:
 
     def test_redirects_and_records_click(self, client, short_url):
         response = client.get(
-            '/abc123', HTTP_X_REAL_IP='203.0.113.9', HTTP_REFERER='https://t.me/channel', HTTP_USER_AGENT='Firefox',
+            '/abc123',
+            HTTP_X_FORWARDED_FOR='203.0.113.9',
+            HTTP_REFERER='https://t.me/channel',
+            HTTP_USER_AGENT='Firefox',
         )
 
         assert response.status_code == 302
@@ -38,7 +41,7 @@ class TestRedirect:
         assert client.get('/abc123/')['Location'] == 'https://example.com/page'
 
     def test_ipv6_client(self, client, short_url):
-        response = client.get('/abc123', HTTP_X_REAL_IP='2001:db8::1')
+        response = client.get('/abc123', HTTP_X_FORWARDED_FOR='2001:db8::1')
 
         assert response.status_code == 302
         click = URLClick.objects.get()
