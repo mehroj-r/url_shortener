@@ -1,0 +1,894 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T10:18:21Z",
+  "title": "Design System: Bekat",
+  "extensions": {
+    "colorMeta": {
+      "granite": {
+        "role": "primary",
+        "displayName": "Polished Granite",
+        "canonical": "#2a2d33",
+        "cssVar": "--granite",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "granite-raised": {
+        "role": "primary",
+        "displayName": "Raised Granite",
+        "canonical": "#363a42",
+        "cssVar": "--granite-raised",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "granite-ink": {
+        "role": "primary",
+        "displayName": "Granite Ink",
+        "canonical": "#f3f4f6",
+        "cssVar": "--granite-ink",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "granite-muted": {
+        "role": "primary",
+        "displayName": "Granite Muted",
+        "canonical": "#b7bcc5",
+        "cssVar": "--granite-muted",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "marble": {
+        "role": "neutral",
+        "displayName": "Marble",
+        "canonical": "#eceef1",
+        "cssVar": "--marble",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "marble-sunken": {
+        "role": "neutral",
+        "displayName": "Marble Sunken",
+        "canonical": "#e3e6ea",
+        "cssVar": "--marble-sunken",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Platform White",
+        "canonical": "#ffffff",
+        "cssVar": "--panel",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#d5d9df",
+        "cssVar": "--stone",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "stone-strong": {
+        "role": "neutral",
+        "displayName": "Stone Strong",
+        "canonical": "#c4c9d1",
+        "cssVar": "--stone-strong",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "control-edge": {
+        "role": "neutral",
+        "displayName": "Control Edge",
+        "canonical": "#8a919c",
+        "cssVar": "--control-edge",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1b1e23",
+        "cssVar": "--ink",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#4a505b",
+        "cssVar": "--ink-2",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#5e6470",
+        "cssVar": "--ink-3",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "bronze": {
+        "role": "secondary",
+        "displayName": "Station Bronze",
+        "canonical": "#8c5d28",
+        "cssVar": "--bronze",
+        "tonalRamp": [
+          "oklch(15% 0.035 66)",
+          "oklch(26% 0.059 66)",
+          "oklch(38% 0.084 66)",
+          "oklch(49% 0.092 66)",
+          "oklch(61% 0.092 66)",
+          "oklch(72% 0.092 66)",
+          "oklch(84% 0.092 66)",
+          "oklch(95% 0.034 66)"
+        ]
+      },
+      "bronze-rule": {
+        "role": "secondary",
+        "displayName": "Bronze Rule",
+        "canonical": "#a26f35",
+        "cssVar": "--bronze-rule",
+        "tonalRamp": [
+          "oklch(15% 0.035 67)",
+          "oklch(26% 0.059 67)",
+          "oklch(38% 0.084 67)",
+          "oklch(49% 0.098 67)",
+          "oklch(61% 0.098 67)",
+          "oklch(72% 0.098 67)",
+          "oklch(84% 0.098 67)",
+          "oklch(95% 0.035 67)"
+        ]
+      },
+      "line-red": {
+        "role": "tertiary",
+        "displayName": "Line Red",
+        "canonical": "#d7262e",
+        "cssVar": "--line-red",
+        "tonalRamp": [
+          "oklch(15% 0.062 25)",
+          "oklch(26% 0.108 25)",
+          "oklch(38% 0.154 25)",
+          "oklch(49% 0.200 25)",
+          "oklch(61% 0.210 25)",
+          "oklch(72% 0.173 25)",
+          "oklch(84% 0.091 25)",
+          "oklch(95% 0.025 25)"
+        ]
+      },
+      "line-blue": {
+        "role": "tertiary",
+        "displayName": "Line Blue",
+        "canonical": "#1c5fb8",
+        "cssVar": "--line-blue",
+        "tonalRamp": [
+          "oklch(15% 0.057 257)",
+          "oklch(26% 0.096 257)",
+          "oklch(38% 0.137 257)",
+          "oklch(49% 0.155 257)",
+          "oklch(61% 0.155 257)",
+          "oklch(72% 0.146 257)",
+          "oklch(84% 0.082 257)",
+          "oklch(95% 0.024 257)"
+        ]
+      },
+      "line-green": {
+        "role": "tertiary",
+        "displayName": "Line Green",
+        "canonical": "#1e9a55",
+        "cssVar": "--line-green",
+        "tonalRamp": [
+          "oklch(15% 0.040 153)",
+          "oklch(26% 0.069 153)",
+          "oklch(38% 0.098 153)",
+          "oklch(49% 0.127 153)",
+          "oklch(61% 0.147 153)",
+          "oklch(72% 0.147 153)",
+          "oklch(84% 0.147 153)",
+          "oklch(95% 0.081 153)"
+        ]
+      },
+      "line-violet": {
+        "role": "tertiary",
+        "displayName": "Line Violet",
+        "canonical": "#7a4fb5",
+        "cssVar": "--line-violet",
+        "tonalRamp": [
+          "oklch(15% 0.081 301)",
+          "oklch(26% 0.141 301)",
+          "oklch(38% 0.157 301)",
+          "oklch(49% 0.157 301)",
+          "oklch(61% 0.157 301)",
+          "oklch(72% 0.157 301)",
+          "oklch(84% 0.097 301)",
+          "oklch(95% 0.028 301)"
+        ]
+      },
+      "line-amber": {
+        "role": "tertiary",
+        "displayName": "Line Amber",
+        "canonical": "#c7860f",
+        "cssVar": "--line-amber",
+        "tonalRamp": [
+          "oklch(15% 0.033 74)",
+          "oklch(26% 0.056 74)",
+          "oklch(38% 0.080 74)",
+          "oklch(49% 0.105 74)",
+          "oklch(61% 0.129 74)",
+          "oklch(72% 0.139 74)",
+          "oklch(84% 0.139 74)",
+          "oklch(95% 0.040 74)"
+        ]
+      },
+      "line-teal": {
+        "role": "tertiary",
+        "displayName": "Line Teal",
+        "canonical": "#0b95a8",
+        "cssVar": "--line-teal",
+        "tonalRamp": [
+          "oklch(15% 0.027 211)",
+          "oklch(26% 0.046 211)",
+          "oklch(38% 0.066 211)",
+          "oklch(49% 0.086 211)",
+          "oklch(61% 0.105 211)",
+          "oklch(72% 0.105 211)",
+          "oklch(84% 0.105 211)",
+          "oklch(95% 0.043 211)"
+        ]
+      },
+      "line-slate": {
+        "role": "tertiary",
+        "displayName": "Line Slate",
+        "canonical": "#6b7280",
+        "cssVar": "--line-slate",
+        "tonalRamp": [
+          "oklch(15% 0.023 264)",
+          "oklch(26% 0.023 264)",
+          "oklch(38% 0.023 264)",
+          "oklch(49% 0.023 264)",
+          "oklch(61% 0.023 264)",
+          "oklch(72% 0.023 264)",
+          "oklch(84% 0.023 264)",
+          "oklch(95% 0.023 264)"
+        ]
+      },
+      "status-warn-ink": {
+        "role": "status",
+        "displayName": "Warn Ink",
+        "canonical": "#7a4a00",
+        "cssVar": "--status-warn-ink",
+        "tonalRamp": [
+          "oklch(15% 0.034 68)",
+          "oklch(26% 0.058 68)",
+          "oklch(38% 0.083 68)",
+          "oklch(49% 0.100 68)",
+          "oklch(61% 0.100 68)",
+          "oklch(72% 0.100 68)",
+          "oklch(84% 0.100 68)",
+          "oklch(95% 0.035 68)"
+        ]
+      },
+      "status-warn-bg": {
+        "role": "status",
+        "displayName": "Warn Tint",
+        "canonical": "#fff1d6",
+        "cssVar": "--status-warn-bg",
+        "tonalRamp": [
+          "oklch(15% 0.032 84)",
+          "oklch(26% 0.038 84)",
+          "oklch(38% 0.038 84)",
+          "oklch(49% 0.038 84)",
+          "oklch(61% 0.038 84)",
+          "oklch(72% 0.038 84)",
+          "oklch(84% 0.038 84)",
+          "oklch(95% 0.038 84)"
+        ]
+      },
+      "status-danger-ink": {
+        "role": "status",
+        "displayName": "Danger Ink",
+        "canonical": "#9b1c1c",
+        "cssVar": "--status-danger-ink",
+        "tonalRamp": [
+          "oklch(15% 0.063 27)",
+          "oklch(26% 0.108 27)",
+          "oklch(38% 0.154 27)",
+          "oklch(49% 0.162 27)",
+          "oklch(61% 0.162 27)",
+          "oklch(72% 0.162 27)",
+          "oklch(84% 0.091 27)",
+          "oklch(95% 0.025 27)"
+        ]
+      },
+      "status-danger-bg": {
+        "role": "status",
+        "displayName": "Danger Tint",
+        "canonical": "#fdecec",
+        "cssVar": "--status-danger-bg",
+        "tonalRamp": [
+          "oklch(15% 0.018 17)",
+          "oklch(26% 0.018 17)",
+          "oklch(38% 0.018 17)",
+          "oklch(49% 0.018 17)",
+          "oklch(61% 0.018 17)",
+          "oklch(72% 0.018 17)",
+          "oklch(84% 0.018 17)",
+          "oklch(95% 0.018 17)"
+        ]
+      },
+      "status-off-ink": {
+        "role": "status",
+        "displayName": "Off Ink",
+        "canonical": "#4a505b",
+        "cssVar": "--status-off-ink",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "status-off-bg": {
+        "role": "status",
+        "displayName": "Off Tint",
+        "canonical": "#e8ebef",
+        "cssVar": "--status-off-bg",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "status-ok-ink": {
+        "role": "status",
+        "displayName": "OK Ink",
+        "canonical": "#135c35",
+        "cssVar": "--status-ok-ink",
+        "tonalRamp": [
+          "oklch(15% 0.039 155)",
+          "oklch(26% 0.066 155)",
+          "oklch(38% 0.094 155)",
+          "oklch(49% 0.095 155)",
+          "oklch(61% 0.095 155)",
+          "oklch(72% 0.095 155)",
+          "oklch(84% 0.095 155)",
+          "oklch(95% 0.079 155)"
+        ]
+      },
+      "status-ok-bg": {
+        "role": "status",
+        "displayName": "OK Tint",
+        "canonical": "#e3f4ea",
+        "cssVar": "--status-ok-bg",
+        "tonalRamp": [
+          "oklch(15% 0.022 160)",
+          "oklch(26% 0.022 160)",
+          "oklch(38% 0.022 160)",
+          "oklch(49% 0.022 160)",
+          "oklch(61% 0.022 160)",
+          "oklch(72% 0.022 160)",
+          "oklch(84% 0.022 160)",
+          "oklch(95% 0.022 160)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus Ring",
+        "canonical": "#2a2d33",
+        "cssVar": "--focus",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "focus-on-granite": {
+        "role": "neutral",
+        "displayName": "Focus Ring on Granite",
+        "canonical": "#f3f4f6",
+        "cssVar": "--focus-on-granite",
+        "tonalRamp": [
+          "#1b1e23",
+          "#2a2d33",
+          "#363a42",
+          "#4a505b",
+          "#8a919c",
+          "#c4c9d1",
+          "#d5d9df",
+          "#eceef1"
+        ]
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection",
+        "canonical": "#efe2cf",
+        "cssVar": "--selection",
+        "tonalRamp": [
+          "oklch(15% 0.029 78)",
+          "oklch(26% 0.029 78)",
+          "oklch(38% 0.029 78)",
+          "oklch(49% 0.029 78)",
+          "oklch(61% 0.029 78)",
+          "oklch(72% 0.029 78)",
+          "oklch(84% 0.029 78)",
+          "oklch(95% 0.029 78)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "cssVar": "--text-hero",
+        "purpose": "Today's click count, the single large figure in a clicks panel."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "cssVar": "--text-2xl",
+        "purpose": "Page titles and the sign-in card title."
+      },
+      "subhead": {
+        "displayName": "Subhead",
+        "cssVar": "--text-xl",
+        "purpose": "Section headings above a group of panels."
+      },
+      "title": {
+        "displayName": "Title",
+        "cssVar": "--text-lg",
+        "purpose": "Panel and dialog titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "cssVar": "--text-base",
+        "purpose": "Default text. Stylistic set 1 ('ss01') is on for all Golos Text."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "cssVar": "--text-md",
+        "purpose": "Table cells, inputs, sentences inside panels, menu items."
+      },
+      "control": {
+        "displayName": "Control",
+        "cssVar": "--text-md",
+        "purpose": "Button and nav labels. Small buttons use 0.8125rem, large 0.9375rem."
+      },
+      "label": {
+        "displayName": "Label",
+        "cssVar": "--text-sm",
+        "purpose": "Field labels, segments, tag toggles; hints and meta lines at weight 400."
+      },
+      "sign": {
+        "displayName": "Sign",
+        "cssVar": "--text-xs",
+        "purpose": "Table column headers only. Uppercase, in Station Bronze (#8c5d28)."
+      },
+      "code": {
+        "displayName": "Code",
+        "cssVar": "--text-md",
+        "purpose": "Short codes, the url.mekhroj.com/ host prefix, click timestamps. Host in Ink 3, code in Ink."
+      },
+      "code-specimen": {
+        "displayName": "Code Specimen",
+        "cssVar": "--text-xl",
+        "purpose": "A link's short code set large on its own page; host prefix at 1.125rem in Ink 3."
+      }
+    },
+    "shadows": [
+      {
+        "name": "raised",
+        "cssVar": "--shadow-raised",
+        "value": "0 1px 2px rgb(27 30 35 / 0.06), 0 4px 12px rgb(27 30 35 / 0.06)",
+        "purpose": "The single creation surface on a page: the ticket window on the dashboard and the sign-in card."
+      },
+      {
+        "name": "overlay",
+        "cssVar": "--shadow-overlay",
+        "value": "0 8px 24px rgb(27 30 35 / 0.16), 0 2px 6px rgb(27 30 35 / 0.08)",
+        "purpose": "Floating layers: dialogs, the account menu, the chart tooltip, toasts, the sticky bulk-action bar."
+      },
+      {
+        "name": "segment-selected",
+        "value": "0 1px 2px rgb(27 30 35 / 0.12)",
+        "purpose": "The white selected segment inside the marble trough of a segmented control."
+      },
+      {
+        "name": "nav-active-underline",
+        "value": "inset 0 -2px 0 var(--bronze-rule)",
+        "purpose": "Bronze rule under the current page in the top bar."
+      },
+      {
+        "name": "station-halo",
+        "value": "0 0 0 2px var(--panel)",
+        "purpose": "White halo around a station disc so it cuts the line behind it."
+      },
+      {
+        "name": "station-expiring",
+        "value": "0 0 0 2px var(--panel), 0 0 0 4px var(--status-warn-ink)",
+        "purpose": "Extra warn ring on a station whose link expires within a week."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "cssVar": "--ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing curve, used for every state change."
+      },
+      {
+        "name": "t-fast",
+        "cssVar": "--t-fast",
+        "value": "150ms",
+        "purpose": "Colour, border and background changes on hover and press; tooltip fade."
+      },
+      {
+        "name": "t-base",
+        "cssVar": "--t-base",
+        "value": "200ms",
+        "purpose": "Station scale on highlight, stale-data dimming, dialog and toast entrance."
+      },
+      {
+        "name": "arrive",
+        "value": "240ms",
+        "purpose": "A new link's station scales in from 0.3 with a fade; the create form's confirmation strip slides 4px. The one authored moment."
+      },
+      {
+        "name": "dialog-in",
+        "value": "200ms ease-out, fade and 8px rise",
+        "purpose": "Dialog open."
+      },
+      {
+        "name": "toast-rise",
+        "value": "200ms ease-out, fade and 6px rise",
+        "purpose": "Toast entrance."
+      },
+      {
+        "name": "shimmer",
+        "value": "1.4s linear infinite",
+        "purpose": "Skeleton rows on first load only."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition durations 0.01ms",
+        "purpose": "Applied globally under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "dashboard-stack",
+        "value": "1180px",
+        "purpose": "Two-column panel rows stack; three-column rows become two."
+      },
+      {
+        "name": "table-wide",
+        "value": "1100px",
+        "purpose": "Links table hides its lowest-priority columns."
+      },
+      {
+        "name": "bar-search",
+        "value": "1080px",
+        "purpose": "Top-bar search field hides."
+      },
+      {
+        "name": "detail-stack",
+        "value": "860px",
+        "purpose": "Link page panel grid becomes one column."
+      },
+      {
+        "name": "compact",
+        "value": "820px",
+        "purpose": "Top bar nav collapses to a menu button, Shorten shows its icon only, create form stacks, page padding drops to 16px."
+      },
+      {
+        "name": "dashboard-single",
+        "value": "760px",
+        "purpose": "Dashboard panels become one column."
+      },
+      {
+        "name": "table-medium",
+        "value": "720px",
+        "purpose": "Links table hides further columns."
+      },
+      {
+        "name": "narrow",
+        "value": "640px",
+        "purpose": "Line map labels stack above tracks and stations narrow to 72px; code rows stack."
+      },
+      {
+        "name": "small",
+        "value": "480px",
+        "purpose": "Sign-in card padding reduces to 20px."
+      }
+    ],
+    "containers": [
+      {
+        "name": "page-max",
+        "cssVar": "--page-max",
+        "value": "1360px",
+        "purpose": "Page and top-bar container."
+      },
+      {
+        "name": "manage-page",
+        "value": "920px",
+        "purpose": "Collections, tags, invites and settings pages."
+      },
+      {
+        "name": "dialog",
+        "value": "min(560px, calc(100vw - 32px))",
+        "purpose": "Dialogs."
+      },
+      {
+        "name": "auth-card",
+        "value": "min(420px, 100%)",
+        "purpose": "Sign-in and invite sign-up card."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Granite filled button for the main action on a surface; 44px in the ticket window.",
+      "html": "<div style=\"display:flex;gap:12px;align-items:center\"><button class=\"ds-btn ds-btn-primary\">Create</button><button class=\"ds-btn ds-btn-primary ds-btn-lg\">Shorten</button></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn-primary { background: var(--granite, #2a2d33); color: var(--granite-ink, #f3f4f6); } .ds-btn-primary:hover:not(:disabled) { background: var(--granite-raised, #363a42); } .ds-btn-lg { height: 44px; padding: 0 20px; font-size: 0.9375rem; min-width: 112px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "White button with a stone border for secondary actions such as Edit or Add code.",
+      "html": "<button class=\"ds-btn ds-btn-secondary\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Add code</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn-secondary { background: var(--panel, #ffffff); border-color: var(--stone-strong, #c4c9d1); color: var(--ink, #1b1e23); } .ds-btn-secondary:hover:not(:disabled) { border-color: var(--control-edge, #8a919c); background: var(--marble, #eceef1); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Transparent button for low-emphasis actions and icon buttons in rows.",
+      "html": "<button class=\"ds-btn ds-btn-ghost\">Delete</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn-ghost { background: transparent; color: var(--ink-2, #4a505b); } .ds-btn-ghost:hover:not(:disabled) { background: var(--marble-sunken, #e3e6ea); color: var(--ink, #1b1e23); }"
+    },
+    {
+      "name": "Text Input and Short Code Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled field with a control-edge border; the short code variant carries the host as an inset monospace prefix.",
+      "html": "<div class=\"ds-fields\"><label class=\"ds-field\"><span class=\"ds-label\">Long URL</span><input class=\"ds-input\" placeholder=\"Paste a long URL\"></label><label class=\"ds-field\"><span class=\"ds-label\">Short code</span><span class=\"ds-code-input\"><span>url.mekhroj.com/</span><input class=\"ds-input\" placeholder=\"auto\"></span></label></div>",
+      "css": ".ds-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 0.6fr); gap: 12px; } .ds-field { display: grid; gap: 6px; min-width: 0; } .ds-label { font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; color: var(--ink-2, #4a505b); } .ds-input { width: 100%; min-width: 0; height: 36px; padding: 0 12px; border: 1px solid var(--control-edge, #8a919c); border-radius: var(--radius, 6px); background: var(--panel, #ffffff); color: var(--ink, #1b1e23); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; transition: border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); box-sizing: border-box; } .ds-input::placeholder { color: var(--ink-3, #5e6470); } .ds-input:hover { border-color: var(--ink-3, #5e6470); } .ds-input:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: -1px; border-color: var(--focus, #2a2d33); } .ds-code-input { position: relative; display: block; } .ds-code-input span { position: absolute; inset-block: 0; inset-inline-start: 13px; display: flex; align-items: center; font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.875rem; color: var(--ink-3, #5e6470); pointer-events: none; } .ds-code-input .ds-input { padding-inline-start: calc(13px + 16ch); font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "top-bar",
+      "description": "Sticky granite bar with the wordmark, nav, search, Shorten and account button, followed by the single ceramic tile band.",
+      "html": "<div class=\"ds-shell\"><header class=\"ds-bar\"><a class=\"ds-wordmark\" href=\"#\"><span class=\"ds-mark\"></span>Bekat</a><nav class=\"ds-nav\"><a class=\"ds-nav-link\" aria-current=\"page\" href=\"#\">Dashboard</a><a class=\"ds-nav-link\" href=\"#\">Links</a><a class=\"ds-nav-link\" href=\"#\">Collections</a><a class=\"ds-nav-link\" href=\"#\">Tags</a></nav><label class=\"ds-search\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></svg><input type=\"search\" placeholder=\"Search links\"></label><button class=\"ds-shorten\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Shorten</button><button class=\"ds-user\">MM</button></header><div class=\"ds-ceramic\"></div></div>",
+      "css": ".ds-shell { font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); } .ds-bar { display: flex; align-items: center; gap: 24px; height: 56px; padding: 0 24px; background: var(--granite, #2a2d33); color: var(--granite-ink, #f3f4f6); } .ds-bar :focus-visible { outline: 2px solid var(--focus-on-granite, #f3f4f6); outline-offset: 2px; } .ds-wordmark { display: inline-flex; align-items: center; gap: 10px; color: var(--granite-ink, #f3f4f6); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; } .ds-mark { position: relative; width: 22px; height: 22px; } .ds-mark::before { content: ''; position: absolute; inset: 9px -2px auto; height: 4px; border-radius: 2px; background: var(--bronze-rule, #a26f35); } .ds-mark::after { content: ''; position: absolute; inset: 3px; border: 3px solid var(--bronze-rule, #a26f35); border-radius: 50%; background: var(--granite, #2a2d33); } .ds-nav { display: flex; gap: 2px; } .ds-nav-link { display: inline-flex; align-items: center; height: 36px; padding: 0 12px; border-radius: var(--radius, 6px); color: var(--granite-muted, #b7bcc5); font-size: 0.875rem; font-weight: 560; text-decoration: none; transition: color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-nav-link:hover { color: var(--granite-ink, #f3f4f6); background: var(--granite-raised, #363a42); } .ds-nav-link[aria-current='page'] { color: var(--granite-ink, #f3f4f6); background: var(--granite-raised, #363a42); box-shadow: inset 0 -2px 0 var(--bronze-rule, #a26f35); } .ds-search { position: relative; margin-inline-start: auto; width: 260px; } .ds-search svg { position: absolute; inset-block: 0; inset-inline-start: 10px; margin: auto; color: var(--granite-muted, #b7bcc5); pointer-events: none; } .ds-search input { width: 100%; height: 34px; padding: 0 12px 0 32px; border: 1px solid #4a4f58; border-radius: var(--radius, 6px); background: #23262b; color: var(--granite-ink, #f3f4f6); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; box-sizing: border-box; } .ds-search input::placeholder { color: var(--granite-muted, #b7bcc5); } .ds-shorten { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border: 0; border-radius: var(--radius, 6px); background: var(--granite-ink, #f3f4f6); color: var(--granite, #2a2d33); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-shorten:hover { background: #fff; } .ds-user { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #4a4f58; border-radius: 50%; background: var(--granite-raised, #363a42); color: var(--granite-ink, #f3f4f6); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 650; cursor: pointer; } .ds-ceramic { height: 18px; background-color: #fbfbfa; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='18' viewBox='0 0 108 18'%3E%3Cg transform='translate(9 9)' fill='%23d7262e'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(27 9)' fill='%231c5fb8'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(45 9)' fill='%231e9a55'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(63 9)' fill='%237a4fb5'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(81 9)' fill='%23c7860f'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(99 9)' fill='%230b95a8'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3C/svg%3E\"); background-repeat: repeat-x; border-bottom: 1px solid var(--stone, #d5d9df); }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segmented",
+      "description": "Marble trough with white selected segment, for date ranges and breakdown switches.",
+      "html": "<div class=\"ds-segmented\" role=\"group\" aria-label=\"Date range\"><button class=\"ds-segment\">7 days</button><button class=\"ds-segment\" aria-pressed=\"true\">30 days</button><button class=\"ds-segment\">90 days</button></div>",
+      "css": ".ds-segmented { display: inline-flex; padding: 3px; gap: 2px; background: var(--marble-sunken, #e3e6ea); border-radius: var(--radius, 6px); } .ds-segment { height: 28px; padding: 0 12px; border: 0; border-radius: var(--radius-sm, 4px); background: transparent; color: var(--ink-2, #4a505b); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-segment:hover { color: var(--ink, #1b1e23); } .ds-segment:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-segment[aria-pressed='true'] { background: var(--panel, #ffffff); color: var(--ink, #1b1e23); box-shadow: 0 1px 2px rgb(27 30 35 / 0.12); }"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "White platform on the marble ground with a stone hairline and no resting shadow; title row with an action at the right.",
+      "html": "<div class=\"ds-ground\"><section class=\"ds-panel\"><header class=\"ds-panel-header\"><h2>Top links</h2><a href=\"#\">All links</a></header><div class=\"ds-panel-body\"><table class=\"ds-table\"><thead><tr><th><span class=\"ds-sign\">Link</span></th><th class=\"ds-num\"><span class=\"ds-sign\">Clicks</span></th></tr></thead><tbody><tr><td><strong>CV 2026</strong><br><code>cv-2026</code></td><td class=\"ds-num\">146</td></tr><tr><td><strong>GitHub profile</strong><br><code>gh</code></td><td class=\"ds-num\">69</td></tr></tbody></table></div></section></div>",
+      "css": ".ds-ground { padding: 24px; background: var(--marble, #eceef1); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); color: var(--ink, #1b1e23); } .ds-panel { background: var(--panel, #ffffff); border: 1px solid var(--stone, #d5d9df); border-radius: var(--radius-lg, 10px); } .ds-panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 0; } .ds-panel-header h2 { margin: 0; font-size: 1.125rem; font-weight: 650; line-height: 1.2; } .ds-panel-header a { color: var(--ink, #1b1e23); font-size: 0.8125rem; font-weight: 560; text-decoration-color: var(--bronze-rule, #a26f35); text-underline-offset: 3px; } .ds-panel-header a:hover { text-decoration-color: currentColor; } .ds-panel-body { padding: 16px 20px 20px; } .ds-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; } .ds-table th { padding: 0 0 8px; text-align: start; border-bottom: 1px solid var(--stone, #d5d9df); } .ds-table td { padding: 12px 0; border-bottom: 1px solid var(--marble-sunken, #e3e6ea); } .ds-table tr:last-child td { border-bottom: 0; } .ds-table tbody tr { transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-table tbody tr:hover { background: var(--marble, #eceef1); } .ds-num { text-align: end !important; font-variant-numeric: tabular-nums; font-weight: 600; } .ds-sign { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bronze, #8c5d28); } .ds-table code { font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.875rem; font-weight: 500; }"
+    },
+    {
+      "name": "Tag Chip and Line Name",
+      "kind": "chip",
+      "refersTo": "tag-chip",
+      "description": "Collection and tag identity: a line dot in the line colour beside the name; tags as small white pills.",
+      "html": "<div class=\"ds-ids\"><span class=\"ds-line-name\"><span class=\"ds-dot\" style=\"--dot: var(--line-green, #1e9a55)\"></span>Job hunt</span><span class=\"ds-tag\"><span class=\"ds-dot\" style=\"--dot: var(--line-amber, #c7860f)\"></span>Print</span><span class=\"ds-tag\"><span class=\"ds-dot\" style=\"--dot: var(--line-slate, #6b7280)\"></span>Draft</span></div>",
+      "css": ".ds-ids { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); } .ds-dot { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); } .ds-line-name { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2, #4a505b); font-size: 0.875rem; } .ds-tag { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 8px 0 7px; border: 1px solid var(--stone, #d5d9df); border-radius: 999px; background: var(--panel, #ffffff); color: var(--ink-2, #4a505b); font-size: 0.75rem; font-weight: 560; white-space: nowrap; } .ds-tag .ds-dot { width: 7px; height: 7px; }"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "badge-warn",
+      "description": "Shown only when a code is not healthy; always an icon and a word on a status tint.",
+      "html": "<div style=\"display:flex;gap:8px\"><span class=\"ds-badge\" data-tone=\"warn\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 6v6l4 2\"/><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>Expires in 3d</span><span class=\"ds-badge\" data-tone=\"off\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"9\" x2=\"15\" y1=\"15\" y2=\"9\"/></svg>Paused</span></div>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.75rem; font-weight: 600; white-space: nowrap; } .ds-badge[data-tone='warn'] { background: var(--status-warn-bg, #fff1d6); color: var(--status-warn-ink, #7a4a00); } .ds-badge[data-tone='danger'] { background: var(--status-danger-bg, #fdecec); color: var(--status-danger-ink, #9b1c1c); } .ds-badge[data-tone='off'] { background: var(--status-off-bg, #e8ebef); color: var(--status-off-ink, #4a505b); }"
+    },
+    {
+      "name": "Line Map",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The signature component: a collection drawn as a 4px line in its colour, its links as white stations sized by clicks, with bronze station codes.",
+      "html": "<div class=\"ds-map\"><div class=\"ds-line\" style=\"--line: var(--line-blue, #1c5fb8)\"><div class=\"ds-line-label\"><a href=\"#\"><span class=\"ds-dot\"></span>Telegram channel</a><span>3 links · 203 clicks</span></div><ol class=\"ds-track\"><li class=\"ds-station\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 26px\"></span><span class=\"ds-code\">5Qqvypi</span><span class=\"ds-tip\"><strong>Channel post: Django</strong><span>125 clicks</span></span></a></li><li class=\"ds-station\" data-state=\"expiring\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 20px\"></span><span class=\"ds-code\">tg-post-88</span><span class=\"ds-tip\"><strong>Channel post: Postgres</strong><span>56 clicks</span></span></a></li><li class=\"ds-station\" data-state=\"closed\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 12px\"></span><span class=\"ds-code\">poll-12</span><span class=\"ds-tip\"><strong>Poll</strong><span>0 clicks</span></span></a></li><li class=\"ds-terminus\"><a href=\"#\">+2</a></li></ol></div></div>",
+      "css": ".ds-map { padding: 40px 20px 16px; background: var(--panel, #ffffff); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); color: var(--ink, #1b1e23); } .ds-line { display: grid; grid-template-columns: minmax(150px, 200px) minmax(0, 1fr); align-items: start; gap: 16px; padding: 8px 0; } .ds-line-label { display: grid; gap: 2px; min-width: 0; padding-top: 4px; } .ds-line-label a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink, #1b1e23); font-weight: 620; text-decoration: none; } .ds-line-label a:hover { text-decoration: underline; } .ds-line-label > span { padding-inline-start: 18px; font-size: 0.8125rem; color: var(--ink-3, #5e6470); } .ds-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--line); } .ds-track { position: relative; display: flex; justify-content: space-between; align-items: flex-start; min-height: 52px; margin: 0; padding: 0 4px; list-style: none; } .ds-track::before { content: ''; position: absolute; inset-inline: 0; top: 11px; height: 4px; border-radius: 2px; background: var(--line); } .ds-track::after { content: ''; position: absolute; inset-inline-end: 0; top: 5px; width: 4px; height: 16px; border-radius: 2px; background: var(--line); } .ds-station { position: relative; display: flex; justify-content: center; width: 96px; min-width: 0; } .ds-station a { display: grid; justify-items: center; gap: 6px; width: 100%; color: var(--ink, #1b1e23); text-decoration: none; border-radius: var(--radius-sm, 4px); } .ds-station a:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-marker { display: grid; place-items: center; width: 26px; height: 26px; } .ds-marker::before { content: ''; width: var(--size); height: var(--size); box-sizing: border-box; border: 3px solid var(--line); border-radius: 50%; background: var(--panel, #ffffff); box-shadow: 0 0 0 2px var(--panel, #ffffff); transition: transform var(--t-base, 200ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-code { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.8125rem; color: var(--bronze, #8c5d28); } .ds-station[data-state='closed'] .ds-marker::before { border-width: 2px; border-style: dashed; border-color: var(--ink-3, #5e6470); } .ds-station[data-state='closed'] .ds-code { color: var(--ink-3, #5e6470); } .ds-station[data-state='expiring'] .ds-marker::before { box-shadow: 0 0 0 2px var(--panel, #ffffff), 0 0 0 4px var(--status-warn-ink, #7a4a00); } .ds-station a:hover .ds-marker::before, .ds-station a:focus-visible .ds-marker::before { background: var(--line); transform: scale(1.12); } .ds-station a:hover .ds-code, .ds-station a:focus-visible .ds-code { color: var(--ink, #1b1e23); font-weight: 600; } .ds-tip { position: absolute; bottom: calc(100% + 4px); left: 50%; translate: -50% 4px; display: grid; gap: 1px; padding: 6px 10px; border-radius: var(--radius, 6px); background: var(--granite, #2a2d33); color: var(--granite-muted, #b7bcc5); font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), translate var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); z-index: 3; } .ds-tip strong { color: var(--granite-ink, #f3f4f6); font-size: 0.8125rem; font-weight: 600; } .ds-station a:hover .ds-tip, .ds-station a:focus-visible .ds-tip { opacity: 1; translate: -50% 0; } .ds-terminus { display: flex; align-items: center; height: 26px; z-index: 1; } .ds-terminus a { display: grid; place-items: center; min-width: 38px; height: 24px; padding: 0 8px; box-sizing: border-box; border: 2px solid var(--line); border-radius: 999px; background: var(--panel, #ffffff); color: var(--ink, #1b1e23); font-size: 0.8125rem; font-weight: 620; text-decoration: none; } .ds-terminus a:hover { background: var(--marble, #eceef1); } @media (prefers-reduced-motion: reduce) { .ds-marker::before, .ds-tip { transition-duration: 0.01ms; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Tashkent Metro",
+    "overview": "Bekat treats a set of short links as a metro network. Collections are lines, each with its own colour; links are stations along them; clicks are passengers through the turnstiles. The materials are those of a Tashkent Metro station: a polished granite top bar, a cool marble floor, white platform panels edged with hairline stone, bronze station lettering, and one band of glazed ceramic tile. The line colours are the brightest colours in the interface, and apart from the tile band they always mean a collection or a tag.\n\nThe interface is an operating tool, not a showcase. Density is moderate and even: 36px controls, 12px table cell padding, panels on a 20px grid gap, a 1360px page. Standard web controls are used throughout; the world contributes the palette, the two typefaces, the density and one signature component, the line map. Motion is short and confined to state changes. Page content does not animate in on load.\n\nThe world rejects the category default of a grey sidebar, a blue accent, rows of stat tiles and a lone line chart. Navigation sits in a horizontal granite bar, interface accents come from granite and bronze, and the clicks chart is a bar strip in granite with today's bar in bronze.",
+    "keyCharacteristics": [
+      "Granite top bar over a marble ground; white panels with 1px stone borders and no resting shadow.",
+      "Seven line colours reserved for collection and tag identity, assigned in a fixed order.",
+      "Bronze for signage: station codes on the line map, table column signs, the spike annotation, link underlines, the wordmark marker.",
+      "Golos Text for the interface; Red Hat Mono for short codes, the short-link host and click times.",
+      "One ornament: a single 18px ceramic tile band under the top bar.",
+      "The line map: collections drawn as 4px coloured lines with links as white stations sized by clicks.",
+      "150 to 200ms ease-out on state changes; one 240ms arrival when a new link is created."
+    ],
+    "rules": [
+      {
+        "name": "The Line Colour Rule",
+        "body": "Line colours mean a collection or a tag and nothing else. Buttons, links, focus rings, selection, charts and status never use them. The ceramic tile band is the one place they appear as ornament, and it repeats all six in their fixed order.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fixed Order Rule",
+        "body": "Line colours are offered and assigned in the order red, blue, green, violet, amber, teal, with slate for no collection. The order is part of the identity; do not reshuffle it per screen.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bronze Split Rule",
+        "body": "Bronze text uses Station Bronze (#8c5d28, 5.7:1 on white). Bronze Rule (#a26f35, 4.3:1 on white) is for lines, underlines and marks only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Quiet Health Rule",
+        "body": "A healthy link shows no badge. Status colour appears only when a link is paused, expired, expiring within a week or in error.",
+        "section": "colors"
+      },
+      {
+        "name": "The Code Face Rule",
+        "body": "Anything a person would type after the slash, and the host before it, is set in Red Hat Mono. Everything else is Golos Text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Signage Rule",
+        "body": "Uppercase, letter-spaced bronze labels are column signs in table headers. They are not used as headings or as labels above headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Platform Rule",
+        "body": "Panels rest flat on the marble with a stone hairline. Only the page's single creation surface is raised, and only overlays cast the overlay shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Polished Granite (#2a2d33) for every interface accent that is not identity: primary buttons, chart bars, share bars, tooltips, toasts, focus rings.",
+      "Do show a collection or tag as a line dot (10px, 7px in chips) or a 4px line in its line colour, next to its name in text.",
+      "Do set short codes, the host prefix and click times in Red Hat Mono, with the host in Ink 3 and the code in Ink.",
+      "Do separate panels from the marble ground with a 1px Stone (#d5d9df) border, and rows inside panels with 1px Marble Sunken (#e3e6ea).",
+      "Do keep state transitions at 150 to 200ms on `cubic-bezier(0.16, 1, 0.3, 1)`, and respect reduced motion.",
+      "Do pair every status colour with an icon and a word.",
+      "Do dim stale data to 60% while it refetches rather than flashing a skeleton.",
+      "Do keep creating a link one step away: the Shorten button in the top bar on every signed-in page."
+    ],
+    "donts": [
+      "Don't use a line colour for a button, link, focus ring, chart bar or status.",
+      "Don't add a second ceramic band or any other ornament; the tile band under the top bar is the only one.",
+      "Don't set text in Bronze Rule (#a26f35); bronze text is Station Bronze (#8c5d28).",
+      "Don't put a shadow on a resting panel; Raised is for the single creation surface, Overlay for floating layers.",
+      "Don't use uppercase letter-spaced signage outside table column headers.",
+      "Don't add entrance animation to page content on load; panels and rows appear without motion.",
+      "Don't show a badge on a healthy link."
+    ]
+  }
+}
