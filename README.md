@@ -1,6 +1,6 @@
 # Spur
 
-A link shortener for its owner and the people they invite. Visiting `https://url.mekhroj.com/<code>` redirects to the target and records the click; the web app at `https://url.mekhroj.com/app/` creates and organises links (collections and tags) and shows where clicks come from.
+A link shortener for its owner and the people they invite. Visiting `https://url.mekhroj.uz/<code>` redirects to the target and records the click; the web app at `https://url.mekhroj.uz/app/` creates and organises links (collections and tags) and shows where clicks come from.
 
 | Directory | What |
 |---|---|
@@ -64,7 +64,7 @@ It listens on `127.0.0.1:1050`. The host's reverse proxy terminates TLS and forw
 
 Repository secrets: `SSH_HOST`, `SSH_USERNAME`, `SSH_PRIVATE_KEY`.
 
-The server's `.env` must define every variable in `.env.example`; production refuses to start without `SECRET_KEY`. Point `DEFAULT_REDIRECT_URL` at `https://url.mekhroj.com/app/` so unknown codes land on the app.
+The server's `.env` must define every variable in `.env.example`; production refuses to start without `SECRET_KEY`. Point `DEFAULT_REDIRECT_URL` at `https://url.mekhroj.uz/app/` so unknown codes land on the app.
 
 ## Backups
 

@@ -478,7 +478,7 @@ Each pair is an ink on a tint, and every badge carries an icon and a word.
 - **Label** (560, 0.8125rem): field labels, segments, tag toggles, the "More options" toggle. Hints and meta lines use the same size at 400.
 - **Column Label** (500, 0.8125rem, Ink 3, sentence case): table column headers.
 - **Caption** (400, 0.75rem): the map key, secondary lines in tooltips, the "View as table" toggle. Badges use this size at 600, tag chips at 560.
-- **Code** (Red Hat Mono 500, 0.875rem, tabular figures): short codes, the `url.mekhroj.com/` host prefix, click timestamps. Station codes on the map and times in Recent clicks drop to 0.8125rem.
+- **Code** (Red Hat Mono 500, 0.875rem, tabular figures): short codes, the `url.mekhroj.uz/` host prefix, click timestamps. Station codes on the map and times in Recent clicks drop to 0.8125rem.
 - **Code Specimen** (Red Hat Mono 600, 1.25rem, 1.2): a link's short code set large on its page, host prefix at 1rem in Ink 3.
 - **Wordmark** (650, 1.125rem, -0.01em): "Spur" beside its mark, in the top bar and above the sign-in card.
 
@@ -561,7 +561,7 @@ Solid and plain. The primary fill is for the main action on a surface; danger is
 - **Focus:** 2px Focus outline inset by 1px, border to Focus.
 - **Error:** border to Danger ink; the message sits below the control in Danger ink with an icon. Form-level errors are a Danger tint block with 12px padding.
 - **Disabled:** Subtle background.
-- **Short code field:** the `url.mekhroj.com/` host is an inset prefix in Red Hat Mono, Ink 3; the input text is Red Hat Mono, and its left padding is calculated in `ch` so the code starts exactly after the slash. In the create panel both fields are 44px at 0.9375rem.
+- **Short code field:** the `url.mekhroj.uz/` host is an inset prefix in Red Hat Mono, Ink 3; the input text is Red Hat Mono, and its left padding is calculated in `ch` so the code starts exactly after the slash. In the create panel both fields are 44px at 0.9375rem.
 - **Select:** the same box with a 12px chevron drawn in Ink 2 for each theme and 32px right padding.
 - **Segmented control:** a Sunken trough with 3px padding and 2px gaps; segments are 28px, 4px radius, Ink 2 text; the selected segment is Segment On with Ink text and the selected-segment shadow. Used for date ranges, for switching a panel's breakdown, and for the theme switch.
 
