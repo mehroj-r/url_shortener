@@ -1,21 +1,21 @@
-# Python
+# Python (packaging dirs are anchored so they don't hide frontend/src/lib etc.)
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
+/backend/build/
+/backend/develop-eggs/
+/backend/dist/
+/backend/downloads/
+/backend/eggs/
 .eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+/backend/lib/
+/backend/lib64/
+/backend/parts/
+/backend/sdist/
+/backend/var/
+/backend/wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -54,12 +54,15 @@ ehthumbs.db
 Thumbs.db
 src/celerybeat-schedule
 
-# Docker
-.dockerignore
+# Generated at image build time
+backend/src/VERSION
 
 # Logs
 logs/
 *.log
+
+# Tooling
+.ruff_cache/
 
 # Coverage
 htmlcov/
@@ -80,3 +83,16 @@ coverage.xml
 # Backup files
 *.bak
 *.backup
+backups/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Impeccable working files (decision pages, review captures); PRODUCT.md, DESIGN.md and surface briefs are committed
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/questions/
+.impeccable/build/
+.impeccable/live/
+.impeccable/config.local.json

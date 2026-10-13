@@ -1,0 +1,53 @@
+.screen {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: var(--s-6);
+  min-height: 100dvh;
+  padding: clamp(40px, 14vh, 128px) var(--s-4) var(--s-12);
+}
+
+.brand {
+  width: min(400px, 100%);
+}
+
+.card {
+  width: min(400px, 100%);
+  padding: var(--s-8);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.card h1 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--s-2);
+}
+
+.lead {
+  margin-bottom: var(--s-6);
+  color: var(--ink-2);
+}
+
+.form {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.footnote {
+  margin-top: var(--s-6);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--sunken);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.wide {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--s-5);
+  }
+}

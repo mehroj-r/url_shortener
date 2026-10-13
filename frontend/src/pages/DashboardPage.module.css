@@ -1,0 +1,99 @@
+.page {
+  display: grid;
+  gap: var(--s-6);
+}
+
+/* Shortening is the first thing on the page */
+.ticket {
+  padding: var(--s-5) var(--s-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  margin-top: var(--s-2);
+}
+
+.heading h1 {
+  font-size: var(--text-2xl);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.collectionFilter {
+  width: auto;
+  min-width: 180px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(320px, 1fr);
+  gap: var(--s-5);
+  align-items: start;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--s-5);
+  align-items: start;
+}
+
+.panelLink {
+  font-size: var(--text-sm);
+  font-weight: 560;
+}
+
+.skeletonLines {
+  display: grid;
+  gap: var(--s-6);
+  padding: var(--s-3) 0;
+}
+
+@media (max-width: 1180px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  /* Single column: today's clicks lead, as the story starts there */
+  .clicksPanel {
+    order: -1;
+  }
+
+  .bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topLinks {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    gap: var(--s-4);
+  }
+
+  .ticket {
+    padding: var(--s-4);
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .collectionFilter {
+    flex: 1;
+  }
+}

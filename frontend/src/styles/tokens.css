@@ -1,0 +1,166 @@
+/*
+ * Colour roles. Light is the default; dark is a separate set of steps, not an inversion,
+ * applied when <html data-theme="dark"> (set from the stored preference or the system).
+ */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --raised: #ffffff;
+  --subtle: #f5f6f8;
+  --sunken: #eceef1;
+  --field: #ffffff;
+  --segment-on: #ffffff;
+  --border: #dfe2e7;
+  --border-strong: #c9ced5;
+  --control-edge: #8a919c;
+
+  /* Ink */
+  --ink: #1b1e23;
+  --ink-2: #4a505b;
+  --ink-3: #5e6470;
+
+  /* Action: near-black on light, near-white on dark */
+  --primary: #1f2227;
+  --primary-hover: #34383f;
+  --on-primary: #f6f7f8;
+
+  /* Floating layers: tooltips, toasts, the bulk-action bar */
+  --float: #1f2227;
+  --float-ink: #f3f4f6;
+  --float-muted: #b7bcc5;
+  --float-warn: #ffd79a;
+
+  /* Copper accent, for marks only: today's bar, the spike rule, the wordmark */
+  --accent: #a26f35;
+  --accent-ink: #8c5d28;
+
+  /* Charts */
+  --chart-bar: #6b7280;
+  --chart-bar-active: #1b1e23;
+  --chart-quiet: #c9ced5;
+
+  /* Lines: identity for collections and tags only, always in this order (validated for colour vision) */
+  --line-red: #cb3e3c;
+  --line-blue: #2b61ab;
+  --line-green: #3a975d;
+  --line-violet: #7755aa;
+  --line-amber: #af8e2a;
+  --line-teal: #0495a8;
+  --line-slate: #6b7280;
+
+  /* Status (distinct from the line colours; always paired with an icon and label) */
+  --status-warn-ink: #7a4a00;
+  --status-warn-bg: #fff1d6;
+  --status-danger-ink: #9b1c1c;
+  --status-danger-bg: #fdecec;
+  --status-off-ink: #4a505b;
+  --status-off-bg: #eceef1;
+  --status-ok-ink: #135c35;
+  --status-ok-bg: #e3f4ea;
+  --danger-fill: #9b1c1c;
+  --danger-fill-hover: #831616;
+
+  --focus: #1b1e23;
+  --selection: #d5dae1;
+  --backdrop: rgb(27 30 35 / 0.45);
+  --shadow-overlay: 0 8px 24px rgb(27 30 35 / 0.14), 0 2px 6px rgb(27 30 35 / 0.06);
+  --shadow-segment: 0 1px 2px rgb(27 30 35 / 0.12);
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%234a505b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 4.5 3 3 3-3'/%3E%3C/svg%3E");
+
+  /* Type */
+  --font-ui: 'Golos Text Variable', 'Golos Text', system-ui, sans-serif;
+  --font-code: 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.875rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-hero: 2.75rem;
+
+  /* Space (4px module) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 150ms;
+  --t-base: 200ms;
+
+  --page-max: 1360px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0f1114;
+  --surface: #16181c;
+  --raised: #1c1f24;
+  --subtle: #1b1e22;
+  --sunken: #22252b;
+  --field: #121418;
+  --segment-on: #2e3239;
+  --border: #272a30;
+  --border-strong: #3a3f47;
+  --control-edge: #636a74;
+
+  --ink: #e6e8eb;
+  --ink-2: #b3b8c0;
+  --ink-3: #8b919b;
+
+  --primary: #e6e8eb;
+  --primary-hover: #ffffff;
+  --on-primary: #16181c;
+
+  --float: #2b2f36;
+  --float-ink: #f3f4f6;
+  --float-muted: #b3b8c0;
+  --float-warn: #f0c46e;
+
+  --accent: #c28a4c;
+  --accent-ink: #d1a068;
+
+  --chart-bar: #7c838e;
+  --chart-bar-active: #e6e8eb;
+  --chart-quiet: #3a3f47;
+
+  --line-red: #e4615a;
+  --line-blue: #5991e2;
+  --line-green: #46a769;
+  --line-violet: #9f7bd8;
+  --line-amber: #af9024;
+  --line-teal: #29a3b6;
+  --line-slate: #8c929f;
+
+  --status-warn-ink: #f0c46e;
+  --status-warn-bg: #33280f;
+  --status-danger-ink: #f29a96;
+  --status-danger-bg: #3a1b1b;
+  --status-off-ink: #b3b8c0;
+  --status-off-bg: #262a30;
+  --status-ok-ink: #87d3a6;
+  --status-ok-bg: #132e1f;
+  --danger-fill: #b93a36;
+  --danger-fill-hover: #a3302d;
+
+  --focus: #e6e8eb;
+  --selection: #3a3f47;
+  --backdrop: rgb(0 0 0 / 0.6);
+  --shadow-overlay: 0 8px 24px rgb(0 0 0 / 0.5), 0 2px 6px rgb(0 0 0 / 0.3);
+  --shadow-segment: 0 1px 2px rgb(0 0 0 / 0.4);
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23b3b8c0' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 4.5 3 3 3-3'/%3E%3C/svg%3E");
+}

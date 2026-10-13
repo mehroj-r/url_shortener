@@ -1,27 +1,56 @@
 services:
   db:
     container_name: url-shortener-db
-    image: postgres:17.5-alpine
+    image: postgres:18.6-alpine
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      # Postgres 18+ keeps its data in a versioned subdirectory (18/docker)
+      - db_data:/var/lib/postgresql
     ports:
-      - "5400:5432"
+      - "127.0.0.1:5400:5432"
     env_file:
       - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      # The API only; the frontend service below serves the app
+      target: base
+      args:
+        INSTALL_DEV: "true"
     container_name: url-shortener-web
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./src:/app
-      - ./src/logs:/app/logs
+      - ./backend/src:/app
     ports:
-      - "8005:8000"
+      - "127.0.0.1:8005:8000"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     env_file:
       - .env
 
+  frontend:
+    image: node:26.11.1-alpine
+    container_name: url-shortener-frontend
+    working_dir: /frontend
+    command: sh -c "npm ci --no-audit --no-fund && npm run dev -- --host 0.0.0.0"
+    environment:
+      API_PROXY: http://web:8000
+    volumes:
+      - ./frontend:/frontend
+      # Keep the container's node_modules (built for Alpine) separate from the host's
+      - frontend_modules:/frontend/node_modules
+    ports:
+      - "127.0.0.1:5173:5173"
+    depends_on:
+      - web
+
 volumes:
-  postgres_data:
+  db_data:
+  frontend_modules:

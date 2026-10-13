@@ -1,0 +1,168 @@
+.form {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.primaryRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr) auto;
+  align-items: start;
+  gap: var(--s-3);
+}
+
+.submitCell {
+  display: grid;
+  gap: 6px;
+}
+
+/* Matches the field label line (see ui.module.css .label) */
+.labelSpacer {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.form[data-variant='ticket'] .primaryRow input {
+  height: 44px;
+  font-size: var(--text-base);
+}
+
+/* The host is an inset prefix inside the input; the code face is monospaced, so its width is exact in ch */
+.codeInput {
+  position: relative;
+}
+
+.codeInput span {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 13px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-code);
+  font-size: var(--text-md);
+  color: var(--ink-3);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.codeInput input {
+  padding-inline-start: calc(13px + var(--prefix));
+  font-family: var(--font-code);
+}
+
+/* Same size as the input text, so the ch-based padding matches the prefix exactly */
+.form[data-variant='ticket'] .codeInput span {
+  font-size: var(--text-base);
+}
+
+.submit {
+  min-width: 112px;
+}
+
+.moreToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: start;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+  font-weight: 560;
+  cursor: pointer;
+}
+
+.moreToggle:hover {
+  color: var(--ink);
+}
+
+.moreToggle svg {
+  transition: rotate var(--t-fast) var(--ease-out);
+}
+
+.moreToggle svg[data-open='true'] {
+  rotate: 180deg;
+}
+
+.more {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-4);
+  padding-top: var(--s-1);
+}
+
+.form[data-variant='full'] .more {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tagsField {
+  display: grid;
+  gap: 6px;
+  grid-column: 1 / -1;
+}
+
+.tagsLabel {
+  font-size: var(--text-sm);
+  font-weight: 560;
+  color: var(--ink-2);
+}
+
+.issued {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--radius);
+  background: var(--status-ok-bg);
+  animation: arrive 240ms var(--ease-out);
+}
+
+.issuedIcon {
+  color: var(--status-ok-ink);
+}
+
+.issuedName {
+  color: var(--ink-2);
+  font-size: var(--text-md);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 1;
+}
+
+.issuedLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-md);
+  font-weight: 560;
+  text-decoration: none;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    translate: 0 -4px;
+  }
+}
+
+@media (max-width: 820px) {
+  .primaryRow {
+    grid-template-columns: 1fr;
+  }
+
+  .more,
+  .form[data-variant='full'] .more {
+    grid-template-columns: 1fr;
+  }
+
+  .submit {
+    width: 100%;
+  }
+
+  .labelSpacer {
+    display: none;
+  }
+}

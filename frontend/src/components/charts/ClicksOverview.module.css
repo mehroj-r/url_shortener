@@ -1,0 +1,44 @@
+.overview {
+  display: grid;
+  gap: var(--s-4);
+  transition: opacity var(--t-base) var(--ease-out);
+}
+
+/* Refetch keeps the frame: the previous numbers dim instead of flashing a skeleton */
+.overview[data-stale='true'] {
+  opacity: 0.6;
+}
+
+.today {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+}
+
+.hero {
+  font-size: var(--text-hero);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.heroLabel {
+  color: var(--ink-2);
+  font-size: var(--text-md);
+}
+
+.sentence {
+  max-width: 60ch;
+  color: var(--ink-2);
+  font-size: var(--text-md);
+}
+
+.note {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.loading {
+  display: grid;
+  gap: var(--s-4);
+}
