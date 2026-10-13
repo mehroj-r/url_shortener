@@ -1,29 +1,27 @@
+import re
+
 from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include, re_path
 
-from apps.analytics.api.views import URLClickView
+from apps.analytics.views import redirect_short_url
+from apps.shortener.validators import RESERVED_SHORT_CODES, SHORT_CODE_PATTERN
 
-app_name = 'config'
-
-# Define reserved paths
-RESERVED_PATHS = ['admin', 'api', 'static', 'media']
-
-# Create the regex pattern dynamically
-reserved_pattern = '|'.join([f'{path}/?$' for path in RESERVED_PATHS])
-url_click_pattern = f'^(?!({reserved_pattern}))[a-zA-Z0-9]+/?$'
+# Reserved first segments without a trailing slash (e.g. "/admin") must not be
+# treated as short codes, so CommonMiddleware can append the slash instead.
+reserved_pattern = '|'.join(f'{re.escape(code)}/?$' for code in RESERVED_SHORT_CODES)
+short_code_pattern = f'^(?!({reserved_pattern}))(?P<short_code>{SHORT_CODE_PATTERN})/?$'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('apps.url_router', namespace='api-v1')),
-    re_path(url_click_pattern, URLClickView.as_view(), name='url-click'),
+    re_path(short_code_pattern, redirect_short_url, name='url-click'),
 ]
 
 if settings.DEBUG:
+    from django.conf.urls.static import static
     import debug_toolbar
 
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
     urlpatterns = [

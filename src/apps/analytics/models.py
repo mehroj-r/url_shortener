@@ -36,4 +36,4 @@ class URLClick(TimestampedModel, SoftDeleteModel):
         verbose_name_plural = "URL Infos"
 
     def __str__(self):
-        return self.url
+        return f"{self.short_url_id} @ {self.created_at:%Y-%m-%d %H:%M:%S}"
