@@ -1,6 +1,6 @@
 [project]
 name = "urlshortener"
-version = "0.1.24"
+version = "0.1.25"
 description = "URL shortener API with per-user collections and click analytics"
 requires-python = ">=3.14"
 dependencies = [
