@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-from rest_framework_extensions.mixins import NestedViewSetMixin
+from rest_framework_nested.viewsets import NestedViewSetMixin
 
 from apps.shortener.api.serializers import (
     URLSerializer,
@@ -35,7 +35,9 @@ class ShortURLViewSet(BaseAPIViewSet, viewsets.ModelViewSet):
 
 class URLNestedViewSet(NestedViewSetMixin, URLViewSet):
     serializer_class = URLNestedSerializer
+    parent_lookup_kwargs = {'collection_pk': 'collection__pk'}
 
 
 class ShortURLNestedViewSet(NestedViewSetMixin, ShortURLViewSet):
     serializer_class = ShortURLNestedSerializer
+    parent_lookup_kwargs = {'url_pk': 'url__pk'}

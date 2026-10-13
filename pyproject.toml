@@ -1,21 +1,31 @@
 [project]
 name = "urlshortener"
-version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.13"
+version = "0.1.24"
+description = "URL shortener API with per-user collections and click analytics"
+requires-python = ">=3.14"
 dependencies = [
-    "django>=5.2.4",
-    "django-cors-headers>=4.7.0",
-    "django-debug-toolbar>=6.0.0",
-    "django-extensions>=4.1",
-    "django-filter>=25.1",
-    "django-phonenumber-field[phonenumbers]>=8.1.0",
-    "django-query-analyzer>=0.0.17",
-    "django-rest-framework>=0.1.0",
+    "django>=6.1.2",
+    "django-cors-headers>=4.9.0",
+    "django-filter>=26.2",
+    "django-phonenumber-field[phonenumbers]>=8.5.0",
+    "djangorestframework>=3.18.3",
     "djangorestframework-simplejwt[crypto]>=5.5.1",
-    "drf-extensions>=0.8.0",
-    "psycopg2-binary>=2.9.10",
+    "drf-nested-routers>=0.95.3",
+    "gunicorn>=26.2.0",
+    "psycopg[binary]>=3.3.6",
     "python-decouple>=3.8",
-    "sentry-sdk[django]>=2.33.2",
-    "uvicorn>=0.35.0",
+    "sentry-sdk[django]>=2.72.0",
 ]
+
+[dependency-groups]
+dev = [
+    "django-debug-toolbar>=8.0.0",
+    "django-extensions>=4.1",
+    "django-query-analyzer>=0.0.17",
+    "pytest>=9.1.1",
+    "pytest-django>=4.14.0",
+    "ruff>=0.17.0",
+]
+
+[tool.uv]
+package = false

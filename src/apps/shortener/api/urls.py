@@ -1,21 +1,27 @@
-from rest_framework_extensions.routers import ExtendedDefaultRouter
+from rest_framework.routers import DefaultRouter
+from rest_framework_nested.routers import NestedSimpleRouter
 
 from apps.shortener.api.views import ShortURLViewSet, URLViewSet, URLCollectionViewSet, URLNestedViewSet, \
     ShortURLNestedViewSet
 
 app_name = 'shortener'
 
-router = ExtendedDefaultRouter()
+router = DefaultRouter()
 
 # Base routers
-collections_router = router.register(r'url-collections', URLCollectionViewSet, basename='url_collections')
-urls_router = router.register(r'urls', URLViewSet, basename='urls')
-short_urls_router = router.register(r'short-urls', ShortURLViewSet, basename='short_urls')
+router.register(r'url-collections', URLCollectionViewSet, basename='url_collections')
+router.register(r'urls', URLViewSet, basename='urls')
+router.register(r'short-urls', ShortURLViewSet, basename='short_urls')
 
 # Nested routers
-urls_nested_router = collections_router.register(r'urls', URLNestedViewSet, basename='collection-urls', parents_query_lookups=['collection'])
-short_urls_nested_router = urls_router.register(r'short-urls', ShortURLNestedViewSet, basename='short-urls', parents_query_lookups=['url'])
+collections_router = NestedSimpleRouter(router, r'url-collections', lookup='collection')
+collections_router.register(r'urls', URLNestedViewSet, basename='collection-urls')
+
+urls_router = NestedSimpleRouter(router, r'urls', lookup='url')
+urls_router.register(r'short-urls', ShortURLNestedViewSet, basename='short-urls')
 
 urlpatterns = [
-    *router.urls
+    *router.urls,
+    *collections_router.urls,
+    *urls_router.urls,
 ]
