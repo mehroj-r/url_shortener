@@ -20,7 +20,7 @@ services:
 
   web:
     container_name: url-shortener-web-prod
-    build: .
+    build: ./backend
     entrypoint: /app/scripts/entrypoint.sh
     command: gunicorn config.wsgi:application --config python:config.gunicorn
     volumes:

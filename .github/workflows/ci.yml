@@ -11,8 +11,11 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  test:
+  backend:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
     services:
       postgres:
         image: postgres:18.6-alpine
@@ -51,7 +54,7 @@ jobs:
         run: uv run pytest
 
   release:
-    needs: test
+    needs: backend
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
@@ -64,14 +67,15 @@ jobs:
         uses: astral-sh/setup-uv@v10.3.0
 
       - name: Bump patch version
+        working-directory: backend
         run: uv version --bump patch --no-sync
 
       - name: Commit and push version bump
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add pyproject.toml uv.lock
-          git commit -m "chore: bump version to $(uv version --short) [ci skip]"
+          git add backend/pyproject.toml backend/uv.lock
+          git commit -m "chore: bump version to $(cd backend && uv version --short) [ci skip]"
           git push
 
   deploy:

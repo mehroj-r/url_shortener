@@ -1,5 +1,3 @@
-.git
-.github
 .venv
 .env
 .env.*
@@ -8,12 +6,7 @@
 .ruff_cache
 **/__pycache__
 **/*.py[cod]
-backups
-logs
-nginx
-scripts
 tests
-utils
 src/VERSION
 src/logs
 src/media
