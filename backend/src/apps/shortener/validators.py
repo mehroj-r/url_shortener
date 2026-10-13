@@ -3,7 +3,7 @@ from django.core.validators import RegexValidator
 from django.utils.translation import gettext_lazy as _
 
 # First path segments the app routes itself; a short code can't take them over.
-RESERVED_SHORT_CODES = ['admin', 'api', 'static', '__debug__', 'query-analyzer']
+RESERVED_SHORT_CODES = ['admin', 'api', 'app', 'static', '__debug__', 'query-analyzer']
 
 SHORT_CODE_PATTERN = r'[A-Za-z0-9_-]+'
 

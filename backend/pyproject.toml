@@ -15,6 +15,7 @@ dependencies = [
     "psycopg[binary]>=3.3.6",
     "python-decouple>=3.8",
     "sentry-sdk[django]>=2.72.0",
+    "ua-parser>=1.0.2",
 ]
 
 [dependency-groups]

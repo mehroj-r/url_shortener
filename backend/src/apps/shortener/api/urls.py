@@ -2,7 +2,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_nested.routers import NestedSimpleRouter
 
 from apps.shortener.api.views import ShortURLViewSet, URLViewSet, URLCollectionViewSet, URLNestedViewSet, \
-    ShortURLNestedViewSet
+    ShortURLNestedViewSet, TagViewSet
 
 app_name = 'shortener'
 
@@ -12,6 +12,7 @@ router = DefaultRouter()
 router.register(r'url-collections', URLCollectionViewSet, basename='url_collections')
 router.register(r'urls', URLViewSet, basename='urls')
 router.register(r'short-urls', ShortURLViewSet, basename='short_urls')
+router.register(r'tags', TagViewSet, basename='tags')
 
 # Nested routers
 collections_router = NestedSimpleRouter(router, r'url-collections', lookup='collection')

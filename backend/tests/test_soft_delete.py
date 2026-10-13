@@ -67,11 +67,22 @@ class TestSoftDelete:
         assert not URL.all_objects.exists()
         assert not URLClick.all_objects.exists()
 
-    def test_destroy_endpoint_soft_deletes(self, tree, alice, client_for):
-        collection, _ = tree
+    def test_deleting_a_collection_keeps_its_links(self, tree, alice, client_for):
+        collection, url = tree
 
         response = client_for(alice).delete(f'/api/v1/shortener/url-collections/{collection.pk}/')
 
         assert response.status_code == 204
         assert URLCollection.all_objects.get(pk=collection.pk).is_deleted
+        url.refresh_from_db()
+        assert url.collection is None and not url.is_deleted
+        assert ShortURL.objects.count() == 2
+
+    def test_deleting_a_collection_with_its_links(self, tree, alice, client_for):
+        collection, _ = tree
+
+        response = client_for(alice).delete(f'/api/v1/shortener/url-collections/{collection.pk}/?delete_links=1')
+
+        assert response.status_code == 204
         assert not URL.objects.exists()
+        assert not URLClick.objects.exists()
