@@ -85,11 +85,11 @@ function Dashboard() {
 
       <div className={styles.top}>
         <Panel
-          title="Lines"
+          title="Collections"
           className={styles.lines}
           actions={
             <RouterLink to="/collections" className={styles.panelLink}>
-              Manage collections
+              Manage
             </RouterLink>
           }
         >
@@ -106,9 +106,9 @@ function Dashboard() {
               days={days}
             />
           ) : (
-            <EmptyState title="No lines yet">
-              Every collection becomes a line here, with its links as stations sized by clicks. Shorten your first link
-              above, then group links into collections.
+            <EmptyState title="No links yet">
+              Each collection is drawn here as a line, with its links sized by clicks. Shorten your first link above,
+              then group links into collections.
             </EmptyState>
           )}
         </Panel>

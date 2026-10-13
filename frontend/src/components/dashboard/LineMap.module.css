@@ -3,14 +3,14 @@
   gap: var(--s-3);
 }
 
-/* The map's key, set small like a network legend */
+/* The map's key */
 .key {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-1) var(--s-5);
   margin: 0;
   padding: 0 0 var(--s-2);
-  border-bottom: 1px solid var(--marble-sunken);
+  border-bottom: 1px solid var(--sunken);
   list-style: none;
   font-size: var(--text-xs);
   color: var(--ink-3);
@@ -25,9 +25,9 @@
 .keyMarker {
   width: 12px;
   height: 12px;
-  border: 2px solid var(--ink-3);
+  border: 1.5px solid var(--ink-3);
   border-radius: 50%;
-  background: var(--panel);
+  background: var(--surface);
 }
 
 .keyMarker[data-state='expiring'] {
@@ -56,7 +56,7 @@
 }
 
 .line + .line {
-  border-top: 1px solid var(--marble-sunken);
+  border-top: 1px solid var(--sunken);
   padding-top: var(--s-3);
 }
 
@@ -73,7 +73,7 @@
   gap: 8px;
   min-width: 0;
   color: var(--ink);
-  font-weight: 620;
+  font-weight: 560;
   text-decoration: none;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .lineMeta {
-  padding-inline-start: 18px;
+  padding-inline-start: 24px;
   font-size: var(--text-sm);
   color: var(--ink-3);
 }
@@ -103,9 +103,9 @@
   content: '';
   position: absolute;
   inset-inline: 0;
-  top: 11px;
-  height: 4px;
-  border-radius: 2px;
+  top: 12px;
+  height: 2px;
+  border-radius: 1px;
   background: var(--line);
 }
 
@@ -113,10 +113,10 @@
   content: '';
   position: absolute;
   inset-inline-end: 0;
-  top: 5px;
-  width: 4px;
-  height: 16px;
-  border-radius: 2px;
+  top: 7px;
+  width: 2px;
+  height: 12px;
+  border-radius: 1px;
   background: var(--line);
 }
 
@@ -124,7 +124,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 96px;
+  width: var(--slot, 96px);
   min-width: 0;
 }
 
@@ -138,7 +138,7 @@
   border-radius: var(--radius-sm);
 }
 
-/* Stations: white discs ringed in the line colour, on a fixed size ramp */
+/* Each link is a disc ringed in its line colour, on one size ramp for the whole map */
 .marker {
   display: grid;
   place-items: center;
@@ -150,20 +150,19 @@
   content: '';
   width: var(--size);
   height: var(--size);
-  border: 3px solid var(--line);
+  border: 2px solid var(--line);
   border-radius: 50%;
-  background: var(--panel);
-  box-shadow: 0 0 0 2px var(--panel);
+  background: var(--surface);
+  box-shadow: 0 0 0 2px var(--surface);
   transition:
     transform var(--t-base) var(--ease-out),
     background-color var(--t-fast) var(--ease-out);
 }
 
 .marker[data-quiet='true']::before {
-  border-width: 2px;
+  border-width: 1.5px;
 }
 
-/* Station names are signage: bronze, like the lettering in the stations */
 .stationCode {
   max-width: 100%;
   overflow: hidden;
@@ -171,10 +170,10 @@
   white-space: nowrap;
   font-family: var(--font-code);
   font-size: var(--text-sm);
-  color: var(--bronze);
+  color: var(--ink-2);
 }
 
-/* Closed stations: a dashed, muted ring; the line still runs through them */
+/* Paused or expired: a dashed, muted ring; the line still runs through them */
 .station[data-state='closed'] .marker::before {
   border-style: dashed;
   border-color: var(--ink-3);
@@ -186,7 +185,7 @@
 
 .station[data-state='expiring'] .marker::before {
   box-shadow:
-    0 0 0 2px var(--panel),
+    0 0 0 2px var(--surface),
     0 0 0 4px var(--status-warn-ink);
 }
 
@@ -194,7 +193,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: #ffd79a;
+  color: var(--float-warn);
 }
 
 .station[data-active='true'] .marker::before {
@@ -216,8 +215,8 @@
   gap: 1px;
   padding: 6px 10px;
   border-radius: var(--radius);
-  background: var(--granite);
-  color: var(--granite-muted);
+  background: var(--float);
+  color: var(--float-muted);
   font-size: var(--text-xs);
   white-space: nowrap;
   opacity: 0;
@@ -229,7 +228,7 @@
 }
 
 .stationTip strong {
-  color: var(--granite-ink);
+  color: var(--float-ink);
   font-size: var(--text-sm);
   font-weight: 600;
 }
@@ -240,7 +239,7 @@
   translate: -50% 0;
 }
 
-/* The one authored moment: a new link arrives as a station on its line */
+/* The one authored moment: a new link arrives on its line */
 .station[data-arriving='true'] .marker::before {
   animation: arrive 240ms var(--ease-out);
 }
@@ -265,26 +264,22 @@
   min-width: 38px;
   height: 24px;
   padding: 0 8px;
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   border-radius: 999px;
-  background: var(--panel);
+  background: var(--surface);
   color: var(--ink);
   font-size: var(--text-sm);
-  font-weight: 620;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .terminus a:hover {
-  background: var(--marble);
+  background: var(--subtle);
 }
 
 @media (max-width: 640px) {
   .line {
     grid-template-columns: 1fr;
     gap: var(--s-2);
-  }
-
-  .station {
-    width: 72px;
   }
 }

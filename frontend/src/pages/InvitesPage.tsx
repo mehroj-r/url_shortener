@@ -14,7 +14,7 @@ function inviteUrl(token: string) {
 }
 
 const STATUS: Record<Invite['status'], { tone: string; label: string; icon: ReactNode }> = {
-  pending: { tone: 'ok', label: 'Waiting', icon: <Clock size={12} aria-hidden /> },
+  pending: { tone: 'off', label: 'Waiting', icon: <Clock size={12} aria-hidden /> },
   used: { tone: 'off', label: 'Used', icon: <CircleCheck size={12} aria-hidden /> },
   expired: { tone: 'danger', label: 'Expired', icon: <TimerOff size={12} aria-hidden /> },
 }
@@ -28,7 +28,7 @@ function InviteItem({ invite }: { invite: Invite }) {
   }
 
   return (
-    <li className={styles.item}>
+    <li className={styles.item} data-kind="invite">
       <span className={ui.badge} data-tone={STATUS[invite.status].tone}>
         {STATUS[invite.status].icon}
         {STATUS[invite.status].label}
@@ -91,7 +91,7 @@ export default function InvitesPage() {
     <div className={styles.page}>
       <div className={styles.heading}>
         <h1>Invites</h1>
-        <p>Bekat is invite-only. Each invite link creates one account and works once, until it expires.</p>
+        <p>Spur is invite-only. Each invite link creates one account and works once, until it expires.</p>
       </div>
 
       <Panel title="Invite someone">

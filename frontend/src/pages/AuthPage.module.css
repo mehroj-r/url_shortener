@@ -1,58 +1,22 @@
 .screen {
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  justify-items: center;
+  align-content: start;
+  gap: var(--s-6);
   min-height: 100dvh;
+  padding: clamp(40px, 14vh, 128px) var(--s-4) var(--s-12);
 }
 
-.bar {
-  display: flex;
-  align-items: center;
-  height: 56px;
-  padding: 0 var(--s-6);
-  background: var(--granite);
-  color: var(--granite-ink);
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.mark {
-  position: relative;
-  width: 22px;
-  height: 22px;
-  margin-inline-end: 10px;
-}
-
-.mark::before {
-  content: '';
-  position: absolute;
-  inset: 9px -2px auto;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--bronze-rule);
-}
-
-.mark::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  border: 3px solid var(--bronze-rule);
-  border-radius: 50%;
-  background: var(--granite);
-}
-
-.body {
-  display: grid;
-  place-items: start center;
-  padding: clamp(32px, 10vh, 96px) var(--s-4) var(--s-12);
+.brand {
+  width: min(400px, 100%);
 }
 
 .card {
-  width: min(420px, 100%);
+  width: min(400px, 100%);
   padding: var(--s-8);
-  border: 1px solid var(--stone);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: var(--panel);
-  box-shadow: var(--shadow-raised);
+  background: var(--surface);
 }
 
 .card h1 {
@@ -73,7 +37,7 @@
 .footnote {
   margin-top: var(--s-6);
   padding-top: var(--s-4);
-  border-top: 1px solid var(--marble-sunken);
+  border-top: 1px solid var(--sunken);
   font-size: var(--text-sm);
   color: var(--ink-3);
 }
@@ -85,9 +49,5 @@
 @media (max-width: 480px) {
   .card {
     padding: var(--s-5);
-  }
-
-  .bar {
-    padding: 0 var(--s-4);
   }
 }

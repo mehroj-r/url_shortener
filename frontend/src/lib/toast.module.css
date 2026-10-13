@@ -12,15 +12,15 @@
 .toast {
   padding: var(--s-2) var(--s-4);
   border-radius: var(--radius);
-  background: var(--granite);
-  color: var(--granite-ink);
+  background: var(--float);
+  color: var(--float-ink);
   font-size: var(--text-md);
   box-shadow: var(--shadow-overlay);
   animation: rise var(--t-base) var(--ease-out);
 }
 
 .toast[data-tone='error'] {
-  background: var(--status-danger-ink);
+  background: var(--danger-fill);
 }
 
 @keyframes rise {

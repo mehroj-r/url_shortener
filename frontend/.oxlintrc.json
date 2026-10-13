@@ -8,7 +8,7 @@
     "react-hooks/exhaustive-deps": "warn",
     // Wants <output> / <search> for every live region and landmark; ARIA roles are used deliberately instead
     "jsx-a11y/prefer-tag-over-role": "off",
-    // Stylesheets, fonts and test matchers are imported for their side effects
-    "import/no-unassigned-import": ["warn", { "allow": ["**/*.css", "@fontsource-variable/*", "@testing-library/jest-dom/vitest"] }]
+    // Stylesheets, fonts, test matchers and the theme module (it follows system theme changes) are imported for their side effects
+    "import/no-unassigned-import": ["warn", { "allow": ["**/*.css", "@fontsource-variable/*", "@testing-library/jest-dom/vitest", "./lib/theme"] }]
   }
 }

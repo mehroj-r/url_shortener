@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router'
 import type { Click, Collection, Link } from '../../api/types'
 import { formatDateTime, formatDay, formatTime } from '../../lib/format'
 import { deviceIcon } from '../charts/Breakdown'
-import { Code, EmptyState, LineDot, Skeleton } from '../ui'
+import { Code, EmptyState, LineMark, Skeleton } from '../ui'
 import { useHighlight } from './highlight'
 import styles from './dashboard.module.css'
 
@@ -65,7 +65,7 @@ export function RecentClicks({
             <span className={styles.clickMain}>
               {showLink ? (
                 <RouterLink to={`/links/${click.link}`} className={styles.clickLink}>
-                  <LineDot color={color} />
+                  <LineMark color={color} />
                   <Code code={click.code} />
                 </RouterLink>
               ) : (

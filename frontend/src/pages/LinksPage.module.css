@@ -55,8 +55,8 @@
   gap: var(--s-2);
   padding: var(--s-2) var(--s-3);
   border-radius: var(--radius-lg);
-  background: var(--granite);
-  color: var(--granite-ink);
+  background: var(--float);
+  color: var(--float-ink);
   box-shadow: var(--shadow-overlay);
 }
 
@@ -73,9 +73,9 @@
 
 .tablePanel {
   padding: var(--s-4) var(--s-5) var(--s-5);
-  border: 1px solid var(--stone);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: var(--panel);
+  background: var(--surface);
   transition: opacity var(--t-base) var(--ease-out);
 }
 
@@ -93,11 +93,11 @@
 }
 
 .row:hover {
-  background: var(--marble);
+  background: var(--subtle);
 }
 
 .row[data-selected='true'] {
-  background: var(--marble-sunken);
+  background: var(--sunken);
 }
 
 .check {

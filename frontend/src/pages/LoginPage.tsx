@@ -3,22 +3,18 @@ import { Navigate, useLocation, useNavigate } from 'react-router'
 
 import { ApiError } from '../api/client'
 import { useAuth } from '../auth/AuthProvider'
-import shell from '../components/AppShell.module.css'
 import { Button, Field, FormError, TextInput } from '../components/ui'
+import { Wordmark } from '../components/Wordmark'
 import styles from './AuthPage.module.css'
 
 export function AuthScreen({ children }: { children: ReactNode }) {
   return (
-    <div className={styles.screen}>
-      <header className={styles.bar}>
-        <span className={styles.mark} aria-hidden />
-        Bekat
-      </header>
-      <div className={shell.ceramic} aria-hidden />
-      <main className={styles.body}>
-        <div className={styles.card}>{children}</div>
-      </main>
-    </div>
+    <main className={styles.screen}>
+      <div className={styles.brand}>
+        <Wordmark />
+      </div>
+      <div className={styles.card}>{children}</div>
+    </main>
   )
 }
 
@@ -91,7 +87,7 @@ export default function LoginPage() {
           Sign in
         </Button>
       </form>
-      <p className={styles.footnote}>New here? Accounts are by invitation. Ask someone who uses Bekat for an invite link.</p>
+      <p className={styles.footnote}>New here? Accounts are by invitation. Ask someone who uses Spur for an invite link.</p>
     </AuthScreen>
   )
 }

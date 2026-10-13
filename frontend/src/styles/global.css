@@ -7,15 +7,14 @@
 }
 
 html {
-  color-scheme: light;
   -webkit-text-size-adjust: 100%;
-  scrollbar-color: var(--stone-strong) transparent;
+  scrollbar-color: var(--border-strong) transparent;
 }
 
 body {
   margin: 0;
   min-height: 100dvh;
-  background: var(--marble);
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-ui);
   font-size: var(--text-base);
@@ -40,7 +39,7 @@ textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--stone-strong);
+  background: var(--border-strong);
   border: 2px solid transparent;
   border-radius: 999px;
   background-clip: padding-box;
@@ -52,7 +51,7 @@ h3,
 h4 {
   margin: 0;
   line-height: 1.2;
-  font-weight: 650;
+  font-weight: 600;
   text-wrap: balance;
 }
 
@@ -62,7 +61,7 @@ p {
 
 a {
   color: var(--ink);
-  text-decoration-color: var(--bronze-rule);
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }

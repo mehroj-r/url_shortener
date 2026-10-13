@@ -21,27 +21,28 @@
 }
 
 .baseline {
-  stroke: var(--stone-strong);
+  stroke: var(--chart-quiet);
   stroke-width: 1;
 }
 
 .grid {
-  stroke: var(--marble-sunken);
+  stroke: var(--sunken);
   stroke-width: 1;
 }
 
 .bar {
-  fill: var(--granite);
+  fill: var(--chart-bar);
   opacity: 0.82;
   transition: opacity var(--t-fast) var(--ease-out);
 }
 
 .bar[data-today='true'] {
-  fill: var(--bronze-rule);
+  fill: var(--accent);
   opacity: 1;
 }
 
 .bar[data-active='true'] {
+  fill: var(--chart-bar-active);
   opacity: 1;
 }
 
@@ -52,7 +53,7 @@
 }
 
 .onset line {
-  stroke: var(--bronze-rule);
+  stroke: var(--accent);
   stroke-width: 1.5;
 }
 
@@ -67,8 +68,8 @@
   position: absolute;
   bottom: 0;
   padding: 0 0 2px 6px;
-  border-left: 1.5px solid var(--bronze-rule);
-  color: var(--bronze);
+  border-left: 1.5px solid var(--accent);
+  color: var(--accent-ink);
   font-size: var(--text-xs);
   font-weight: 600;
   white-space: nowrap;
@@ -89,8 +90,8 @@
   gap: 1px;
   padding: 6px 10px;
   border-radius: var(--radius);
-  background: var(--granite);
-  color: var(--granite-muted);
+  background: var(--float);
+  color: var(--float-muted);
   font-size: var(--text-xs);
   white-space: nowrap;
   pointer-events: none;
@@ -99,7 +100,7 @@
 }
 
 .tooltip strong {
-  color: var(--granite-ink);
+  color: var(--float-ink);
   font-size: var(--text-md);
 }
 
@@ -111,7 +112,7 @@
   color: var(--ink-2);
   font-size: var(--text-xs);
   text-decoration: underline;
-  text-decoration-color: var(--bronze-rule);
+  text-decoration-color: var(--border-strong);
   text-underline-offset: 3px;
   cursor: pointer;
 }
@@ -123,7 +124,7 @@
 .dataTable {
   max-height: 220px;
   overflow: auto;
-  border: 1px solid var(--marble-sunken);
+  border: 1px solid var(--sunken);
   border-radius: var(--radius);
 }
 
@@ -137,13 +138,13 @@
 .dataTable td {
   padding: 4px 10px;
   text-align: start;
-  border-bottom: 1px solid var(--marble-sunken);
+  border-bottom: 1px solid var(--sunken);
 }
 
 .dataTable th {
   position: sticky;
   top: 0;
-  background: var(--marble);
+  background: var(--subtle);
 }
 
 /* Breakdown lists */
@@ -185,7 +186,7 @@
 .breakdownTrack {
   height: 8px;
   border-radius: 4px;
-  background: var(--marble);
+  background: var(--subtle);
   overflow: hidden;
 }
 
@@ -193,7 +194,7 @@
   display: block;
   height: 100%;
   border-radius: 4px;
-  background: var(--granite);
+  background: var(--chart-bar);
 }
 
 .breakdownValue {
@@ -241,11 +242,11 @@
   width: 100%;
   min-height: 2px;
   border-radius: 3px 3px 0 0;
-  background: var(--stone-strong);
+  background: var(--chart-bar);
 }
 
 .hourBars > span > span[data-peak='true'] {
-  background: var(--granite);
+  background: var(--chart-bar-active);
 }
 
 .hourAxis {

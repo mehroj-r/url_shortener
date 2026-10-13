@@ -47,11 +47,16 @@
   align-items: center;
   gap: var(--s-4);
   padding: var(--s-3) 0;
-  border-bottom: 1px solid var(--marble-sunken);
+  border-bottom: 1px solid var(--sunken);
 }
 
 .item:last-child {
   border-bottom: 0;
+}
+
+/* Invite rows lead with a status badge, which sizes its own column */
+.item[data-kind='invite'] {
+  grid-template-columns: max-content minmax(0, 1fr) auto auto;
 }
 
 /* A short length of the line itself, with a station at its end */
@@ -64,9 +69,9 @@
   content: '';
   position: absolute;
   inset-inline: 0;
-  top: 5px;
-  height: 4px;
-  border-radius: 2px;
+  top: 6px;
+  height: 2px;
+  border-radius: 1px;
   background: var(--line);
 }
 
@@ -78,9 +83,9 @@
   width: 14px;
   height: 14px;
   box-sizing: border-box;
-  border: 3px solid var(--line);
+  border: 2px solid var(--line);
   border-radius: 50%;
-  background: var(--panel);
+  background: var(--surface);
 }
 
 .itemName {
@@ -145,7 +150,7 @@
 
 .choice input {
   margin-top: 4px;
-  accent-color: var(--granite);
+  accent-color: var(--primary);
 }
 
 .choice span {
@@ -162,6 +167,10 @@
     grid-template-columns: 32px minmax(0, 1fr) auto;
   }
 
+  .item[data-kind='invite'] {
+    grid-template-columns: max-content minmax(0, 1fr) auto;
+  }
+
   .itemStats {
     display: none;
   }
@@ -175,4 +184,11 @@
 .tagSwatch span {
   width: 14px;
   height: 14px;
+}
+
+.appearance {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3) var(--s-4);
 }

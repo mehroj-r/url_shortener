@@ -5,7 +5,8 @@ import { ApiError } from '../api/client'
 import { useChangePassword, useUpdateProfile } from '../api/queries'
 import type { Profile } from '../api/types'
 import { useAuth } from '../auth/AuthProvider'
-import { Button, Field, FormError, Panel, Skeleton, TextInput, ui } from '../components/ui'
+import { Button, Field, FormError, Panel, Segmented, Skeleton, TextInput, ui } from '../components/ui'
+import { setThemePreference, THEME_OPTIONS, useThemePreference } from '../lib/theme'
 import { useToast } from '../lib/toast'
 import styles from './ManagePage.module.css'
 
@@ -101,6 +102,16 @@ function PasswordForm() {
   )
 }
 
+function AppearanceForm() {
+  const theme = useThemePreference()
+  return (
+    <div className={styles.appearance}>
+      <Segmented label="Theme" value={theme} options={THEME_OPTIONS} onChange={setThemePreference} />
+      <p className={ui.hint}>System follows your device's light or dark setting. The choice is saved in this browser.</p>
+    </div>
+  )
+}
+
 export default function SettingsPage() {
   const { user, logout } = useAuth()
   return (
@@ -109,6 +120,9 @@ export default function SettingsPage() {
         <h1>Settings</h1>
       </div>
       <Panel title="Profile">{user ? <ProfileForm user={user} /> : <Skeleton height={160} />}</Panel>
+      <Panel title="Appearance">
+        <AppearanceForm />
+      </Panel>
       <Panel title="Password">
         <PasswordForm />
       </Panel>

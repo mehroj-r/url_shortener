@@ -12,11 +12,11 @@
   width: 28px;
   height: 28px;
   padding: 0;
-  border: 2px solid var(--panel);
+  border: 2px solid var(--surface);
   border-radius: 50%;
   background: var(--swatch);
   color: #fff;
-  box-shadow: 0 0 0 1px var(--stone-strong);
+  box-shadow: 0 0 0 1px var(--border-strong);
   cursor: pointer;
   transition: box-shadow var(--t-fast) var(--ease-out);
 }

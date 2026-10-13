@@ -3,13 +3,12 @@
   gap: var(--s-6);
 }
 
-/* The ticket window: shortening is the first thing on the page */
+/* Shortening is the first thing on the page */
 .ticket {
   padding: var(--s-5) var(--s-6);
-  border: 1px solid var(--stone);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: var(--panel);
-  box-shadow: var(--shadow-raised);
+  background: var(--surface);
 }
 
 .heading {

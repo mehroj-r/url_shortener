@@ -14,7 +14,7 @@
   align-items: center;
   gap: 4px var(--s-4);
   padding: var(--s-3) 0;
-  border-bottom: 1px solid var(--marble-sunken);
+  border-bottom: 1px solid var(--sunken);
 }
 
 .codeRow:first-child {
@@ -111,7 +111,7 @@
   width: 280px;
   height: 280px;
   image-rendering: pixelated;
-  border: 1px solid var(--stone);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
@@ -119,7 +119,7 @@
   width: 280px;
   height: 280px;
   border-radius: var(--radius);
-  background: var(--marble);
+  background: var(--subtle);
 }
 
 @media (max-width: 640px) {

@@ -285,7 +285,7 @@ export default function LinksPage() {
                 </Button>
               }
             >
-              Paste a long URL, pick a code or let Bekat make one, and share {window.location.host}/your-code.
+              Paste a long URL, pick a code or let Spur make one, and share {window.location.host}/your-code.
             </EmptyState>
           )
         ) : (

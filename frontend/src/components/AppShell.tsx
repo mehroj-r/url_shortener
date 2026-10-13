@@ -3,9 +3,11 @@ import { createContext, use, useCallback, useEffect, useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router'
 
 import { useAuth } from '../auth/AuthProvider'
+import { setThemePreference, THEME_OPTIONS, useThemePreference } from '../lib/theme'
 import styles from './AppShell.module.css'
 import { CreateLinkDialog } from './CreateLinkForm'
-import { Button, IconButton } from './ui'
+import { Button, IconButton, Segmented } from './ui'
+import { Wordmark } from './Wordmark'
 
 const NAV = [
   { to: '/', label: 'Dashboard', end: true },
@@ -32,6 +34,7 @@ export function AppShell() {
   const [creating, setCreating] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [query, setQuery] = useState('')
+  const theme = useThemePreference()
 
   // Where the page already has a ticket window, go there instead of opening a dialog over it
   const openCreate = useCallback(() => {
@@ -69,9 +72,8 @@ export function AppShell() {
     <>
       <header className={styles.topBar}>
         <div className={styles.barInner}>
-          <NavLink to="/" className={styles.wordmark} aria-label="Bekat, dashboard">
-            <span className={styles.mark} aria-hidden />
-            Bekat
+          <NavLink to="/" className={styles.home} aria-label="Spur, dashboard">
+            <Wordmark />
           </NavLink>
           <nav className={styles.nav} aria-label="Main">
             {NAV.map((item) => (
@@ -98,7 +100,7 @@ export function AppShell() {
               onChange={(event) => setQuery(event.target.value)}
             />
           </form>
-          <Button size="sm" className={styles.shorten} onClick={openCreate} aria-keyshortcuts="n">
+          <Button size="sm" variant="secondary" onClick={openCreate} aria-keyshortcuts="n">
             <Plus size={15} aria-hidden />
             <span className={styles.shortenLabel}>Shorten</span>
           </Button>
@@ -123,6 +125,10 @@ export function AppShell() {
                 <span>{user.email}</span>
               </div>
             )}
+            <div className={styles.menuTheme}>
+              <span aria-hidden>Theme</span>
+              <Segmented label="Theme" value={theme} options={THEME_OPTIONS} onChange={setThemePreference} />
+            </div>
             <NavLink
               to="/settings"
               className={styles.menuItem}
@@ -152,7 +158,6 @@ export function AppShell() {
           </NavLink>
         </nav>
       </header>
-      <div className={styles.ceramic} aria-hidden />
       <main className={styles.main}>
         <OpenCreateContext value={openCreate}>
           <Outlet />

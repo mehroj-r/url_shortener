@@ -1,5 +1,5 @@
 const API_ROOT = '/api/v1'
-const REFRESH_KEY = 'bekat.refresh'
+const REFRESH_KEY = 'spur.refresh'
 
 type FieldErrors = Record<string, string[]>
 

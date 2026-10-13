@@ -1,6 +1,7 @@
 import '@fontsource-variable/golos-text'
 import '@fontsource-variable/red-hat-mono'
 import './styles/global.css'
+import './lib/theme'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { StrictMode } from 'react'

@@ -70,7 +70,7 @@ export default function JoinPage() {
 
   return (
     <AuthScreen>
-      <h1>Join Bekat</h1>
+      <h1>Join Spur</h1>
       <p className={styles.lead}>{check.data.invited_by} invited you. Create your account to start shortening links.</p>
       <form className={styles.form} onSubmit={submit}>
         <div className={ui.formRow}>

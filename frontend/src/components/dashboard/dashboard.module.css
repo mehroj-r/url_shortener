@@ -9,7 +9,7 @@
 
 .clickableRow:hover,
 .clickableRow[data-active='true'] {
-  background: var(--marble);
+  background: var(--subtle);
 }
 
 .clickableRow:focus-visible {
@@ -36,26 +36,7 @@
 }
 
 .clicksCell {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--s-3);
   font-weight: 600;
-}
-
-.shareTrack {
-  width: 64px;
-  height: 6px;
-  border-radius: 3px;
-  background: var(--marble);
-  overflow: hidden;
-}
-
-.shareTrack span {
-  display: block;
-  height: 100%;
-  border-radius: 3px;
-  background: var(--granite);
 }
 
 /* Recent clicks */
@@ -74,7 +55,7 @@
   padding: 9px 6px;
   margin-inline: -6px;
   border-radius: var(--radius);
-  border-bottom: 1px solid var(--marble-sunken);
+  border-bottom: 1px solid var(--sunken);
   transition: background-color var(--t-fast) var(--ease-out);
 }
 
@@ -83,7 +64,7 @@
 }
 
 .clicks li[data-active='true'] {
-  background: var(--marble);
+  background: var(--subtle);
 }
 
 .clickTime {

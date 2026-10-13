@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router'
 import type { Collection, Link } from '../../api/types'
 import { lineColor } from '../../lib/colors'
 import { formatNumber, plural } from '../../lib/format'
-import { LineDot, useNow } from '../ui'
+import { LineMark, useNow } from '../ui'
 import { useHighlightTarget, useHighlight } from './highlight'
 import styles from './LineMap.module.css'
 
@@ -82,7 +82,7 @@ function Station({
 }
 
 /**
- * Collections drawn as metro lines: each link is a station on its collection's line,
+ * Collections drawn as lines: each link is a station on its collection's line,
  * sized by its clicks in the selected range on one scale for the whole map.
  */
 export function LineMap({
@@ -137,7 +137,7 @@ export function LineMap({
     <ul className={styles.key} aria-label="Map key">
       <li>
         <span className={styles.keyMarker} aria-hidden />
-        Station size = clicks in the last {days} days
+        Size = clicks in the last {days} days
       </li>
       <li>
         <span className={styles.keyMarker} data-state="expiring" aria-hidden />
@@ -152,20 +152,28 @@ export function LineMap({
       {lines.map((line, index) => {
         const stations = shown[index]
         const hidden = line.links.length - stations.length
+        // Each station gets an equal share of the track, so short lines have room for whole codes
+        const slots = stations.length + (hidden > 0 ? 1 : 0)
+        const slot = trackWidth > 0 ? `${Math.min(STATION_SPACING, Math.floor((trackWidth - 8) / slots))}px` : undefined
         const name = line.collection?.name ?? 'No collection'
         const filter = line.collection ? `collection=${line.collection.id}` : 'collection=none'
         return (
           <li key={line.key} className={styles.line} style={{ '--line': lineColor(line.collection?.color ?? 'slate') } as CSSProperties}>
             <div className={styles.lineLabel}>
               <RouterLink to={`/links?${filter}`} className={styles.lineName}>
-                <LineDot color={line.collection?.color ?? 'slate'} />
+                <LineMark color={line.collection?.color ?? 'slate'} />
                 {name}
               </RouterLink>
               <span className={styles.lineMeta}>
                 {plural(line.links.length, 'link')} · <span className="num">{formatNumber(line.clicks)}</span> clicks
               </span>
             </div>
-            <ol className={styles.track} ref={index === 0 ? measure : undefined} aria-label={`${name} links`}>
+            <ol
+              className={styles.track}
+              ref={index === 0 ? measure : undefined}
+              style={{ '--slot': slot } as CSSProperties}
+              aria-label={`${name} links`}
+            >
               {stations.map((link) => (
                 <Station
                   key={link.id}

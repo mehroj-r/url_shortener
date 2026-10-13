@@ -204,10 +204,21 @@ export function LineDot({ color, className }: { color: TagColor | null | undefin
   )
 }
 
+/** A collection's marker: a short length of its line ending in a station. Tags use the plain dot. */
+export function LineMark({ color, className }: { color: TagColor | null | undefined; className?: string }) {
+  return (
+    <span
+      className={[styles.lineMark, className].filter(Boolean).join(' ')}
+      style={{ '--dot': lineColor(color) } as CSSProperties}
+      aria-hidden
+    />
+  )
+}
+
 export function LineName({ name, color }: { name: string; color: TagColor | null | undefined }) {
   return (
     <span className={styles.lineName}>
-      <LineDot color={color} />
+      <LineMark color={color} />
       <span>{name}</span>
     </span>
   )

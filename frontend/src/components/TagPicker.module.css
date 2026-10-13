@@ -13,9 +13,9 @@
   gap: 6px;
   height: 28px;
   padding: 0 10px;
-  border: 1px solid var(--stone-strong);
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
-  background: var(--panel);
+  background: var(--surface);
   color: var(--ink-2);
   font-size: var(--text-sm);
   font-weight: 560;
@@ -30,9 +30,9 @@
 }
 
 .toggle[aria-pressed='true'] {
-  background: var(--granite);
-  border-color: var(--granite);
-  color: var(--granite-ink);
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
 }
 
 .toggle span {
