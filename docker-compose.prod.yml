@@ -1,7 +1,7 @@
 services:
   db:
     container_name: url-shortener-db-prod
-    image: postgres:17.5-alpine
+    image: postgres:17.11-alpine
     ports:
         - "127.0.0.1:${DB_PORT}:5432"
     volumes:
@@ -11,20 +11,26 @@ services:
     restart: unless-stopped
     env_file:
       - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   web:
     container_name: url-shortener-web-prod
     build: .
     entrypoint: /app/scripts/entrypoint.sh
+    command: gunicorn config.wsgi:application --config python:config.gunicorn
     volumes:
-      - ./src/staticfiles:/app/staticfiles
-      - ./src/media:/app/media
-      - ./src/logs:/app/logs
+      - static_files:/app/staticfiles
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - url_shortener_net
     restart: unless-stopped
+    stop_grace_period: 35s
     env_file:
       - .env
 
@@ -34,8 +40,7 @@ services:
     ports:
       - "127.0.0.1:1050:1050"
     volumes:
-      - ./src/staticfiles:/app/staticfiles
-      - ./src/media:/app/media
+      - static_files:/app/staticfiles:ro
     depends_on:
       - web
     networks:
@@ -44,6 +49,7 @@ services:
 
 volumes:
   postgres_data:
+  static_files:
 
 networks:
   url_shortener_net:

@@ -54,12 +54,15 @@ ehthumbs.db
 Thumbs.db
 src/celerybeat-schedule
 
-# Docker
-.dockerignore
+# Generated at image build time
+src/VERSION
 
 # Logs
 logs/
 *.log
+
+# Tooling
+.ruff_cache/
 
 # Coverage
 htmlcov/
@@ -80,3 +83,4 @@ coverage.xml
 # Backup files
 *.bak
 *.backup
+backups/
