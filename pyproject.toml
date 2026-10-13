@@ -35,3 +35,18 @@ DJANGO_SETTINGS_MODULE = "config.settings.test"
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "--strict-markers"
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+extend-exclude = ["src/apps/*/migrations"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "DJ"]
+# DJ001: nullable username/user agent are deliberate; W292/DJ012: existing code style
+ignore = ["DJ001", "DJ012", "W292"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/config/settings/*.py" = ["F403", "F405"]
+"src/*/admin/__init__.py" = ["F403"]
+"src/apps/*/admin/__init__.py" = ["F403"]
