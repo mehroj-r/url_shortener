@@ -1,13 +1,13 @@
 from .base import *
 
 import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
+from sentry_sdk.scrubber import DEFAULT_DENYLIST, EventScrubber
 
 SECRET_KEY = config('SECRET_KEY')
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_SECONDS = 86400
+SECURE_HSTS_SECONDS = config('SECURE_HSTS_SECONDS', default=60 * 60 * 24 * 365, cast=int)
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = True
@@ -17,17 +17,12 @@ X_FRAME_OPTIONS = 'DENY'
 
 sentry_sdk.init(
     dsn=config('SENTRY_DSN', default=''),
-    integrations=[DjangoIntegration()],
-    traces_sample_rate=1.0,
-    sample_rate=1.0,
-    max_breadcrumbs=100,
-    max_value_length=1024,
-    send_default_pii=True,
-    attach_stacktrace=True,
-    include_source_context=False,
-    include_local_variables=True,
-    send_client_reports=True,
-    max_request_body_size="always",
-    release="url_shortener@1.0.0",
-    environment="production",
+    traces_sample_rate=config('SENTRY_TRACES_SAMPLE_RATE', default=0.1, cast=float),
+    send_default_pii=False,
+    event_scrubber=EventScrubber(
+        denylist=DEFAULT_DENYLIST + ['password_repeat', 'refresh', 'access'],
+        recursive=True,
+    ),
+    release=f'url_shortener@{APP_VERSION}',
+    environment='production',
 )

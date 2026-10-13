@@ -1,14 +1,16 @@
-import os
 from datetime import timedelta
 from pathlib import Path
-from decouple import config
-from django.utils import timezone
+from decouple import Csv, config
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = config('SECRET_KEY', default='')
 DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 DEFAULT_REDIRECT_URL = config('DEFAULT_REDIRECT_URL', default='https://url.mekhroj.uz')
+
+# Written into the image at build time from pyproject.toml
+VERSION_FILE = BASE_DIR / 'VERSION'
+APP_VERSION = VERSION_FILE.read_text().strip() if VERSION_FILE.exists() else 'dev'
 
 DJANGO_APPS = [
     'corsheaders',
@@ -24,6 +26,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
+    'django_filters',
     "phonenumber_field",
 ]
 
@@ -131,61 +134,31 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / "static"]
-
-if not os.path.exists(BASE_DIR / 'static'):
-    os.makedirs(BASE_DIR / 'static')
-
-# Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Logging
-LOG_DIR = BASE_DIR.parent / 'logs'
-
+# Logging (stdout only; collected by Docker)
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     "formatters": {
         "detailed": {
-            "format": "[%(asctime)s] %(levelname)s in %(module)s: %(message)s"
-        },
-        "simple": {
-            "format": "%(levelname)s: %(message)s"
+            "format": "[%(asctime)s] %(levelname)s in %(name)s: %(message)s"
         },
     },
     'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': LOG_DIR / f'django-{timezone.now().date()}.log',
-            "formatter": "detailed",
-        },
         'console': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
-            "formatter": "simple",
+            "formatter": "detailed",
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['file', 'console'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-        'apps': {
-            'handlers': ['file', 'console'],
-            'level': 'INFO',
-            'propagate': True,
-        },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
     },
 }
-
-if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
 
 # Phone number field settings
 PHONENUMBER_DEFAULT_REGION = 'UZ'
@@ -209,4 +182,4 @@ AUTH_USER_MODEL = 'account.User' # noqa
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
-    CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='').split(',')
+    CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='', cast=Csv())
