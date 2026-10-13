@@ -37,7 +37,9 @@ services:
 
   nginx:
     container_name: url-shortener-nginx-prod
-    build: nginx
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
     ports:
       - "127.0.0.1:1050:1050"
     volumes:

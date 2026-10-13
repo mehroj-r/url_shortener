@@ -85,3 +85,14 @@ coverage.xml
 *.backup
 backups/
 
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Impeccable working files (decision pages, review captures); PRODUCT.md, DESIGN.md and surface briefs are committed
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/questions/
+.impeccable/build/
+.impeccable/live/
+.impeccable/config.local.json

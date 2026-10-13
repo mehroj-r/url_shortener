@@ -1,0 +1,6 @@
+# Root context is only used by the nginx image (frontend build + config)
+*
+!frontend
+!nginx
+frontend/node_modules
+frontend/dist
