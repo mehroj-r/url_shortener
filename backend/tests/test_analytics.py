@@ -11,8 +11,8 @@ class TestClickAPI:
     def test_users_only_see_clicks_on_their_own_links(self, client, client_for, alice, bob, make_short_url):
         make_short_url(alice, code='alice1')
         make_short_url(bob, code='bob1')
-        client.get('/alice1', HTTP_X_REAL_IP='203.0.113.1')
-        client.get('/bob1', HTTP_X_REAL_IP='203.0.113.2')
+        client.get('/alice1', HTTP_X_FORWARDED_FOR='203.0.113.1')
+        client.get('/bob1', HTTP_X_FORWARDED_FOR='203.0.113.2')
 
         results = client_for(bob).get(CLICKS).json()['data']['results']
 

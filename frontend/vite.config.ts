@@ -2,7 +2,7 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-// The app is served by nginx under /app/ on the same origin as the API.
+// The app is served by Django under /app/ on the same origin as the API.
 // In development, /api is proxied to the Django dev server (docker compose publishes it on 8005).
 export default defineConfig({
   base: '/app/',

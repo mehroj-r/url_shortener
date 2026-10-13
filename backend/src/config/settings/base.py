@@ -42,6 +42,9 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # Static files and the built web app, before anything that touches the database
+    'core.middleware.StaticFilesMiddleware',
+    'django.middleware.csp.ContentSecurityPolicyMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -131,9 +134,26 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files (CSS, JavaScript, Images), served by WhiteNoise with hashed names
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STORAGES = {
+    'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'},
+    'staticfiles': {'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage'},
+}
+
+# The built web app (frontend/), served under /app/. The production image copies it here;
+# in development the Vite dev server serves the app instead.
+FRONTEND_DIR = Path(config('FRONTEND_DIR', default=str(BASE_DIR / 'frontend')))
+
+# Reverse proxies whose X-Forwarded-For entries are trusted when finding the client IP
+# (see core.utils.request.get_client_ip): loopback and private networks, where the host's
+# proxy reaches the container from.
+TRUSTED_PROXY_NETWORKS = config(
+    'TRUSTED_PROXY_NETWORKS',
+    default='127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,::1/128,fc00::/7',
+    cast=Csv(),
+)
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

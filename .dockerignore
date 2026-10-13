@@ -1,6 +1,18 @@
-# Root context is only used by the nginx image (frontend build + config)
+# Images are built from the repository root (backend/Dockerfile); send only what they use
 *
+!backend
 !frontend
-!nginx
+backend/.venv
+backend/tests
+backend/.pytest_cache
+backend/.ruff_cache
+backend/src/VERSION
+backend/src/logs
+backend/src/media
+backend/src/staticfiles
+**/__pycache__
+**/*.py[cod]
+**/.env
+**/.env.*
 frontend/node_modules
 frontend/dist
