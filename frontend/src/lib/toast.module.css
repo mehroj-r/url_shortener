@@ -1,0 +1,31 @@
+.region {
+  position: fixed;
+  inset-block-end: var(--s-6);
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  display: grid;
+  gap: var(--s-2);
+  z-index: 50;
+  pointer-events: none;
+}
+
+.toast {
+  padding: var(--s-2) var(--s-4);
+  border-radius: var(--radius);
+  background: var(--granite);
+  color: var(--granite-ink);
+  font-size: var(--text-md);
+  box-shadow: var(--shadow-overlay);
+  animation: rise var(--t-base) var(--ease-out);
+}
+
+.toast[data-tone='error'] {
+  background: var(--status-danger-ink);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+}

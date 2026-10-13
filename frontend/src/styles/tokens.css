@@ -1,0 +1,82 @@
+:root {
+  /* Stone: the station's materials */
+  --granite: #2a2d33;
+  --granite-raised: #363a42;
+  --granite-ink: #f3f4f6;
+  --granite-muted: #b7bcc5;
+  --marble: #eceef1;
+  --marble-sunken: #e3e6ea;
+  --panel: #ffffff;
+  --stone: #d5d9df;
+  --stone-strong: #c4c9d1;
+  --control-edge: #8a919c;
+
+  /* Ink */
+  --ink: #1b1e23;
+  --ink-2: #4a505b;
+  --ink-3: #5e6470;
+
+  /* Signage */
+  --bronze: #8c5d28;
+  --bronze-rule: #a26f35;
+
+  /* Lines: identity for collections and tags only, always in this order (validated for colour vision) */
+  --line-red: #d7262e;
+  --line-blue: #1c5fb8;
+  --line-green: #1e9a55;
+  --line-violet: #7a4fb5;
+  --line-amber: #c7860f;
+  --line-teal: #0b95a8;
+  --line-slate: #6b7280;
+
+  /* Status (distinct from the line colours; always paired with an icon and label) */
+  --status-warn-ink: #7a4a00;
+  --status-warn-bg: #fff1d6;
+  --status-danger-ink: #9b1c1c;
+  --status-danger-bg: #fdecec;
+  --status-off-ink: #4a505b;
+  --status-off-bg: #e8ebef;
+  --status-ok-ink: #135c35;
+  --status-ok-bg: #e3f4ea;
+
+  /* Interface accents come from stone and bronze, never from the line colours */
+  --focus: #2a2d33;
+  --focus-on-granite: #f3f4f6;
+  --selection: #efe2cf;
+
+  /* Type */
+  --font-ui: 'Golos Text Variable', 'Golos Text', system-ui, sans-serif;
+  --font-code: 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.875rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-hero: 3.5rem;
+
+  /* Space (4px module) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  --shadow-raised: 0 1px 2px rgb(27 30 35 / 0.06), 0 4px 12px rgb(27 30 35 / 0.06);
+  --shadow-overlay: 0 8px 24px rgb(27 30 35 / 0.16), 0 2px 6px rgb(27 30 35 / 0.08);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 150ms;
+  --t-base: 200ms;
+
+  --page-max: 1360px;
+}

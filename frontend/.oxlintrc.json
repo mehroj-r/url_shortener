@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "import", "jsx-a11y"],
+  "categories": { "correctness": "error", "suspicious": "warn" },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // Wants <output> / <search> for every live region and landmark; ARIA roles are used deliberately instead
+    "jsx-a11y/prefer-tag-over-role": "off",
+    // Stylesheets, fonts and test matchers are imported for their side effects
+    "import/no-unassigned-import": ["warn", { "allow": ["**/*.css", "@fontsource-variable/*", "@testing-library/jest-dom/vitest"] }]
+  }
+}

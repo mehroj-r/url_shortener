@@ -1,0 +1,257 @@
+/* Daily bars */
+.bars {
+  display: grid;
+  gap: var(--s-2);
+}
+
+.plot {
+  position: relative;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  cursor: crosshair;
+}
+
+.svg:focus-visible {
+  outline-offset: 6px;
+  border-radius: var(--radius-sm);
+}
+
+.baseline {
+  stroke: var(--stone-strong);
+  stroke-width: 1;
+}
+
+.grid {
+  stroke: var(--marble-sunken);
+  stroke-width: 1;
+}
+
+.bar {
+  fill: var(--granite);
+  opacity: 0.82;
+  transition: opacity var(--t-fast) var(--ease-out);
+}
+
+.bar[data-today='true'] {
+  fill: var(--bronze-rule);
+  opacity: 1;
+}
+
+.bar[data-active='true'] {
+  opacity: 1;
+}
+
+.crosshair {
+  stroke: var(--ink-3);
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.onset line {
+  stroke: var(--bronze-rule);
+  stroke-width: 1.5;
+}
+
+.annotations {
+  position: relative;
+  height: 18px;
+  margin-bottom: -8px;
+}
+
+/* Sits above the plot; its left rule continues the onset line drawn in the chart */
+.onsetLabel {
+  position: absolute;
+  bottom: 0;
+  padding: 0 0 2px 6px;
+  border-left: 1.5px solid var(--bronze-rule);
+  color: var(--bronze);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tick {
+  fill: var(--ink-3);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tooltip {
+  position: absolute;
+  top: -8px;
+  translate: -50% -100%;
+  display: grid;
+  gap: 1px;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  background: var(--granite);
+  color: var(--granite-muted);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: var(--shadow-overlay);
+  z-index: 2;
+}
+
+.tooltip strong {
+  color: var(--granite-ink);
+  font-size: var(--text-md);
+}
+
+.tableToggle {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  font-size: var(--text-xs);
+  text-decoration: underline;
+  text-decoration-color: var(--bronze-rule);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.tableToggle:hover {
+  color: var(--ink);
+}
+
+.dataTable {
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid var(--marble-sunken);
+  border-radius: var(--radius);
+}
+
+.dataTable table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 4px 10px;
+  text-align: start;
+  border-bottom: 1px solid var(--marble-sunken);
+}
+
+.dataTable th {
+  position: sticky;
+  top: 0;
+  background: var(--marble);
+}
+
+/* Breakdown lists */
+.breakdown {
+  display: grid;
+  gap: var(--s-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breakdown li {
+  display: grid;
+  grid-template-columns: minmax(96px, 1fr) minmax(60px, 1.4fr) auto;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: var(--text-md);
+}
+
+.breakdownName {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.breakdownName svg {
+  flex: none;
+  color: var(--ink-3);
+}
+
+.breakdownName span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.breakdownTrack {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--marble);
+  overflow: hidden;
+}
+
+.breakdownTrack span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: var(--granite);
+}
+
+.breakdownValue {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: var(--s-2);
+  min-width: 84px;
+}
+
+.breakdownValue span {
+  min-width: 34px;
+  text-align: end;
+  color: var(--ink-3);
+  font-size: var(--text-sm);
+}
+
+.emptyText {
+  font-size: var(--text-md);
+  color: var(--ink-3);
+}
+
+/* Hours */
+.hours {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.hourBars {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 2px;
+  height: 72px;
+  align-items: end;
+}
+
+.hourBars > span {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.hourBars > span > span {
+  width: 100%;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  background: var(--stone-strong);
+}
+
+.hourBars > span > span[data-peak='true'] {
+  background: var(--granite);
+}
+
+.hourAxis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}

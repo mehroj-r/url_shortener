@@ -1,0 +1,35 @@
+.picker {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.swatch {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 2px solid var(--panel);
+  border-radius: 50%;
+  background: var(--swatch);
+  color: #fff;
+  box-shadow: 0 0 0 1px var(--stone-strong);
+  cursor: pointer;
+  transition: box-shadow var(--t-fast) var(--ease-out);
+}
+
+.swatch:hover {
+  box-shadow: 0 0 0 1px var(--ink-3);
+}
+
+.swatch:has(input:checked) {
+  box-shadow: 0 0 0 2px var(--ink);
+}
+
+.swatch:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}

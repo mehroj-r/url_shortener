@@ -1,0 +1,46 @@
+.picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--stone-strong);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+  font-weight: 560;
+  cursor: pointer;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out);
+}
+
+.toggle:hover {
+  border-color: var(--control-edge);
+}
+
+.toggle[aria-pressed='true'] {
+  background: var(--granite);
+  border-color: var(--granite);
+  color: var(--granite-ink);
+}
+
+.toggle span {
+  width: 8px;
+  height: 8px;
+}
+
+.none {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}

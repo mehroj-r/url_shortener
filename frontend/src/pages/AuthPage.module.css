@@ -1,0 +1,93 @@
+.screen {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  min-height: 100dvh;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 var(--s-6);
+  background: var(--granite);
+  color: var(--granite-ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.mark {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin-inline-end: 10px;
+}
+
+.mark::before {
+  content: '';
+  position: absolute;
+  inset: 9px -2px auto;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bronze-rule);
+}
+
+.mark::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 3px solid var(--bronze-rule);
+  border-radius: 50%;
+  background: var(--granite);
+}
+
+.body {
+  display: grid;
+  place-items: start center;
+  padding: clamp(32px, 10vh, 96px) var(--s-4) var(--s-12);
+}
+
+.card {
+  width: min(420px, 100%);
+  padding: var(--s-8);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+  box-shadow: var(--shadow-raised);
+}
+
+.card h1 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--s-2);
+}
+
+.lead {
+  margin-bottom: var(--s-6);
+  color: var(--ink-2);
+}
+
+.form {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.footnote {
+  margin-top: var(--s-6);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--marble-sunken);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.wide {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--s-5);
+  }
+
+  .bar {
+    padding: 0 var(--s-4);
+  }
+}

@@ -1,0 +1,290 @@
+.mapWrap {
+  display: grid;
+  gap: var(--s-3);
+}
+
+/* The map's key, set small like a network legend */
+.key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1) var(--s-5);
+  margin: 0;
+  padding: 0 0 var(--s-2);
+  border-bottom: 1px solid var(--marble-sunken);
+  list-style: none;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.key li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.keyMarker {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--ink-3);
+  border-radius: 50%;
+  background: var(--panel);
+}
+
+.keyMarker[data-state='expiring'] {
+  border-color: var(--status-warn-ink);
+  box-shadow: 0 0 0 2px var(--status-warn-bg);
+}
+
+.keyMarker[data-state='closed'] {
+  border-style: dashed;
+}
+
+.map {
+  display: grid;
+  gap: var(--s-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: minmax(150px, 200px) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--s-4);
+  padding: var(--s-2) 0;
+}
+
+.line + .line {
+  border-top: 1px solid var(--marble-sunken);
+  padding-top: var(--s-3);
+}
+
+.lineLabel {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  padding-top: 4px;
+}
+
+.lineName {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: var(--ink);
+  font-weight: 620;
+  text-decoration: none;
+}
+
+.lineName:hover {
+  text-decoration: underline;
+}
+
+.lineMeta {
+  padding-inline-start: 18px;
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+/* The line itself, drawn behind the stations at the centre of the largest marker */
+.track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 52px;
+  margin: 0;
+  padding: 0 4px;
+  list-style: none;
+}
+
+.track::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 11px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.track::after {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  top: 5px;
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.station {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 96px;
+  min-width: 0;
+}
+
+.stationLink {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  width: 100%;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+/* Stations: white discs ringed in the line colour, on a fixed size ramp */
+.marker {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+}
+
+.marker::before {
+  content: '';
+  width: var(--size);
+  height: var(--size);
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 0 0 0 2px var(--panel);
+  transition:
+    transform var(--t-base) var(--ease-out),
+    background-color var(--t-fast) var(--ease-out);
+}
+
+.marker[data-quiet='true']::before {
+  border-width: 2px;
+}
+
+/* Station names are signage: bronze, like the lettering in the stations */
+.stationCode {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-code);
+  font-size: var(--text-sm);
+  color: var(--bronze);
+}
+
+/* Closed stations: a dashed, muted ring; the line still runs through them */
+.station[data-state='closed'] .marker::before {
+  border-style: dashed;
+  border-color: var(--ink-3);
+}
+
+.station[data-state='closed'] .stationCode {
+  color: var(--ink-3);
+}
+
+.station[data-state='expiring'] .marker::before {
+  box-shadow:
+    0 0 0 2px var(--panel),
+    0 0 0 4px var(--status-warn-ink);
+}
+
+.tipState {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffd79a;
+}
+
+.station[data-active='true'] .marker::before {
+  background: var(--line);
+  transform: scale(1.12);
+}
+
+.station[data-active='true'] .stationCode {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.stationTip {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  translate: -50% 4px;
+  display: grid;
+  gap: 1px;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  background: var(--granite);
+  color: var(--granite-muted);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity var(--t-fast) var(--ease-out),
+    translate var(--t-fast) var(--ease-out);
+  z-index: 3;
+}
+
+.stationTip strong {
+  color: var(--granite-ink);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.stationLink:hover .stationTip,
+.stationLink:focus-visible .stationTip {
+  opacity: 1;
+  translate: -50% 0;
+}
+
+/* The one authored moment: a new link arrives as a station on its line */
+.station[data-arriving='true'] .marker::before {
+  animation: arrive 240ms var(--ease-out);
+}
+
+@keyframes arrive {
+  from {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+.terminus {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  z-index: 1;
+}
+
+.terminus a {
+  display: grid;
+  place-items: center;
+  min-width: 38px;
+  height: 24px;
+  padding: 0 8px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 620;
+  text-decoration: none;
+}
+
+.terminus a:hover {
+  background: var(--marble);
+}
+
+@media (max-width: 640px) {
+  .line {
+    grid-template-columns: 1fr;
+    gap: var(--s-2);
+  }
+
+  .station {
+    width: 72px;
+  }
+}

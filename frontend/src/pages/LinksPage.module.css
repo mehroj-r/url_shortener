@@ -1,0 +1,187 @@
+.page {
+  display: grid;
+  gap: var(--s-5);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+
+.heading h1 {
+  font-size: var(--text-2xl);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.filters select {
+  width: auto;
+  min-width: 150px;
+}
+
+.search {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 360px;
+}
+
+.search svg {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 10px;
+  margin: auto;
+  color: var(--ink-3);
+  pointer-events: none;
+}
+
+.search input {
+  padding-inline-start: 32px;
+}
+
+.bulkBar {
+  position: sticky;
+  top: 64px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--radius-lg);
+  background: var(--granite);
+  color: var(--granite-ink);
+  box-shadow: var(--shadow-overlay);
+}
+
+.bulkBar strong {
+  margin-inline-end: var(--s-2);
+  font-size: var(--text-md);
+}
+
+.bulkBar select {
+  width: auto;
+  height: 30px;
+  font-size: var(--text-sm);
+}
+
+.tablePanel {
+  padding: var(--s-4) var(--s-5) var(--s-5);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+  transition: opacity var(--t-base) var(--ease-out);
+}
+
+.tablePanel[data-stale='true'] {
+  opacity: 0.6;
+}
+
+.table td {
+  padding-block: 10px;
+}
+
+.row {
+  cursor: pointer;
+  transition: background-color var(--t-fast) var(--ease-out);
+}
+
+.row:hover {
+  background: var(--marble);
+}
+
+.row[data-selected='true'] {
+  background: var(--marble-sunken);
+}
+
+.check {
+  width: 28px;
+}
+
+.linkCell {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.linkName {
+  max-width: 34ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.linkName:hover {
+  text-decoration: underline;
+}
+
+.codeLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  font-size: var(--text-sm);
+}
+
+.destination {
+  display: block;
+  max-width: 32ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink-2);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 260px;
+}
+
+.clicks {
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--ink-3);
+}
+
+.skeleton {
+  display: grid;
+  gap: var(--s-5);
+  padding: var(--s-3) 0;
+}
+
+@media (max-width: 1100px) {
+  .wide {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .medium {
+    display: none;
+  }
+
+  .tablePanel {
+    padding: var(--s-3);
+  }
+
+  .filters select {
+    flex: 1 1 140px;
+  }
+
+  .search {
+    max-width: none;
+  }
+}
