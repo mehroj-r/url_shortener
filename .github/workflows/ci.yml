@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v10
+        uses: astral-sh/setup-uv@v10.3.0
 
       - name: Install dependencies
         run: uv sync --locked
@@ -61,7 +61,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v10
+        uses: astral-sh/setup-uv@v10.3.0
 
       - name: Bump patch version
         run: uv version --bump patch --no-sync
