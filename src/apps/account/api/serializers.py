@@ -1,4 +1,5 @@
-from django.contrib.auth import get_user_model
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError as DjangoValidationError
 from django.utils.translation import gettext_lazy as _
 
 from rest_framework import serializers
@@ -22,6 +23,27 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             'password',
             'password_repeat',
         )
+        # Uniqueness is checked below: case-insensitively, and including soft-deleted users
+        extra_kwargs = {
+            'username': {'validators': []},
+            'phone': {'validators': []},
+            'email': {'validators': []},
+        }
+
+    @staticmethod
+    def _check_unique(field, lookup, value):
+        if value and User.all_objects.filter(**{lookup: value}).exists():
+            raise serializers.ValidationError(_("A user with this {} already exists.").format(field))
+        return value
+
+    def validate_email(self, value):
+        return self._check_unique('email', 'email__iexact', value)
+
+    def validate_username(self, value):
+        return self._check_unique('username', 'username__iexact', value)
+
+    def validate_phone(self, value):
+        return self._check_unique('phone number', 'phone', value)
 
     def validate(self, attrs):
 
@@ -31,11 +53,21 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
                 "password": _("Passwords do not match."),
                 "password_repeat": _("Passwords do not match.")
             })
-        else:
-            # Remove password_repeat from attrs as it's not needed for saving
-            attrs.pop('password_repeat')
+
+        # Remove password_repeat from attrs as it's not needed for saving
+        attrs.pop('password_repeat')
+
+        # Run AUTH_PASSWORD_VALIDATORS against the would-be user
+        user = User(**{key: value for key, value in attrs.items() if key != 'password'})
+        try:
+            validate_password(attrs['password'], user=user)
+        except DjangoValidationError as e:
+            raise serializers.ValidationError({"password": list(e.messages)}) from e
 
         return super().validate(attrs)
+
+    def create(self, validated_data):
+        return User.objects.create_user(**validated_data)
 
 
 class LoginSerializer(serializers.Serializer):
@@ -43,7 +75,7 @@ class LoginSerializer(serializers.Serializer):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.login_fields = get_user_model().LOGIN_FIELDS  # noqa
+        self.login_fields = User.LOGIN_FIELDS
 
         # Dynamically add login fields to the serializer
         for field in self.login_fields:
@@ -70,28 +102,24 @@ class LoginSerializer(serializers.Serializer):
                 )
             })
 
-        # Build query for user lookup
-        query_params = { }
-        for field, value in provided_login_fields.items():
-            query_params[field] = value
+        # Email and username are unique case-insensitively, so look them up the same way
+        field, value = next(iter(provided_login_fields.items()))
+        lookup = field if field == 'phone' else f'{field}__iexact'
+        user = User.objects.filter(**{lookup: value}).first()
 
-        try:
-            user = User.objects.get(**query_params)
+        if user is None:
+            # Hash anyway, so response time doesn't reveal whether the account exists
+            User().set_password(attrs['password'])
 
-            # Validate password
-            if not user.check_password(attrs['password']):
-                raise serializers.ValidationError({
-                    "password": _("Incorrect password.")
-                })
-
-            # Store user in validated_data for later use
-            attrs['user'] = user
-            return attrs
-
-        except User.DoesNotExist:
+        # One error for every failure, so responses don't reveal whether the account exists
+        if user is None or not user.check_password(attrs['password']) or not user.is_active:
             raise serializers.ValidationError({
                 "credentials": _("No active account found with the provided credentials.")
             })
+
+        # Store user in validated_data for later use
+        attrs['user'] = user
+        return attrs
 
     def to_representation(self, instance):
         ret = super().to_representation(instance)

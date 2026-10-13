@@ -5,7 +5,6 @@ from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
 from core.models import TimestampedModel, SoftDeleteModel
-from django.contrib.auth.hashers import make_password
 
 from apps.account import managers
 
@@ -19,6 +18,7 @@ class User(AbstractBaseUser, TimestampedModel, SoftDeleteModel):
         max_length=150,
         verbose_name=_('Username'),
         null=True,
+        blank=True,
     )
 
     phone = PhoneNumberField(
@@ -26,6 +26,7 @@ class User(AbstractBaseUser, TimestampedModel, SoftDeleteModel):
         unique=True,
         verbose_name=_('Phone Number'),
         null=True,
+        blank=True,
     )
 
     email = models.EmailField(
@@ -60,13 +61,6 @@ class User(AbstractBaseUser, TimestampedModel, SoftDeleteModel):
 
     def __str__(self):
         return self.get_full_name()
-
-    def save(self, *args, **kwargs):
-
-        if self.password and not self.password.startswith('pbkdf2_sha256$'):
-            self.password = make_password(self.password) # Hash the password
-
-        return super().save(*args, **kwargs)
 
     def get_full_name(self):
         return f"{self.first_name} {self.last_name}"

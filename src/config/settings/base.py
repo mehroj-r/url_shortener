@@ -23,6 +23,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
     "phonenumber_field",
 ]
 
@@ -95,6 +96,9 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
+    'DEFAULT_THROTTLE_RATES': {
+        'auth': config('AUTH_THROTTLE_RATE', default='10/min'),
+    },
 }
 
 if not DEBUG:
@@ -196,6 +200,7 @@ SIMPLE_JWT = {
     "AUTH_HEADER_NAME": "HTTP_AUTHORIZATION",
     "USER_ID_FIELD": "id",
     "USER_ID_CLAIM": "user_id",
+    "UPDATE_LAST_LOGIN": True,
 }
 
 AUTH_USER_MODEL = 'account.User' # noqa
