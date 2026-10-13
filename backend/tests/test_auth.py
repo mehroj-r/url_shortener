@@ -11,13 +11,14 @@ REFRESH = '/api/v1/auth/token-refresh/'
 VERIFY = '/api/v1/auth/token-verify/'
 
 
-def registration(**overrides):
+def registration(invite, **overrides):
     data = {
         'first_name': 'Carol',
         'last_name': 'Smith',
         'email': 'carol@example.com',
         'password': PASSWORD,
         'password_repeat': PASSWORD,
+        'invite': invite,
     }
     return {**data, **overrides}
 
@@ -25,8 +26,8 @@ def registration(**overrides):
 @pytest.mark.django_db
 class TestRegistration:
 
-    def test_creates_user_with_hashed_password(self, api_client):
-        response = api_client.post(REGISTER, registration(), format='json')
+    def test_creates_user_with_hashed_password(self, api_client, invite_token):
+        response = api_client.post(REGISTER, registration(invite_token), format='json')
 
         assert response.status_code == 201
         assert 'password' not in response.json()['data']
@@ -34,21 +35,24 @@ class TestRegistration:
         assert user.check_password(PASSWORD)
         assert user.password != PASSWORD
 
-    def test_rejects_weak_password(self, api_client):
-        response = api_client.post(REGISTER, registration(password='1', password_repeat='1'), format='json')
+    def test_rejects_weak_password(self, api_client, invite_token):
+        data = registration(invite_token, password='1', password_repeat='1')
+        response = api_client.post(REGISTER, data, format='json')
 
         assert response.status_code == 400
         assert 'password' in response.json()['error']
-        assert not User.objects.exists()
+        assert not User.objects.filter(email='carol@example.com').exists()
 
-    def test_rejects_password_similar_to_email(self, api_client):
-        data = registration(email='carolsmith@example.com', password='carolsmith', password_repeat='carolsmith')
+    def test_rejects_password_similar_to_email(self, api_client, invite_token):
+        data = registration(invite_token, email='carolsmith@example.com', password='carolsmith',
+                            password_repeat='carolsmith')
         response = api_client.post(REGISTER, data, format='json')
 
         assert response.status_code == 400
 
-    def test_rejects_mismatched_passwords(self, api_client):
-        response = api_client.post(REGISTER, registration(password_repeat='something-else-entirely'), format='json')
+    def test_rejects_mismatched_passwords(self, api_client, invite_token):
+        data = registration(invite_token, password_repeat='something-else-entirely')
+        response = api_client.post(REGISTER, data, format='json')
 
         assert response.status_code == 400
         assert set(response.json()['error']) == {'password', 'password_repeat'}
@@ -58,16 +62,16 @@ class TestRegistration:
         ('username', 'alice'),
         ('phone', '+998901234567'),
     ])
-    def test_rejects_identifiers_already_taken(self, api_client, alice, field, value):
-        response = api_client.post(REGISTER, registration(**{field: value}), format='json')
+    def test_rejects_identifiers_already_taken(self, api_client, alice, field, value, invite_token):
+        response = api_client.post(REGISTER, registration(invite_token, **{field: value}), format='json')
 
         assert response.status_code == 400
         assert field in response.json()['error']
 
-    def test_email_of_deleted_user_stays_taken(self, api_client, alice):
+    def test_email_of_deleted_user_stays_taken(self, api_client, alice, invite_token):
         alice.delete()
 
-        response = api_client.post(REGISTER, registration(email='alice@example.com'), format='json')
+        response = api_client.post(REGISTER, registration(invite_token, email='alice@example.com'), format='json')
 
         assert response.status_code == 400
         assert 'email' in response.json()['error']

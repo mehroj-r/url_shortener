@@ -4,7 +4,7 @@ import pytest
 from django.core.cache import cache
 from rest_framework.test import APIClient
 
-from apps.account.models import User
+from apps.account.models import Invite, User
 from apps.shortener.models import URL, ShortURL, URLCollection
 
 PASSWORD = 'correct-horse-battery-staple'
@@ -69,3 +69,9 @@ def make_collection():
         return URLCollection.objects.create(user=user, name=name)
 
     return make_collection
+
+
+@pytest.fixture
+def invite_token(make_user):
+    inviter = make_user(email='inviter@example.com')
+    return Invite.objects.create(created_by=inviter, note='test').token
