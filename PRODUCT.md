@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-React + Vite + TypeScript single-page app in `frontend/`, built to static files and served by the Django app on the same origin as the API (`url.mekhroj.com`), so there is no CORS and no extra host configuration. The Django REST API lives in `backend/` of the same repository.
+React + Vite + TypeScript single-page app in `frontend/`, built to static files and served by the Django app on the same origin as the API (`url.mekhroj.uz`), so there is no CORS and no extra host configuration. The Django REST API lives in `backend/` of the same repository.
 
 ## Users
 
@@ -24,7 +24,7 @@ The organisation and analytics of a paid link-management tool, on a domain and s
 
 ## Operating Context
 
-- Short links resolve at `https://url.mekhroj.com/<code>`; unknown or inactive codes redirect to a configurable default URL.
+- Short links resolve at `https://url.mekhroj.uz/<code>`; unknown or inactive codes redirect to a configurable default URL.
 - Links are shared in messages, posts and documents; clicks arrive from whatever app the link was opened in.
 - Managing links (creating, organising, reviewing analytics) happens in the browser, on desktop and phone. (Assumed: no usage data exists yet.)
 
@@ -40,7 +40,7 @@ The organisation and analytics of a paid link-management tool, on a domain and s
 
 ## Brand Commitments
 
-The product is called **Spur** (a short branch off a main line), chosen by the owner on 2026-10-13 to replace the first name, Bekat. It lives on the domain `url.mekhroj.com`. The only logo is the wordmark's mark: a short branch leaving a line, ending in a copper dot.
+The product is called **Spur** (a short branch off a main line), chosen by the owner on 2026-10-13 to replace the first name, Bekat. It lives on the domain `url.mekhroj.uz`. The only logo is the wordmark's mark: a short branch leaving a line, ending in a copper dot.
 
 Must not feel like a generic SaaS admin template, and must not be slow or showy: speed and clarity over effects. The owner asked for a minimal, serious interface with no decoration, and for a dark theme alongside the light one (2026-10-13).
 
