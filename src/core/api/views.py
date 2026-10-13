@@ -76,7 +76,9 @@ class UserFilterMixin:
 class ViewSetMixin:
     """
     Mixin to only allow filtering on the 'list' action.
+    Also restricts the URL lookup to numeric ids (nested routes inherit it for the parent id).
     """
+    lookup_value_regex = r'\d+'
 
     def filter_queryset(self, queryset):
         if self.action == 'list':   # noqa

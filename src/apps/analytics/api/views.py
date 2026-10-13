@@ -46,8 +46,8 @@ class URLClickView(BaseAPIView, generics.RetrieveAPIView):
 
 
 class URLClickViewSet(BaseAPIViewSet, viewsets.ReadOnlyModelViewSet):
-    queryset = URLClick.objects.all()
+    queryset = URLClick.objects.order_by('-created_at')
     serializer_class = URLClickSerializer
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = URLClickFilterSet
-    user_field = None
+    user_field = 'short_url__url__user'

@@ -3,13 +3,14 @@ from rest_framework import serializers
 from django.utils.translation import gettext_lazy as _
 from rest_framework.fields import CurrentUserDefault
 
-from apps.shortener.api.defaults import CurrentCollectionDefault, CurrentURLDefault
+from apps.shortener.api.fields import OwnedPrimaryKeyRelatedField
 from apps.shortener.models import URL, URLCollection, ShortURL
 
 
 class URLSerializer(serializers.ModelSerializer):
 
     user = serializers.HiddenField(default=CurrentUserDefault())
+    collection = OwnedPrimaryKeyRelatedField(queryset=URLCollection.objects.all(), required=False, allow_null=True)
     allowed_prefixes = ('http://', 'https://') # noqa
 
     class Meta:
@@ -23,11 +24,8 @@ class URLSerializer(serializers.ModelSerializer):
         return value
 
 class URLNestedSerializer(URLSerializer):
-    collection = serializers.HiddenField(default=CurrentCollectionDefault())
-
-    class Meta(URLSerializer.Meta):
-        fields = URLSerializer.Meta.fields + ['collection']
-        read_only_fields = URLSerializer.Meta.read_only_fields + ['collection']
+    """The collection comes from the URL path (see URLNestedViewSet)."""
+    collection = serializers.PrimaryKeyRelatedField(read_only=True)
 
 
 class URLCollectionSerializer(serializers.ModelSerializer):
@@ -39,6 +37,8 @@ class URLCollectionSerializer(serializers.ModelSerializer):
 
 
 class ShortURLSerializer(serializers.ModelSerializer):
+    url = OwnedPrimaryKeyRelatedField(queryset=URL.objects.all())
+
     class Meta:
         model = ShortURL
         fields = ['id', 'url', 'short_url', 'is_active', 'created_at']
@@ -46,8 +46,5 @@ class ShortURLSerializer(serializers.ModelSerializer):
 
 
 class ShortURLNestedSerializer(ShortURLSerializer):
-    url = serializers.HiddenField(default=CurrentURLDefault())
-
-    class Meta(ShortURLSerializer.Meta):
-        fields = ShortURLSerializer.Meta.fields + ['url']
-        read_only_fields = ShortURLSerializer.Meta.read_only_fields + ['url']
+    """The URL comes from the URL path (see ShortURLNestedViewSet)."""
+    url = serializers.PrimaryKeyRelatedField(read_only=True)
