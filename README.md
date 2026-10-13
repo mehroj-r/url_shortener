@@ -2,7 +2,7 @@
 
 Django REST API for short links: users group URLs into collections, create short codes for them, and see click analytics. Visiting `https://url.mekhroj.com/<code>` redirects to the target and records the click.
 
-Stack: Python 3.14, Django 6.1, Django REST Framework, SimpleJWT, PostgreSQL 17, gunicorn behind nginx, managed with [uv](https://docs.astral.sh/uv/).
+Stack: Python 3.14, Django 6.1, Django REST Framework, SimpleJWT, PostgreSQL 18, gunicorn behind nginx, managed with [uv](https://docs.astral.sh/uv/).
 
 ## Local development
 

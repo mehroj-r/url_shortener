@@ -1,11 +1,12 @@
 services:
   db:
     container_name: url-shortener-db-prod
-    image: postgres:17.11-alpine
+    image: postgres:18.6-alpine
     ports:
         - "127.0.0.1:${DB_PORT}:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      # Postgres 18+ keeps its data in a versioned subdirectory (18/docker)
+      - db_data:/var/lib/postgresql
     networks:
       - url_shortener_net
     restart: unless-stopped
@@ -48,7 +49,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  postgres_data:
+  db_data:
   static_files:
 
 networks:
