@@ -1,343 +1,381 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T10:18:21Z",
-  "title": "Design System: Bekat",
+  "generatedAt": "2026-10-13T12:50:53Z",
+  "title": "Design System: Spur",
   "extensions": {
     "colorMeta": {
-      "granite": {
+      "primary": {
         "role": "primary",
-        "displayName": "Polished Granite",
-        "canonical": "#2a2d33",
-        "cssVar": "--granite",
+        "displayName": "Primary Fill",
+        "canonical": "#1f2227",
+        "cssVar": "--primary",
+        "theme": "light",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#090b10",
+          "#212429",
+          "#3f4348",
+          "#5d6167",
+          "#80838a",
+          "#a1a5ab",
+          "#c7cbd1",
+          "#eaeff6"
         ]
       },
-      "granite-raised": {
+      "primary-dark": {
         "role": "primary",
-        "displayName": "Raised Granite",
-        "canonical": "#363a42",
-        "cssVar": "--granite-raised",
+        "displayName": "Primary Fill (dark)",
+        "canonical": "#e6e8eb",
+        "cssVar": "--primary",
+        "theme": "dark",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#0a0b0d",
+          "#232426",
+          "#414245",
+          "#5f6063",
+          "#818386",
+          "#a3a5a7",
+          "#c9cbcd",
+          "#edeff2"
         ]
       },
-      "granite-ink": {
+      "primary-hover": {
         "role": "primary",
-        "displayName": "Granite Ink",
-        "canonical": "#f3f4f6",
-        "cssVar": "--granite-ink",
+        "displayName": "Primary Hover",
+        "canonical": "#34383f",
+        "cssVar": "--primary-hover",
+        "theme": "light",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#080b11",
+          "#20242b",
+          "#3e434a",
+          "#5c6168",
+          "#7f838b",
+          "#a0a5ad",
+          "#c6cbd4",
+          "#eaeff8"
         ]
       },
-      "granite-muted": {
+      "primary-hover-dark": {
         "role": "primary",
-        "displayName": "Granite Muted",
-        "canonical": "#b7bcc5",
-        "cssVar": "--granite-muted",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "marble": {
-        "role": "neutral",
-        "displayName": "Marble",
-        "canonical": "#eceef1",
-        "cssVar": "--marble",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "marble-sunken": {
-        "role": "neutral",
-        "displayName": "Marble Sunken",
-        "canonical": "#e3e6ea",
-        "cssVar": "--marble-sunken",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "panel": {
-        "role": "neutral",
-        "displayName": "Platform White",
+        "displayName": "Primary Hover (dark)",
         "canonical": "#ffffff",
-        "cssVar": "--panel",
+        "cssVar": "--primary-hover",
+        "theme": "dark",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
         ]
       },
-      "stone": {
-        "role": "neutral",
-        "displayName": "Stone",
-        "canonical": "#d5d9df",
-        "cssVar": "--stone",
+      "on-primary": {
+        "role": "primary",
+        "displayName": "On Primary",
+        "canonical": "#f6f7f8",
+        "cssVar": "--on-primary",
+        "theme": "light",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#0b0b0c",
+          "#232425",
+          "#424243",
+          "#606061",
+          "#828384",
+          "#a4a5a5",
+          "#cacacb",
+          "#edeeef"
         ]
       },
-      "stone-strong": {
-        "role": "neutral",
-        "displayName": "Stone Strong",
-        "canonical": "#c4c9d1",
-        "cssVar": "--stone-strong",
+      "on-primary-dark": {
+        "role": "primary",
+        "displayName": "On Primary (dark)",
+        "canonical": "#16181c",
+        "cssVar": "--on-primary",
+        "theme": "dark",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#090b0f",
+          "#222428",
+          "#404247",
+          "#5e6065",
+          "#818388",
+          "#a2a5aa",
+          "#c8cad0",
+          "#eceef4"
         ]
       },
-      "control-edge": {
-        "role": "neutral",
-        "displayName": "Control Edge",
-        "canonical": "#8a919c",
-        "cssVar": "--control-edge",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "ink": {
-        "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#1b1e23",
-        "cssVar": "--ink",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "ink-2": {
-        "role": "neutral",
-        "displayName": "Ink 2",
-        "canonical": "#4a505b",
-        "cssVar": "--ink-2",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "ink-3": {
-        "role": "neutral",
-        "displayName": "Ink 3",
-        "canonical": "#5e6470",
-        "cssVar": "--ink-3",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "bronze": {
+      "accent": {
         "role": "secondary",
-        "displayName": "Station Bronze",
-        "canonical": "#8c5d28",
-        "cssVar": "--bronze",
-        "tonalRamp": [
-          "oklch(15% 0.035 66)",
-          "oklch(26% 0.059 66)",
-          "oklch(38% 0.084 66)",
-          "oklch(49% 0.092 66)",
-          "oklch(61% 0.092 66)",
-          "oklch(72% 0.092 66)",
-          "oklch(84% 0.092 66)",
-          "oklch(95% 0.034 66)"
-        ]
-      },
-      "bronze-rule": {
-        "role": "secondary",
-        "displayName": "Bronze Rule",
+        "displayName": "Copper",
         "canonical": "#a26f35",
-        "cssVar": "--bronze-rule",
+        "cssVar": "--accent",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.035 67)",
-          "oklch(26% 0.059 67)",
-          "oklch(38% 0.084 67)",
-          "oklch(49% 0.098 67)",
-          "oklch(61% 0.098 67)",
-          "oklch(72% 0.098 67)",
-          "oklch(84% 0.098 67)",
-          "oklch(95% 0.035 67)"
+          "#150800",
+          "#361e01",
+          "#5f3802",
+          "#855415",
+          "#aa773d",
+          "#ce985f",
+          "#f6be84",
+          "#ffebd7"
+        ]
+      },
+      "accent-dark": {
+        "role": "secondary",
+        "displayName": "Copper (dark)",
+        "canonical": "#c28a4c",
+        "cssVar": "--accent",
+        "theme": "dark",
+        "tonalRamp": [
+          "#150800",
+          "#361e01",
+          "#5f3802",
+          "#875309",
+          "#ad7637",
+          "#d0985a",
+          "#f8bd7f",
+          "#ffebd7"
+        ]
+      },
+      "accent-ink": {
+        "role": "secondary",
+        "displayName": "Copper Ink",
+        "canonical": "#8c5d28",
+        "cssVar": "--accent-ink",
+        "theme": "light",
+        "tonalRamp": [
+          "#140800",
+          "#361d00",
+          "#603801",
+          "#83551f",
+          "#a87844",
+          "#cc9965",
+          "#f4bf8a",
+          "#ffebd7"
+        ]
+      },
+      "accent-ink-dark": {
+        "role": "secondary",
+        "displayName": "Copper Ink (dark)",
+        "canonical": "#d1a068",
+        "cssVar": "--accent-ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "#140800",
+          "#351e01",
+          "#5e3902",
+          "#82561b",
+          "#a77941",
+          "#cb9a62",
+          "#f3c087",
+          "#ffebd6"
         ]
       },
       "line-red": {
         "role": "tertiary",
         "displayName": "Line Red",
-        "canonical": "#d7262e",
+        "canonical": "#cb3e3c",
         "cssVar": "--line-red",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.062 25)",
-          "oklch(26% 0.108 25)",
-          "oklch(38% 0.154 25)",
-          "oklch(49% 0.200 25)",
-          "oklch(61% 0.210 25)",
-          "oklch(72% 0.173 25)",
-          "oklch(84% 0.091 25)",
-          "oklch(95% 0.025 25)"
+          "#1f0001",
+          "#4b0105",
+          "#81000f",
+          "#af2025",
+          "#d94c48",
+          "#ff726a",
+          "#feb5ae",
+          "#ffe9e6"
+        ]
+      },
+      "line-red-dark": {
+        "role": "tertiary",
+        "displayName": "Line Red (dark)",
+        "canonical": "#e4615a",
+        "cssVar": "--line-red",
+        "theme": "dark",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0105",
+          "#81020f",
+          "#aa2a2a",
+          "#d4524d",
+          "#fb756d",
+          "#feb5ad",
+          "#ffe9e6"
         ]
       },
       "line-blue": {
         "role": "tertiary",
         "displayName": "Line Blue",
-        "canonical": "#1c5fb8",
+        "canonical": "#2b61ab",
         "cssVar": "--line-blue",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.057 257)",
-          "oklch(26% 0.096 257)",
-          "oklch(38% 0.137 257)",
-          "oklch(49% 0.155 257)",
-          "oklch(61% 0.155 257)",
-          "oklch(72% 0.146 257)",
-          "oklch(84% 0.082 257)",
-          "oklch(95% 0.024 257)"
+          "#000a22",
+          "#002250",
+          "#043f86",
+          "#295fa9",
+          "#4d84d1",
+          "#6da6f6",
+          "#aacdff",
+          "#e5efff"
+        ]
+      },
+      "line-blue-dark": {
+        "role": "tertiary",
+        "displayName": "Line Blue (dark)",
+        "canonical": "#5991e2",
+        "cssVar": "--line-blue",
+        "theme": "dark",
+        "tonalRamp": [
+          "#000a22",
+          "#002151",
+          "#033e88",
+          "#285fab",
+          "#4c83d3",
+          "#6da6f8",
+          "#aacdff",
+          "#e5efff"
         ]
       },
       "line-green": {
         "role": "tertiary",
         "displayName": "Line Green",
-        "canonical": "#1e9a55",
+        "canonical": "#3a975d",
         "cssVar": "--line-green",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.040 153)",
-          "oklch(26% 0.069 153)",
-          "oklch(38% 0.098 153)",
-          "oklch(49% 0.127 153)",
-          "oklch(61% 0.147 153)",
-          "oklch(72% 0.147 153)",
-          "oklch(84% 0.147 153)",
-          "oklch(95% 0.081 153)"
+          "#001004",
+          "#002d13",
+          "#025028",
+          "#04743c",
+          "#3b985e",
+          "#60bb7f",
+          "#87e2a4",
+          "#c7ffd6"
+        ]
+      },
+      "line-green-dark": {
+        "role": "tertiary",
+        "displayName": "Line Green (dark)",
+        "canonical": "#46a769",
+        "cssVar": "--line-green",
+        "theme": "dark",
+        "tonalRamp": [
+          "#001004",
+          "#012d13",
+          "#005127",
+          "#01743b",
+          "#36995c",
+          "#5cbc7d",
+          "#83e3a1",
+          "#c6ffd5"
         ]
       },
       "line-violet": {
         "role": "tertiary",
         "displayName": "Line Violet",
-        "canonical": "#7a4fb5",
+        "canonical": "#7755aa",
         "cssVar": "--line-violet",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.081 301)",
-          "oklch(26% 0.141 301)",
-          "oklch(38% 0.157 301)",
-          "oklch(49% 0.157 301)",
-          "oklch(61% 0.157 301)",
-          "oklch(72% 0.157 301)",
-          "oklch(84% 0.097 301)",
-          "oklch(95% 0.028 301)"
+          "#120027",
+          "#300458",
+          "#4f2b7d",
+          "#6d4b9f",
+          "#906fc6",
+          "#b290eb",
+          "#d4bdfe",
+          "#f1ebfe"
+        ]
+      },
+      "line-violet-dark": {
+        "role": "tertiary",
+        "displayName": "Line Violet (dark)",
+        "canonical": "#9f7bd8",
+        "cssVar": "--line-violet",
+        "theme": "dark",
+        "tonalRamp": [
+          "#120027",
+          "#31005b",
+          "#50297f",
+          "#6e4aa2",
+          "#916dc9",
+          "#b38fee",
+          "#d4bdfe",
+          "#f1ebfe"
         ]
       },
       "line-amber": {
         "role": "tertiary",
         "displayName": "Line Amber",
-        "canonical": "#c7860f",
+        "canonical": "#af8e2a",
         "cssVar": "--line-amber",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.033 74)",
-          "oklch(26% 0.056 74)",
-          "oklch(38% 0.080 74)",
-          "oklch(49% 0.105 74)",
-          "oklch(61% 0.129 74)",
-          "oklch(72% 0.139 74)",
-          "oklch(84% 0.139 74)",
-          "oklch(95% 0.040 74)"
+          "#100a00",
+          "#2e2201",
+          "#524003",
+          "#775d00",
+          "#9f7f12",
+          "#c2a140",
+          "#e9c769",
+          "#ffedc0"
+        ]
+      },
+      "line-amber-dark": {
+        "role": "tertiary",
+        "displayName": "Line Amber (dark)",
+        "canonical": "#af9024",
+        "cssVar": "--line-amber",
+        "theme": "dark",
+        "tonalRamp": [
+          "#100b00",
+          "#2d2301",
+          "#514002",
+          "#755e05",
+          "#9e8001",
+          "#c1a13b",
+          "#e8c864",
+          "#ffeebc"
         ]
       },
       "line-teal": {
         "role": "tertiary",
         "displayName": "Line Teal",
-        "canonical": "#0b95a8",
+        "canonical": "#0495a8",
         "cssVar": "--line-teal",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.027 211)",
-          "oklch(26% 0.046 211)",
-          "oklch(38% 0.066 211)",
-          "oklch(49% 0.086 211)",
-          "oklch(61% 0.105 211)",
-          "oklch(72% 0.105 211)",
-          "oklch(84% 0.105 211)",
-          "oklch(95% 0.043 211)"
+          "#000e11",
+          "#012a30",
+          "#004b56",
+          "#046d7b",
+          "#0c93a6",
+          "#41b6ca",
+          "#6dddf1",
+          "#cff7fe"
+        ]
+      },
+      "line-teal-dark": {
+        "role": "tertiary",
+        "displayName": "Line Teal (dark)",
+        "canonical": "#29a3b6",
+        "cssVar": "--line-teal",
+        "theme": "dark",
+        "tonalRamp": [
+          "#000e11",
+          "#002a30",
+          "#034b56",
+          "#006d7b",
+          "#0694a6",
+          "#43b6c9",
+          "#6eddf1",
+          "#cff7ff"
         ]
       },
       "line-slate": {
@@ -345,15 +383,815 @@
         "displayName": "Line Slate",
         "canonical": "#6b7280",
         "cssVar": "--line-slate",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.023 264)",
-          "oklch(26% 0.023 264)",
-          "oklch(38% 0.023 264)",
-          "oklch(49% 0.023 264)",
-          "oklch(61% 0.023 264)",
-          "oklch(72% 0.023 264)",
-          "oklch(84% 0.023 264)",
-          "oklch(95% 0.023 264)"
+          "#070b15",
+          "#1e2430",
+          "#3c424f",
+          "#5a616e",
+          "#7c8392",
+          "#9da5b4",
+          "#c3cbda",
+          "#e7efff"
+        ]
+      },
+      "line-slate-dark": {
+        "role": "tertiary",
+        "displayName": "Line Slate (dark)",
+        "canonical": "#8c929f",
+        "cssVar": "--line-slate",
+        "theme": "dark",
+        "tonalRamp": [
+          "#070b14",
+          "#1f242e",
+          "#3d424e",
+          "#5b606c",
+          "#7d8390",
+          "#9ea5b2",
+          "#c4cbd8",
+          "#e8effd"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "#f3f4f6",
+        "cssVar": "--bg",
+        "theme": "light",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#232425",
+          "#414244",
+          "#5f6062",
+          "#828385",
+          "#a4a4a6",
+          "#c9cacc",
+          "#edeef0"
+        ]
+      },
+      "bg-dark": {
+        "role": "neutral",
+        "displayName": "Ground (dark)",
+        "canonical": "#0f1114",
+        "cssVar": "--bg",
+        "theme": "dark",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#404246",
+          "#5e6164",
+          "#818387",
+          "#a2a5a9",
+          "#c8cbcf",
+          "#eceff3"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#ffffff",
+        "cssVar": "--surface",
+        "theme": "light",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Surface (dark)",
+        "canonical": "#16181c",
+        "cssVar": "--surface",
+        "theme": "dark",
+        "tonalRamp": [
+          "#090b0f",
+          "#222428",
+          "#404247",
+          "#5e6065",
+          "#818388",
+          "#a2a5aa",
+          "#c8cad0",
+          "#eceef4"
+        ]
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Raised",
+        "canonical": "#ffffff",
+        "cssVar": "--raised",
+        "theme": "light",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "raised-dark": {
+        "role": "neutral",
+        "displayName": "Raised (dark)",
+        "canonical": "#1c1f24",
+        "cssVar": "--raised",
+        "theme": "dark",
+        "tonalRamp": [
+          "#090b10",
+          "#212429",
+          "#3f4348",
+          "#5d6167",
+          "#80838a",
+          "#a1a5ab",
+          "#c7cbd2",
+          "#eaeff6"
+        ]
+      },
+      "subtle": {
+        "role": "neutral",
+        "displayName": "Subtle",
+        "canonical": "#f5f6f8",
+        "cssVar": "--subtle",
+        "theme": "light",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#232425",
+          "#424244",
+          "#5f6062",
+          "#828385",
+          "#a4a4a6",
+          "#c9cacc",
+          "#edeef0"
+        ]
+      },
+      "subtle-dark": {
+        "role": "neutral",
+        "displayName": "Subtle (dark)",
+        "canonical": "#1b1e22",
+        "cssVar": "--subtle",
+        "theme": "dark",
+        "tonalRamp": [
+          "#090b0f",
+          "#212428",
+          "#3f4347",
+          "#5d6166",
+          "#808389",
+          "#a1a5aa",
+          "#c7cbd0",
+          "#ebeff5"
+        ]
+      },
+      "sunken": {
+        "role": "neutral",
+        "displayName": "Sunken",
+        "canonical": "#eceef1",
+        "cssVar": "--sunken",
+        "theme": "light",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#414245",
+          "#5f6063",
+          "#818386",
+          "#a3a5a7",
+          "#c9cbcd",
+          "#edeff2"
+        ]
+      },
+      "sunken-dark": {
+        "role": "neutral",
+        "displayName": "Sunken (dark)",
+        "canonical": "#22252b",
+        "cssVar": "--sunken",
+        "theme": "dark",
+        "tonalRamp": [
+          "#090b10",
+          "#21242a",
+          "#3f4249",
+          "#5d6067",
+          "#7f838b",
+          "#a1a5ac",
+          "#c7cbd3",
+          "#eaeff7"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "canonical": "#ffffff",
+        "cssVar": "--field",
+        "theme": "light",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "field-dark": {
+        "role": "neutral",
+        "displayName": "Field (dark)",
+        "canonical": "#121418",
+        "cssVar": "--field",
+        "theme": "dark",
+        "tonalRamp": [
+          "#090b0f",
+          "#222428",
+          "#404247",
+          "#5e6066",
+          "#808389",
+          "#a2a5aa",
+          "#c8cbd0",
+          "#ebeef4"
+        ]
+      },
+      "segment-on": {
+        "role": "neutral",
+        "displayName": "Segment On",
+        "canonical": "#ffffff",
+        "cssVar": "--segment-on",
+        "theme": "light",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "segment-on-dark": {
+        "role": "neutral",
+        "displayName": "Segment On (dark)",
+        "canonical": "#2e3239",
+        "cssVar": "--segment-on",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b11",
+          "#20242b",
+          "#3e434a",
+          "#5c6168",
+          "#7f838c",
+          "#a0a5ad",
+          "#c6cbd4",
+          "#e9eff8"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#dfe2e7",
+        "cssVar": "--border",
+        "theme": "light",
+        "tonalRamp": [
+          "#090b0e",
+          "#222428",
+          "#404246",
+          "#5e6065",
+          "#818388",
+          "#a2a5a9",
+          "#c8cbcf",
+          "#eceff4"
+        ]
+      },
+      "border-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark)",
+        "canonical": "#272a30",
+        "cssVar": "--border",
+        "theme": "dark",
+        "tonalRamp": [
+          "#090b10",
+          "#21242a",
+          "#3f4249",
+          "#5d6067",
+          "#80838b",
+          "#a1a5ac",
+          "#c7cbd2",
+          "#eaeff7"
+        ]
+      },
+      "border-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "#c9ced5",
+        "cssVar": "--border-strong",
+        "theme": "light",
+        "tonalRamp": [
+          "#080b10",
+          "#212429",
+          "#3f4348",
+          "#5c6167",
+          "#7f848a",
+          "#a0a5ac",
+          "#c6cbd2",
+          "#eaeff6"
+        ]
+      },
+      "border-strong-dark": {
+        "role": "neutral",
+        "displayName": "Hairline Strong (dark)",
+        "canonical": "#3a3f47",
+        "cssVar": "--border-strong",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b12",
+          "#20242c",
+          "#3e434b",
+          "#5b6169",
+          "#7e848d",
+          "#9fa5ae",
+          "#c5cbd5",
+          "#e9eff9"
+        ]
+      },
+      "control-edge": {
+        "role": "neutral",
+        "displayName": "Control Edge",
+        "canonical": "#8a919c",
+        "cssVar": "--control-edge",
+        "theme": "light",
+        "tonalRamp": [
+          "#070b13",
+          "#1f242d",
+          "#3d434c",
+          "#5a616b",
+          "#7d848e",
+          "#9ea5b0",
+          "#c4cbd7",
+          "#e7effb"
+        ]
+      },
+      "control-edge-dark": {
+        "role": "neutral",
+        "displayName": "Control Edge (dark)",
+        "canonical": "#636a74",
+        "cssVar": "--control-edge",
+        "theme": "dark",
+        "tonalRamp": [
+          "#070b13",
+          "#1f242d",
+          "#3c434c",
+          "#5a616b",
+          "#7c848e",
+          "#9ea5b0",
+          "#c3cbd6",
+          "#e7effb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1b1e23",
+        "cssVar": "--ink",
+        "theme": "light",
+        "tonalRamp": [
+          "#090b10",
+          "#212429",
+          "#3f4348",
+          "#5d6167",
+          "#80838a",
+          "#a1a5ab",
+          "#c7cbd2",
+          "#eaeff6"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (dark)",
+        "canonical": "#e6e8eb",
+        "cssVar": "--ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#414245",
+          "#5f6063",
+          "#818386",
+          "#a3a5a7",
+          "#c9cbcd",
+          "#edeff2"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#4a505b",
+        "cssVar": "--ink-2",
+        "theme": "light",
+        "tonalRamp": [
+          "#070b14",
+          "#1f242e",
+          "#3d434d",
+          "#5a616c",
+          "#7d838f",
+          "#9ea5b1",
+          "#c4cbd8",
+          "#e7effc"
+        ]
+      },
+      "ink-2-dark": {
+        "role": "neutral",
+        "displayName": "Ink 2 (dark)",
+        "canonical": "#b3b8c0",
+        "cssVar": "--ink-2",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b11",
+          "#20242a",
+          "#3e4349",
+          "#5c6168",
+          "#7f838b",
+          "#a0a5ad",
+          "#c6cbd3",
+          "#eaeff7"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#5e6470",
+        "cssVar": "--ink-3",
+        "theme": "light",
+        "tonalRamp": [
+          "#070b14",
+          "#1f242e",
+          "#3d424e",
+          "#5b616c",
+          "#7d8390",
+          "#9ea5b2",
+          "#c4cbd8",
+          "#e8effd"
+        ]
+      },
+      "ink-3-dark": {
+        "role": "neutral",
+        "displayName": "Ink 3 (dark)",
+        "canonical": "#8b919b",
+        "cssVar": "--ink-3",
+        "theme": "dark",
+        "tonalRamp": [
+          "#070b12",
+          "#20242c",
+          "#3d434b",
+          "#5b616a",
+          "#7e848d",
+          "#9fa5af",
+          "#c4cbd6",
+          "#e8effa"
+        ]
+      },
+      "float": {
+        "role": "neutral",
+        "displayName": "Float",
+        "canonical": "#1f2227",
+        "cssVar": "--float",
+        "theme": "light",
+        "tonalRamp": [
+          "#090b10",
+          "#212429",
+          "#3f4348",
+          "#5d6167",
+          "#80838a",
+          "#a1a5ab",
+          "#c7cbd1",
+          "#eaeff6"
+        ]
+      },
+      "float-dark": {
+        "role": "neutral",
+        "displayName": "Float (dark)",
+        "canonical": "#2b2f36",
+        "cssVar": "--float",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b11",
+          "#20242b",
+          "#3e434a",
+          "#5c6169",
+          "#7f838c",
+          "#a0a5ae",
+          "#c6cbd4",
+          "#e9eff8"
+        ]
+      },
+      "float-ink": {
+        "role": "neutral",
+        "displayName": "Float Ink",
+        "canonical": "#f3f4f6",
+        "cssVar": "--float-ink",
+        "theme": "light",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#232425",
+          "#414244",
+          "#5f6062",
+          "#828385",
+          "#a4a4a6",
+          "#c9cacc",
+          "#edeef0"
+        ]
+      },
+      "float-ink-dark": {
+        "role": "neutral",
+        "displayName": "Float Ink (dark)",
+        "canonical": "#f3f4f6",
+        "cssVar": "--float-ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#232425",
+          "#414244",
+          "#5f6062",
+          "#828385",
+          "#a4a4a6",
+          "#c9cacc",
+          "#edeef0"
+        ]
+      },
+      "float-muted": {
+        "role": "neutral",
+        "displayName": "Float Muted",
+        "canonical": "#b7bcc5",
+        "cssVar": "--float-muted",
+        "theme": "light",
+        "tonalRamp": [
+          "#080b11",
+          "#20242b",
+          "#3e434a",
+          "#5c6169",
+          "#7f838c",
+          "#a0a5ae",
+          "#c6cbd4",
+          "#e9eff8"
+        ]
+      },
+      "float-muted-dark": {
+        "role": "neutral",
+        "displayName": "Float Muted (dark)",
+        "canonical": "#b3b8c0",
+        "cssVar": "--float-muted",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b11",
+          "#20242a",
+          "#3e4349",
+          "#5c6168",
+          "#7f838b",
+          "#a0a5ad",
+          "#c6cbd3",
+          "#eaeff7"
+        ]
+      },
+      "float-warn": {
+        "role": "neutral",
+        "displayName": "Float Warn",
+        "canonical": "#ffd79a",
+        "cssVar": "--float-warn",
+        "theme": "light",
+        "tonalRamp": [
+          "#120900",
+          "#322001",
+          "#593c00",
+          "#7c591b",
+          "#a17c41",
+          "#c49e62",
+          "#ebc487",
+          "#feecd0"
+        ]
+      },
+      "float-warn-dark": {
+        "role": "neutral",
+        "displayName": "Float Warn (dark)",
+        "canonical": "#f0c46e",
+        "cssVar": "--float-warn",
+        "theme": "dark",
+        "tonalRamp": [
+          "#120a00",
+          "#302101",
+          "#563e00",
+          "#7c5a02",
+          "#a57c1d",
+          "#c89d46",
+          "#f0c46e",
+          "#ffeccb"
+        ]
+      },
+      "chart-bar": {
+        "role": "neutral",
+        "displayName": "Chart Bar",
+        "canonical": "#6b7280",
+        "cssVar": "--chart-bar",
+        "theme": "light",
+        "tonalRamp": [
+          "#070b15",
+          "#1e2430",
+          "#3c424f",
+          "#5a616e",
+          "#7c8392",
+          "#9da5b4",
+          "#c3cbda",
+          "#e7efff"
+        ]
+      },
+      "chart-bar-dark": {
+        "role": "neutral",
+        "displayName": "Chart Bar (dark)",
+        "canonical": "#7c838e",
+        "cssVar": "--chart-bar",
+        "theme": "dark",
+        "tonalRamp": [
+          "#070b13",
+          "#1f242d",
+          "#3d434d",
+          "#5a616b",
+          "#7d848f",
+          "#9ea5b1",
+          "#c3cbd7",
+          "#e7effb"
+        ]
+      },
+      "chart-bar-active": {
+        "role": "neutral",
+        "displayName": "Chart Bar Active",
+        "canonical": "#1b1e23",
+        "cssVar": "--chart-bar-active",
+        "theme": "light",
+        "tonalRamp": [
+          "#090b10",
+          "#212429",
+          "#3f4348",
+          "#5d6167",
+          "#80838a",
+          "#a1a5ab",
+          "#c7cbd2",
+          "#eaeff6"
+        ]
+      },
+      "chart-bar-active-dark": {
+        "role": "neutral",
+        "displayName": "Chart Bar Active (dark)",
+        "canonical": "#e6e8eb",
+        "cssVar": "--chart-bar-active",
+        "theme": "dark",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#414245",
+          "#5f6063",
+          "#818386",
+          "#a3a5a7",
+          "#c9cbcd",
+          "#edeff2"
+        ]
+      },
+      "chart-quiet": {
+        "role": "neutral",
+        "displayName": "Chart Quiet",
+        "canonical": "#c9ced5",
+        "cssVar": "--chart-quiet",
+        "theme": "light",
+        "tonalRamp": [
+          "#080b10",
+          "#212429",
+          "#3f4348",
+          "#5c6167",
+          "#7f848a",
+          "#a0a5ac",
+          "#c6cbd2",
+          "#eaeff6"
+        ]
+      },
+      "chart-quiet-dark": {
+        "role": "neutral",
+        "displayName": "Chart Quiet (dark)",
+        "canonical": "#3a3f47",
+        "cssVar": "--chart-quiet",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b12",
+          "#20242c",
+          "#3e434b",
+          "#5b6169",
+          "#7e848d",
+          "#9fa5ae",
+          "#c5cbd5",
+          "#e9eff9"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus",
+        "canonical": "#1b1e23",
+        "cssVar": "--focus",
+        "theme": "light",
+        "tonalRamp": [
+          "#090b10",
+          "#212429",
+          "#3f4348",
+          "#5d6167",
+          "#80838a",
+          "#a1a5ab",
+          "#c7cbd2",
+          "#eaeff6"
+        ]
+      },
+      "focus-dark": {
+        "role": "neutral",
+        "displayName": "Focus (dark)",
+        "canonical": "#e6e8eb",
+        "cssVar": "--focus",
+        "theme": "dark",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#414245",
+          "#5f6063",
+          "#818386",
+          "#a3a5a7",
+          "#c9cbcd",
+          "#edeff2"
+        ]
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection",
+        "canonical": "#d5dae1",
+        "cssVar": "--selection",
+        "theme": "light",
+        "tonalRamp": [
+          "#080b10",
+          "#212429",
+          "#3f4348",
+          "#5c6167",
+          "#7f848a",
+          "#a0a5ac",
+          "#c6cbd2",
+          "#eaeff6"
+        ]
+      },
+      "selection-dark": {
+        "role": "neutral",
+        "displayName": "Selection (dark)",
+        "canonical": "#3a3f47",
+        "cssVar": "--selection",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b12",
+          "#20242c",
+          "#3e434b",
+          "#5b6169",
+          "#7e848d",
+          "#9fa5ae",
+          "#c5cbd5",
+          "#e9eff9"
+        ]
+      },
+      "backdrop": {
+        "role": "neutral",
+        "displayName": "Backdrop",
+        "canonical": "rgb(27 30 35 / 0.45)",
+        "cssVar": "--backdrop",
+        "theme": "light",
+        "tonalRamp": [
+          "#090b10",
+          "#212429",
+          "#3f4348",
+          "#5d6167",
+          "#80838a",
+          "#a1a5ab",
+          "#c7cbd2",
+          "#eaeff6"
+        ]
+      },
+      "backdrop-dark": {
+        "role": "neutral",
+        "displayName": "Backdrop (dark)",
+        "canonical": "rgb(0 0 0 / 0.6)",
+        "cssVar": "--backdrop",
+        "theme": "dark",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
         ]
       },
       "status-warn-ink": {
@@ -361,15 +1199,33 @@
         "displayName": "Warn Ink",
         "canonical": "#7a4a00",
         "cssVar": "--status-warn-ink",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.034 68)",
-          "oklch(26% 0.058 68)",
-          "oklch(38% 0.083 68)",
-          "oklch(49% 0.100 68)",
-          "oklch(61% 0.100 68)",
-          "oklch(72% 0.100 68)",
-          "oklch(84% 0.100 68)",
-          "oklch(95% 0.035 68)"
+          "#140800",
+          "#351e01",
+          "#5e3903",
+          "#855412",
+          "#aa773b",
+          "#ce995d",
+          "#f6bf82",
+          "#feebd7"
+        ]
+      },
+      "status-warn-ink-dark": {
+        "role": "status",
+        "displayName": "Warn Ink (dark)",
+        "canonical": "#f0c46e",
+        "cssVar": "--status-warn-ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "#120a00",
+          "#302101",
+          "#563e00",
+          "#7c5a02",
+          "#a57c1d",
+          "#c89d46",
+          "#f0c46e",
+          "#ffeccb"
         ]
       },
       "status-warn-bg": {
@@ -377,15 +1233,33 @@
         "displayName": "Warn Tint",
         "canonical": "#fff1d6",
         "cssVar": "--status-warn-bg",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.032 84)",
-          "oklch(26% 0.038 84)",
-          "oklch(38% 0.038 84)",
-          "oklch(49% 0.038 84)",
-          "oklch(61% 0.038 84)",
-          "oklch(72% 0.038 84)",
-          "oklch(84% 0.038 84)",
-          "oklch(95% 0.038 84)"
+          "#110a00",
+          "#2d220c",
+          "#4c412a",
+          "#6b5f47",
+          "#8e8269",
+          "#b0a38a",
+          "#d7c9af",
+          "#fbedd2"
+        ]
+      },
+      "status-warn-bg-dark": {
+        "role": "status",
+        "displayName": "Warn Tint (dark)",
+        "canonical": "#33280f",
+        "cssVar": "--status-warn-bg",
+        "theme": "dark",
+        "tonalRamp": [
+          "#110a00",
+          "#2d2209",
+          "#4c4128",
+          "#6b5f45",
+          "#8f8266",
+          "#b1a387",
+          "#d7c9ac",
+          "#fbedcf"
         ]
       },
       "status-danger-ink": {
@@ -393,15 +1267,33 @@
         "displayName": "Danger Ink",
         "canonical": "#9b1c1c",
         "cssVar": "--status-danger-ink",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.063 27)",
-          "oklch(26% 0.108 27)",
-          "oklch(38% 0.154 27)",
-          "oklch(49% 0.162 27)",
-          "oklch(61% 0.162 27)",
-          "oklch(72% 0.162 27)",
-          "oklch(84% 0.091 27)",
-          "oklch(95% 0.025 27)"
+          "#1f0000",
+          "#4b0104",
+          "#81000a",
+          "#a92c28",
+          "#d3544b",
+          "#fa776c",
+          "#feb5ac",
+          "#ffe9e6"
+        ]
+      },
+      "status-danger-ink-dark": {
+        "role": "status",
+        "displayName": "Danger Ink (dark)",
+        "canonical": "#f29a96",
+        "cssVar": "--status-danger-ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "#1f0002",
+          "#4b0009",
+          "#702527",
+          "#934544",
+          "#bb6865",
+          "#e08986",
+          "#feb5b1",
+          "#ffe9e7"
         ]
       },
       "status-danger-bg": {
@@ -409,15 +1301,101 @@
         "displayName": "Danger Tint",
         "canonical": "#fdecec",
         "cssVar": "--status-danger-bg",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.018 17)",
-          "oklch(26% 0.018 17)",
-          "oklch(38% 0.018 17)",
-          "oklch(49% 0.018 17)",
-          "oklch(61% 0.018 17)",
-          "oklch(72% 0.018 17)",
-          "oklch(84% 0.018 17)",
-          "oklch(95% 0.018 17)"
+          "#120808",
+          "#2c2121",
+          "#4c3f3f",
+          "#6b5c5c",
+          "#8e7f7f",
+          "#b0a0a0",
+          "#d6c6c6",
+          "#fbeaea"
+        ]
+      },
+      "status-danger-bg-dark": {
+        "role": "status",
+        "displayName": "Danger Tint (dark)",
+        "canonical": "#3a1b1b",
+        "cssVar": "--status-danger-bg",
+        "theme": "dark",
+        "tonalRamp": [
+          "#1b0204",
+          "#381a1a",
+          "#5a3837",
+          "#7a5554",
+          "#9f7877",
+          "#c29997",
+          "#e9bfbd",
+          "#fee9e8"
+        ]
+      },
+      "danger-fill": {
+        "role": "status",
+        "displayName": "Danger Fill",
+        "canonical": "#9b1c1c",
+        "cssVar": "--danger-fill",
+        "theme": "light",
+        "tonalRamp": [
+          "#1f0000",
+          "#4b0104",
+          "#81000a",
+          "#a92c28",
+          "#d3544b",
+          "#fa776c",
+          "#feb5ac",
+          "#ffe9e6"
+        ]
+      },
+      "danger-fill-dark": {
+        "role": "status",
+        "displayName": "Danger Fill (dark)",
+        "canonical": "#b93a36",
+        "cssVar": "--danger-fill",
+        "theme": "dark",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0004",
+          "#81010d",
+          "#aa2b29",
+          "#d4534c",
+          "#fa766c",
+          "#feb5ad",
+          "#fee9e6"
+        ]
+      },
+      "danger-fill-hover": {
+        "role": "status",
+        "displayName": "Danger Fill Hover",
+        "canonical": "#831616",
+        "cssVar": "--danger-fill-hover",
+        "theme": "light",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0003",
+          "#7e0f11",
+          "#a23631",
+          "#cb5c52",
+          "#f17e73",
+          "#ffb5ac",
+          "#fee9e6"
+        ]
+      },
+      "danger-fill-hover-dark": {
+        "role": "status",
+        "displayName": "Danger Fill Hover (dark)",
+        "canonical": "#a3302d",
+        "cssVar": "--danger-fill-hover",
+        "theme": "dark",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0004",
+          "#80040f",
+          "#a5322f",
+          "#ce5851",
+          "#f57b71",
+          "#ffb5ad",
+          "#fee9e6"
         ]
       },
       "status-off-ink": {
@@ -425,31 +1403,67 @@
         "displayName": "Off Ink",
         "canonical": "#4a505b",
         "cssVar": "--status-off-ink",
+        "theme": "light",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#070b14",
+          "#1f242e",
+          "#3d434d",
+          "#5a616c",
+          "#7d838f",
+          "#9ea5b1",
+          "#c4cbd8",
+          "#e7effc"
+        ]
+      },
+      "status-off-ink-dark": {
+        "role": "status",
+        "displayName": "Off Ink (dark)",
+        "canonical": "#b3b8c0",
+        "cssVar": "--status-off-ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b11",
+          "#20242a",
+          "#3e4349",
+          "#5c6168",
+          "#7f838b",
+          "#a0a5ad",
+          "#c6cbd3",
+          "#eaeff7"
         ]
       },
       "status-off-bg": {
         "role": "status",
         "displayName": "Off Tint",
-        "canonical": "#e8ebef",
+        "canonical": "#eceef1",
         "cssVar": "--status-off-bg",
+        "theme": "light",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
+          "#0a0b0d",
+          "#232426",
+          "#414245",
+          "#5f6063",
+          "#818386",
+          "#a3a5a7",
+          "#c9cbcd",
+          "#edeff2"
+        ]
+      },
+      "status-off-bg-dark": {
+        "role": "status",
+        "displayName": "Off Tint (dark)",
+        "canonical": "#262a30",
+        "cssVar": "--status-off-bg",
+        "theme": "dark",
+        "tonalRamp": [
+          "#080b10",
+          "#20242a",
+          "#3e4349",
+          "#5c6168",
+          "#7f848b",
+          "#a0a5ad",
+          "#c6cbd3",
+          "#e9eff7"
         ]
       },
       "status-ok-ink": {
@@ -457,15 +1471,33 @@
         "displayName": "OK Ink",
         "canonical": "#135c35",
         "cssVar": "--status-ok-ink",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.039 155)",
-          "oklch(26% 0.066 155)",
-          "oklch(38% 0.094 155)",
-          "oklch(49% 0.095 155)",
-          "oklch(61% 0.095 155)",
-          "oklch(72% 0.095 155)",
-          "oklch(84% 0.095 155)",
-          "oklch(95% 0.079 155)"
+          "#000f05",
+          "#012d16",
+          "#03502b",
+          "#2c7048",
+          "#519469",
+          "#72b68a",
+          "#98ddaf",
+          "#c5ffd7"
+        ]
+      },
+      "status-ok-ink-dark": {
+        "role": "status",
+        "displayName": "OK Ink (dark)",
+        "canonical": "#87d3a6",
+        "cssVar": "--status-ok-ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "#000f06",
+          "#002d18",
+          "#01502f",
+          "#227149",
+          "#4a956b",
+          "#6cb88c",
+          "#92dfb1",
+          "#c4ffda"
         ]
       },
       "status-ok-bg": {
@@ -473,155 +1505,155 @@
         "displayName": "OK Tint",
         "canonical": "#e3f4ea",
         "cssVar": "--status-ok-bg",
+        "theme": "light",
         "tonalRamp": [
-          "oklch(15% 0.022 160)",
-          "oklch(26% 0.022 160)",
-          "oklch(38% 0.022 160)",
-          "oklch(49% 0.022 160)",
-          "oklch(61% 0.022 160)",
-          "oklch(72% 0.022 160)",
-          "oklch(84% 0.022 160)",
-          "oklch(95% 0.022 160)"
+          "#040e08",
+          "#1b2720",
+          "#38463e",
+          "#56655c",
+          "#78887f",
+          "#99a9a0",
+          "#bfcfc6",
+          "#e2f3e9"
         ]
       },
-      "focus": {
-        "role": "neutral",
-        "displayName": "Focus Ring",
-        "canonical": "#2a2d33",
-        "cssVar": "--focus",
+      "status-ok-bg-dark": {
+        "role": "status",
+        "displayName": "OK Tint (dark)",
+        "canonical": "#132e1f",
+        "cssVar": "--status-ok-bg",
+        "theme": "dark",
         "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "focus-on-granite": {
-        "role": "neutral",
-        "displayName": "Focus Ring on Granite",
-        "canonical": "#f3f4f6",
-        "cssVar": "--focus-on-granite",
-        "tonalRamp": [
-          "#1b1e23",
-          "#2a2d33",
-          "#363a42",
-          "#4a505b",
-          "#8a919c",
-          "#c4c9d1",
-          "#d5d9df",
-          "#eceef1"
-        ]
-      },
-      "selection": {
-        "role": "neutral",
-        "displayName": "Selection",
-        "canonical": "#efe2cf",
-        "cssVar": "--selection",
-        "tonalRamp": [
-          "oklch(15% 0.029 78)",
-          "oklch(26% 0.029 78)",
-          "oklch(38% 0.029 78)",
-          "oklch(49% 0.029 78)",
-          "oklch(61% 0.029 78)",
-          "oklch(72% 0.029 78)",
-          "oklch(84% 0.029 78)",
-          "oklch(95% 0.029 78)"
+          "#000f06",
+          "#0f2a1c",
+          "#2e4a39",
+          "#4c6857",
+          "#6e8b79",
+          "#8fad9a",
+          "#b4d4c0",
+          "#d7f8e3"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "cssVar": "--text-hero",
-        "purpose": "Today's click count, the single large figure in a clicks panel."
+        "purpose": "Today's click count, the single large figure in a clicks panel.",
+        "cssVar": "--text-hero"
       },
       "headline": {
         "displayName": "Headline",
-        "cssVar": "--text-2xl",
-        "purpose": "Page titles and the sign-in card title."
+        "purpose": "Page titles and the sign-in card title.",
+        "cssVar": "--text-2xl"
       },
       "subhead": {
         "displayName": "Subhead",
-        "cssVar": "--text-xl",
-        "purpose": "Section headings above a group of panels."
+        "purpose": "Section headings above a group of panels, such as Clicks on a link page.",
+        "cssVar": "--text-xl"
       },
       "title": {
         "displayName": "Title",
-        "cssVar": "--text-lg",
-        "purpose": "Panel and dialog titles."
+        "purpose": "Panel and dialog titles.",
+        "cssVar": "--text-lg"
       },
       "body": {
         "displayName": "Body",
-        "cssVar": "--text-base",
-        "purpose": "Default text. Stylistic set 1 ('ss01') is on for all Golos Text."
+        "purpose": "Default text. Stylistic set 1 ('ss01') is on for all Golos Text.",
+        "cssVar": "--text-base"
       },
       "body-sm": {
         "displayName": "Body Small",
-        "cssVar": "--text-md",
-        "purpose": "Table cells, inputs, sentences inside panels, menu items."
+        "purpose": "Table cells, inputs, sentences inside panels, menu items, toasts.",
+        "cssVar": "--text-md"
       },
       "control": {
         "displayName": "Control",
-        "cssVar": "--text-md",
-        "purpose": "Button and nav labels. Small buttons use 0.8125rem, large 0.9375rem."
+        "purpose": "Button labels. Small buttons use 0.8125rem, large 0.9375rem.",
+        "cssVar": "--text-md"
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "Top bar nav items, Ink 2 at rest and Ink when current.",
+        "cssVar": "--text-md"
       },
       "label": {
         "displayName": "Label",
-        "cssVar": "--text-sm",
-        "purpose": "Field labels, segments, tag toggles; hints and meta lines at weight 400."
+        "purpose": "Field labels, segments, tag toggles; hints and meta lines at weight 400.",
+        "cssVar": "--text-sm"
       },
-      "sign": {
-        "displayName": "Sign",
-        "cssVar": "--text-xs",
-        "purpose": "Table column headers only. Uppercase, in Station Bronze (#8c5d28)."
+      "column-label": {
+        "displayName": "Column Label",
+        "purpose": "Table column headers. Sentence case, Ink 3, so the figures lead.",
+        "cssVar": "--text-sm"
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Map key, tooltip secondary lines, the View as table toggle; badges at 600, tag chips at 560.",
+        "cssVar": "--text-xs"
       },
       "code": {
         "displayName": "Code",
-        "cssVar": "--text-md",
-        "purpose": "Short codes, the url.mekhroj.com/ host prefix, click timestamps. Host in Ink 3, code in Ink."
+        "purpose": "Short codes, the url.mekhroj.com/ host prefix, click timestamps. Host in Ink 3, code in Ink.",
+        "cssVar": "--text-md"
       },
       "code-specimen": {
         "displayName": "Code Specimen",
-        "cssVar": "--text-xl",
-        "purpose": "A link's short code set large on its own page; host prefix at 1.125rem in Ink 3."
+        "purpose": "A link's short code set large on its own page; host prefix at 1rem in Ink 3.",
+        "cssVar": "--text-xl"
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "The product name beside its mark, in the top bar and above the sign-in card."
       }
     },
     "shadows": [
       {
-        "name": "raised",
-        "cssVar": "--shadow-raised",
-        "value": "0 1px 2px rgb(27 30 35 / 0.06), 0 4px 12px rgb(27 30 35 / 0.06)",
-        "purpose": "The single creation surface on a page: the ticket window on the dashboard and the sign-in card."
-      },
-      {
         "name": "overlay",
         "cssVar": "--shadow-overlay",
-        "value": "0 8px 24px rgb(27 30 35 / 0.16), 0 2px 6px rgb(27 30 35 / 0.08)",
+        "theme": "light",
+        "value": "0 8px 24px rgb(27 30 35 / 0.14), 0 2px 6px rgb(27 30 35 / 0.06)",
         "purpose": "Floating layers: dialogs, the account menu, the chart tooltip, toasts, the sticky bulk-action bar."
       },
       {
-        "name": "segment-selected",
-        "value": "0 1px 2px rgb(27 30 35 / 0.12)",
-        "purpose": "The white selected segment inside the marble trough of a segmented control."
+        "name": "overlay-dark",
+        "cssVar": "--shadow-overlay",
+        "theme": "dark",
+        "value": "0 8px 24px rgb(0 0 0 / 0.5), 0 2px 6px rgb(0 0 0 / 0.3)",
+        "purpose": "The same floating layers in the dark theme."
       },
       {
-        "name": "nav-active-underline",
-        "value": "inset 0 -2px 0 var(--bronze-rule)",
-        "purpose": "Bronze rule under the current page in the top bar."
+        "name": "segment",
+        "cssVar": "--shadow-segment",
+        "theme": "light",
+        "value": "0 1px 2px rgb(27 30 35 / 0.12)",
+        "purpose": "The selected segment inside its Sunken trough."
+      },
+      {
+        "name": "segment-dark",
+        "cssVar": "--shadow-segment",
+        "theme": "dark",
+        "value": "0 1px 2px rgb(0 0 0 / 0.4)",
+        "purpose": "The selected segment in the dark theme."
+      },
+      {
+        "name": "current-page-rule",
+        "value": "inset 0 -2px 0 var(--ink)",
+        "purpose": "A 2px Ink underline at the bottom edge of the top bar under the current nav item."
       },
       {
         "name": "station-halo",
-        "value": "0 0 0 2px var(--panel)",
-        "purpose": "White halo around a station disc so it cuts the line behind it."
+        "value": "0 0 0 2px var(--surface)",
+        "purpose": "A Surface halo around a station disc so it cuts the line behind it."
       },
       {
         "name": "station-expiring",
-        "value": "0 0 0 2px var(--panel), 0 0 0 4px var(--status-warn-ink)",
-        "purpose": "Extra warn ring on a station whose link expires within a week."
+        "value": "0 0 0 2px var(--surface), 0 0 0 4px var(--status-warn-ink)",
+        "purpose": "The extra Warn ring on a station whose link expires within a week."
+      },
+      {
+        "name": "key-expiring",
+        "value": "0 0 0 2px var(--status-warn-bg)",
+        "purpose": "The Warn tint halo on the expiring marker in the line map key."
       }
     ],
     "motion": [
@@ -635,18 +1667,18 @@
         "name": "t-fast",
         "cssVar": "--t-fast",
         "value": "150ms",
-        "purpose": "Colour, border and background changes on hover and press; tooltip fade."
+        "purpose": "Colour, border and background changes on hover and press; tooltip fade and 4px rise; the More options chevron turning."
       },
       {
         "name": "t-base",
         "cssVar": "--t-base",
         "value": "200ms",
-        "purpose": "Station scale on highlight, stale-data dimming, dialog and toast entrance."
+        "purpose": "Station scale on highlight, stale-data dimming to 60%, dialog and toast entrance."
       },
       {
         "name": "arrive",
         "value": "240ms",
-        "purpose": "A new link's station scales in from 0.3 with a fade; the create form's confirmation strip slides 4px. The one authored moment."
+        "purpose": "A new link's station scales in from 0.3 with a fade; the create form's confirmation strip fades in from 4px above. The one authored moment."
       },
       {
         "name": "dialog-in",
@@ -664,6 +1696,11 @@
         "purpose": "Skeleton rows on first load only."
       },
       {
+        "name": "spin",
+        "value": "0.7s linear infinite",
+        "purpose": "The 14px loading ring inside a busy button."
+      },
+      {
         "name": "reduced-motion",
         "value": "animation and transition durations 0.01ms",
         "purpose": "Applied globally under prefers-reduced-motion: reduce."
@@ -673,7 +1710,7 @@
       {
         "name": "dashboard-stack",
         "value": "1180px",
-        "purpose": "Two-column panel rows stack; three-column rows become two."
+        "purpose": "Dashboard top row stacks with the Clicks panel first; the bottom row becomes two columns with Top links across both."
       },
       {
         "name": "table-wide",
@@ -693,22 +1730,22 @@
       {
         "name": "compact",
         "value": "820px",
-        "purpose": "Top bar nav collapses to a menu button, Shorten shows its icon only, create form stacks, page padding drops to 16px."
+        "purpose": "Nav moves behind a menu button, Shorten shows its icon only, the create form stacks, page padding drops to 20px 16px 40px."
       },
       {
         "name": "dashboard-single",
         "value": "760px",
-        "purpose": "Dashboard panels become one column."
+        "purpose": "Dashboard panels become one column; page gap 16px, create panel padding 16px."
       },
       {
         "name": "table-medium",
         "value": "720px",
-        "purpose": "Links table hides further columns."
+        "purpose": "Links table hides further columns and its panel padding drops to 12px."
       },
       {
         "name": "narrow",
         "value": "640px",
-        "purpose": "Line map labels stack above tracks and stations narrow to 72px; code rows stack."
+        "purpose": "Line map labels stack above tracks; code rows stack; list rows on manage pages drop their stats."
       },
       {
         "name": "small",
@@ -735,119 +1772,151 @@
       },
       {
         "name": "auth-card",
-        "value": "min(420px, 100%)",
-        "purpose": "Sign-in and invite sign-up card."
+        "value": "min(400px, 100%)",
+        "purpose": "Sign-in and invite sign-up card, with the wordmark above it."
+      },
+      {
+        "name": "account-menu",
+        "value": "min-width 240px",
+        "purpose": "Account menu popover, anchored to the right edge of the page container."
       }
-    ]
+    ],
+    "themes": {
+      "default": "light",
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "preference": [
+        "system",
+        "light",
+        "dark"
+      ],
+      "darkTokenSuffix": "-dark",
+      "switch": "System / Light / Dark segmented control in the account menu and in Settings > Appearance.",
+      "applied": "data-theme on the root element, set before the first paint from the stored choice or the system setting; System follows the device live and other tabs follow a change.",
+      "storage": "The choice is saved in this browser; System clears it.",
+      "themeColor": {
+        "light": "#ffffff",
+        "dark": "#16181c"
+      },
+      "note": "Dark is a separate set of steps tuned on its own ground, not an inversion of light."
+    }
   },
   "components": [
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Granite filled button for the main action on a surface; 44px in the ticket window.",
+      "description": "Near-black on light, near-white on dark: the one main action on a surface; 44px in the create panel.",
       "html": "<div style=\"display:flex;gap:12px;align-items:center\"><button class=\"ds-btn ds-btn-primary\">Create</button><button class=\"ds-btn ds-btn-primary ds-btn-lg\">Shorten</button></div>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn-primary { background: var(--granite, #2a2d33); color: var(--granite-ink, #f3f4f6); } .ds-btn-primary:hover:not(:disabled) { background: var(--granite-raised, #363a42); } .ds-btn-lg { height: 44px; padding: 0 20px; font-size: 0.9375rem; min-width: 112px; }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn svg { flex: none; } .ds-btn-primary { background: var(--primary, #1f2227); color: var(--on-primary, #f6f7f8); } .ds-btn-primary:hover:not(:disabled) { background: var(--primary-hover, #34383f); } .ds-btn-lg { height: 44px; padding: 0 20px; font-size: 0.9375rem; min-width: 112px; }"
     },
     {
       "name": "Secondary Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "White button with a stone border for secondary actions such as Edit or Add code.",
-      "html": "<button class=\"ds-btn ds-btn-secondary\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Add code</button>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn-secondary { background: var(--panel, #ffffff); border-color: var(--stone-strong, #c4c9d1); color: var(--ink, #1b1e23); } .ds-btn-secondary:hover:not(:disabled) { border-color: var(--control-edge, #8a919c); background: var(--marble, #eceef1); }"
+      "description": "The default button: Surface with a strong hairline. At small size with a plus icon it is the Shorten button in the top bar.",
+      "html": "<div style=\"display:flex;gap:12px;align-items:center\"><button class=\"ds-btn ds-btn-secondary\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Add code</button><button class=\"ds-btn ds-btn-secondary ds-btn-sm\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Shorten</button></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn svg { flex: none; } .ds-btn-secondary { background: var(--surface, #ffffff); border-color: var(--border-strong, #c9ced5); color: var(--ink, #1b1e23); } .ds-btn-secondary:hover:not(:disabled) { border-color: var(--control-edge, #8a919c); background: var(--subtle, #f5f6f8); } .ds-btn-sm { height: 30px; padding: 0 12px; font-size: 0.8125rem; }"
     },
     {
       "name": "Ghost Button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Transparent button for low-emphasis actions and icon buttons in rows.",
-      "html": "<button class=\"ds-btn ds-btn-ghost\">Delete</button>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn-ghost { background: transparent; color: var(--ink-2, #4a505b); } .ds-btn-ghost:hover:not(:disabled) { background: var(--marble-sunken, #e3e6ea); color: var(--ink, #1b1e23); }"
+      "description": "Transparent button for low-emphasis actions and the icon buttons in rows.",
+      "html": "<div style=\"display:flex;gap:8px;align-items:center\"><button class=\"ds-btn ds-btn-ghost\">Cancel</button><button class=\"ds-btn ds-btn-ghost ds-btn-icon\" aria-label=\"Copy short link\" title=\"Copy short link\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/></svg></button></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--radius, 6px); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; font-weight: 560; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.55; cursor: not-allowed; } .ds-btn svg { flex: none; } .ds-btn-ghost { background: transparent; color: var(--ink-2, #4a505b); } .ds-btn-ghost:hover:not(:disabled) { background: var(--sunken, #eceef1); color: var(--ink, #1b1e23); } .ds-btn-icon { width: 32px; height: 32px; padding: 0; }"
     },
     {
       "name": "Text Input and Short Code Field",
       "kind": "input",
       "refersTo": "input",
-      "description": "Labelled field with a control-edge border; the short code variant carries the host as an inset monospace prefix.",
+      "description": "Labelled field with a control-edge border; the short code variant carries the host as an inset monospace prefix measured in ch.",
       "html": "<div class=\"ds-fields\"><label class=\"ds-field\"><span class=\"ds-label\">Long URL</span><input class=\"ds-input\" placeholder=\"Paste a long URL\"></label><label class=\"ds-field\"><span class=\"ds-label\">Short code</span><span class=\"ds-code-input\"><span>url.mekhroj.com/</span><input class=\"ds-input\" placeholder=\"auto\"></span></label></div>",
-      "css": ".ds-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 0.6fr); gap: 12px; } .ds-field { display: grid; gap: 6px; min-width: 0; } .ds-label { font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; color: var(--ink-2, #4a505b); } .ds-input { width: 100%; min-width: 0; height: 36px; padding: 0 12px; border: 1px solid var(--control-edge, #8a919c); border-radius: var(--radius, 6px); background: var(--panel, #ffffff); color: var(--ink, #1b1e23); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; transition: border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); box-sizing: border-box; } .ds-input::placeholder { color: var(--ink-3, #5e6470); } .ds-input:hover { border-color: var(--ink-3, #5e6470); } .ds-input:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: -1px; border-color: var(--focus, #2a2d33); } .ds-code-input { position: relative; display: block; } .ds-code-input span { position: absolute; inset-block: 0; inset-inline-start: 13px; display: flex; align-items: center; font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.875rem; color: var(--ink-3, #5e6470); pointer-events: none; } .ds-code-input .ds-input { padding-inline-start: calc(13px + 16ch); font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); }"
+      "css": ".ds-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 0.6fr); gap: 12px; } .ds-field { display: grid; gap: 6px; min-width: 0; } .ds-label { font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; color: var(--ink-2, #4a505b); } .ds-input { width: 100%; min-width: 0; height: 36px; padding: 0 12px; box-sizing: border-box; border: 1px solid var(--control-edge, #8a919c); border-radius: var(--radius, 6px); background: var(--field, #ffffff); color: var(--ink, #1b1e23); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; transition: border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-input::placeholder { color: var(--ink-3, #5e6470); } .ds-input:hover { border-color: var(--ink-3, #5e6470); } .ds-input:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: -1px; border-color: var(--focus, #1b1e23); } .ds-code-input { position: relative; display: block; } .ds-code-input span { position: absolute; inset-block: 0; inset-inline-start: 13px; display: flex; align-items: center; font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.875rem; color: var(--ink-3, #5e6470); white-space: nowrap; pointer-events: none; } .ds-code-input .ds-input { padding-inline-start: calc(13px + 16ch); font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); }"
     },
     {
       "name": "Top Bar",
       "kind": "nav",
       "refersTo": "top-bar",
-      "description": "Sticky granite bar with the wordmark, nav, search, Shorten and account button, followed by the single ceramic tile band.",
-      "html": "<div class=\"ds-shell\"><header class=\"ds-bar\"><a class=\"ds-wordmark\" href=\"#\"><span class=\"ds-mark\"></span>Bekat</a><nav class=\"ds-nav\"><a class=\"ds-nav-link\" aria-current=\"page\" href=\"#\">Dashboard</a><a class=\"ds-nav-link\" href=\"#\">Links</a><a class=\"ds-nav-link\" href=\"#\">Collections</a><a class=\"ds-nav-link\" href=\"#\">Tags</a></nav><label class=\"ds-search\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></svg><input type=\"search\" placeholder=\"Search links\"></label><button class=\"ds-shorten\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Shorten</button><button class=\"ds-user\">MM</button></header><div class=\"ds-ceramic\"></div></div>",
-      "css": ".ds-shell { font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); } .ds-bar { display: flex; align-items: center; gap: 24px; height: 56px; padding: 0 24px; background: var(--granite, #2a2d33); color: var(--granite-ink, #f3f4f6); } .ds-bar :focus-visible { outline: 2px solid var(--focus-on-granite, #f3f4f6); outline-offset: 2px; } .ds-wordmark { display: inline-flex; align-items: center; gap: 10px; color: var(--granite-ink, #f3f4f6); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; } .ds-mark { position: relative; width: 22px; height: 22px; } .ds-mark::before { content: ''; position: absolute; inset: 9px -2px auto; height: 4px; border-radius: 2px; background: var(--bronze-rule, #a26f35); } .ds-mark::after { content: ''; position: absolute; inset: 3px; border: 3px solid var(--bronze-rule, #a26f35); border-radius: 50%; background: var(--granite, #2a2d33); } .ds-nav { display: flex; gap: 2px; } .ds-nav-link { display: inline-flex; align-items: center; height: 36px; padding: 0 12px; border-radius: var(--radius, 6px); color: var(--granite-muted, #b7bcc5); font-size: 0.875rem; font-weight: 560; text-decoration: none; transition: color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-nav-link:hover { color: var(--granite-ink, #f3f4f6); background: var(--granite-raised, #363a42); } .ds-nav-link[aria-current='page'] { color: var(--granite-ink, #f3f4f6); background: var(--granite-raised, #363a42); box-shadow: inset 0 -2px 0 var(--bronze-rule, #a26f35); } .ds-search { position: relative; margin-inline-start: auto; width: 260px; } .ds-search svg { position: absolute; inset-block: 0; inset-inline-start: 10px; margin: auto; color: var(--granite-muted, #b7bcc5); pointer-events: none; } .ds-search input { width: 100%; height: 34px; padding: 0 12px 0 32px; border: 1px solid #4a4f58; border-radius: var(--radius, 6px); background: #23262b; color: var(--granite-ink, #f3f4f6); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; box-sizing: border-box; } .ds-search input::placeholder { color: var(--granite-muted, #b7bcc5); } .ds-shorten { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border: 0; border-radius: var(--radius, 6px); background: var(--granite-ink, #f3f4f6); color: var(--granite, #2a2d33); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-shorten:hover { background: #fff; } .ds-user { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #4a4f58; border-radius: 50%; background: var(--granite-raised, #363a42); color: var(--granite-ink, #f3f4f6); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 650; cursor: pointer; } .ds-ceramic { height: 18px; background-color: #fbfbfa; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='18' viewBox='0 0 108 18'%3E%3Cg transform='translate(9 9)' fill='%23d7262e'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(27 9)' fill='%231c5fb8'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(45 9)' fill='%231e9a55'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(63 9)' fill='%237a4fb5'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(81 9)' fill='%23c7860f'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3Cg transform='translate(99 9)' fill='%230b95a8'%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4'/%3E%3Crect x='-6.2' y='-6.2' width='12.4' height='12.4' transform='rotate(45)'/%3E%3C/g%3E%3C/svg%3E\"); background-repeat: repeat-x; border-bottom: 1px solid var(--stone, #d5d9df); }"
+      "description": "The quiet bar: Surface ruled off by a hairline, the Spur wordmark with its copper dot, nav with an ink underline on the current page, search, Shorten and the account button.",
+      "html": "<header class=\"ds-bar\"><a class=\"ds-wordmark\" href=\"#\"><svg class=\"ds-mark\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M2 14.5h16\"/><path d=\"M5 14.5c4.2 0 4.6-8 9.5-8\"/></g><circle class=\"ds-mark-dot\" cx=\"15\" cy=\"6.5\" r=\"2.4\"/></svg>Spur</a><nav class=\"ds-nav\" aria-label=\"Main\"><a class=\"ds-nav-link\" aria-current=\"page\" href=\"#\">Dashboard</a><a class=\"ds-nav-link\" href=\"#\">Links</a><a class=\"ds-nav-link\" href=\"#\">Collections</a><a class=\"ds-nav-link\" href=\"#\">Tags</a><a class=\"ds-nav-link\" href=\"#\">Invites</a></nav><label class=\"ds-search\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></svg><input type=\"search\" placeholder=\"Search links\" aria-label=\"Search links\"></label><button class=\"ds-shorten\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg>Shorten</button><button class=\"ds-user\" aria-label=\"Account menu\">MM</button></header>",
+      "css": ".ds-bar { display: flex; align-items: center; gap: 24px; height: 56px; padding: 0 24px; background: var(--surface, #ffffff); border-bottom: 1px solid var(--border, #dfe2e7); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); color: var(--ink, #1b1e23); } .ds-bar :focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-wordmark { display: inline-flex; align-items: center; gap: 8px; color: var(--ink, #1b1e23); font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; text-decoration: none; border-radius: var(--radius-sm, 4px); } .ds-mark { flex: none; } .ds-mark-dot { fill: var(--accent, #a26f35); } .ds-nav { display: flex; align-self: stretch; gap: 4px; } .ds-nav-link { display: inline-flex; align-items: center; padding: 0 12px; color: var(--ink-2, #4a505b); font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-nav-link:hover { color: var(--ink, #1b1e23); } .ds-nav-link[aria-current='page'] { color: var(--ink, #1b1e23); box-shadow: inset 0 -2px 0 var(--ink, #1b1e23); } .ds-bar .ds-nav-link:focus-visible { outline-offset: -4px; border-radius: var(--radius, 6px); } .ds-search { position: relative; margin-inline-start: auto; width: 240px; } .ds-search svg { position: absolute; inset-block: 0; inset-inline-start: 10px; margin: auto; color: var(--ink-3, #5e6470); pointer-events: none; } .ds-search input { width: 100%; height: 32px; padding: 0 12px 0 32px; box-sizing: border-box; border: 1px solid var(--border, #dfe2e7); border-radius: var(--radius, 6px); background: var(--subtle, #f5f6f8); color: var(--ink, #1b1e23); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.875rem; transition: border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-search input::placeholder { color: var(--ink-3, #5e6470); } .ds-search input:hover { border-color: var(--border-strong, #c9ced5); } .ds-bar .ds-search input:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: -1px; border-color: var(--focus, #1b1e23); background: var(--field, #ffffff); } .ds-shorten { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border: 1px solid var(--border-strong, #c9ced5); border-radius: var(--radius, 6px); background: var(--surface, #ffffff); color: var(--ink, #1b1e23); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; line-height: 1; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-shorten:hover { border-color: var(--control-edge, #8a919c); background: var(--subtle, #f5f6f8); } .ds-user { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--border, #dfe2e7); border-radius: 50%; background: var(--sunken, #eceef1); color: var(--ink, #1b1e23); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-user:hover { border-color: var(--control-edge, #8a919c); }"
     },
     {
       "name": "Segmented Control",
       "kind": "chip",
       "refersTo": "segmented",
-      "description": "Marble trough with white selected segment, for date ranges and breakdown switches.",
-      "html": "<div class=\"ds-segmented\" role=\"group\" aria-label=\"Date range\"><button class=\"ds-segment\">7 days</button><button class=\"ds-segment\" aria-pressed=\"true\">30 days</button><button class=\"ds-segment\">90 days</button></div>",
-      "css": ".ds-segmented { display: inline-flex; padding: 3px; gap: 2px; background: var(--marble-sunken, #e3e6ea); border-radius: var(--radius, 6px); } .ds-segment { height: 28px; padding: 0 12px; border: 0; border-radius: var(--radius-sm, 4px); background: transparent; color: var(--ink-2, #4a505b); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-segment:hover { color: var(--ink, #1b1e23); } .ds-segment:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-segment[aria-pressed='true'] { background: var(--panel, #ffffff); color: var(--ink, #1b1e23); box-shadow: 0 1px 2px rgb(27 30 35 / 0.12); }"
+      "description": "Sunken trough with a lifted selected segment, for date ranges, breakdown switches and the System / Light / Dark theme switch.",
+      "html": "<div class=\"ds-seg-demo\"><div class=\"ds-segmented\" role=\"group\" aria-label=\"Date range\"><button class=\"ds-segment\" aria-pressed=\"false\">7 days</button><button class=\"ds-segment\" aria-pressed=\"true\">30 days</button><button class=\"ds-segment\" aria-pressed=\"false\">90 days</button></div><div class=\"ds-segmented\" role=\"group\" aria-label=\"Theme\"><button class=\"ds-segment\" aria-pressed=\"true\">System</button><button class=\"ds-segment\" aria-pressed=\"false\">Light</button><button class=\"ds-segment\" aria-pressed=\"false\">Dark</button></div></div>",
+      "css": ".ds-seg-demo { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; } .ds-segmented { display: inline-flex; padding: 3px; gap: 2px; background: var(--sunken, #eceef1); border-radius: var(--radius, 6px); } .ds-segment { height: 28px; padding: 0 12px; border: 0; border-radius: var(--radius-sm, 4px); background: transparent; color: var(--ink-2, #4a505b); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-segment:hover { color: var(--ink, #1b1e23); } .ds-segment:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-segment[aria-pressed='true'] { background: var(--segment-on, #ffffff); color: var(--ink, #1b1e23); box-shadow: var(--shadow-segment, 0 1px 2px rgb(27 30 35 / 0.12)); }"
     },
     {
-      "name": "Panel",
+      "name": "Panel, Light and Dark",
       "kind": "card",
       "refersTo": "panel",
-      "description": "White platform on the marble ground with a stone hairline and no resting shadow; title row with an action at the right.",
-      "html": "<div class=\"ds-ground\"><section class=\"ds-panel\"><header class=\"ds-panel-header\"><h2>Top links</h2><a href=\"#\">All links</a></header><div class=\"ds-panel-body\"><table class=\"ds-table\"><thead><tr><th><span class=\"ds-sign\">Link</span></th><th class=\"ds-num\"><span class=\"ds-sign\">Clicks</span></th></tr></thead><tbody><tr><td><strong>CV 2026</strong><br><code>cv-2026</code></td><td class=\"ds-num\">146</td></tr><tr><td><strong>GitHub profile</strong><br><code>gh</code></td><td class=\"ds-num\">69</td></tr></tbody></table></div></section></div>",
-      "css": ".ds-ground { padding: 24px; background: var(--marble, #eceef1); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); color: var(--ink, #1b1e23); } .ds-panel { background: var(--panel, #ffffff); border: 1px solid var(--stone, #d5d9df); border-radius: var(--radius-lg, 10px); } .ds-panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 0; } .ds-panel-header h2 { margin: 0; font-size: 1.125rem; font-weight: 650; line-height: 1.2; } .ds-panel-header a { color: var(--ink, #1b1e23); font-size: 0.8125rem; font-weight: 560; text-decoration-color: var(--bronze-rule, #a26f35); text-underline-offset: 3px; } .ds-panel-header a:hover { text-decoration-color: currentColor; } .ds-panel-body { padding: 16px 20px 20px; } .ds-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; } .ds-table th { padding: 0 0 8px; text-align: start; border-bottom: 1px solid var(--stone, #d5d9df); } .ds-table td { padding: 12px 0; border-bottom: 1px solid var(--marble-sunken, #e3e6ea); } .ds-table tr:last-child td { border-bottom: 0; } .ds-table tbody tr { transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-table tbody tr:hover { background: var(--marble, #eceef1); } .ds-num { text-align: end !important; font-variant-numeric: tabular-nums; font-weight: 600; } .ds-sign { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bronze, #8c5d28); } .ds-table code { font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.875rem; font-weight: 500; }"
+      "description": "A flat Surface panel on the Ground with a hairline and no shadow, shown in both themes; sentence-case Ink 3 column labels, collections as line marks, tabular figures.",
+      "html": "<div class=\"ds-pair\"><div class=\"ds-ground ds-theme-light\"><section class=\"ds-panel\"><header class=\"ds-panel-header\"><h2>Top links</h2><a href=\"#\">All links</a></header><div class=\"ds-panel-body\"><table class=\"ds-table\"><thead><tr><th><span class=\"ds-col\">Link</span></th><th><span class=\"ds-col\">Collection</span></th><th class=\"ds-num\"><span class=\"ds-col\">Clicks</span></th></tr></thead><tbody><tr><td><span class=\"ds-link\"><strong>CV 2026</strong><span class=\"ds-code\"><span>url.mekhroj.com/</span>cv-2026</span></span></td><td><span class=\"ds-line-name\"><span class=\"ds-line-mark\" style=\"--dot: var(--line-green)\"></span>Job hunt</span></td><td class=\"ds-num\">146</td></tr><tr><td><span class=\"ds-link\"><strong>Channel post: Django</strong><span class=\"ds-code\"><span>url.mekhroj.com/</span>5Qqvypi</span></span></td><td><span class=\"ds-line-name\"><span class=\"ds-line-mark\" style=\"--dot: var(--line-blue)\"></span>Telegram channel</span></td><td class=\"ds-num\">125</td></tr></tbody></table></div></section></div><div class=\"ds-ground ds-theme-dark\"><section class=\"ds-panel\"><header class=\"ds-panel-header\"><h2>Top links</h2><a href=\"#\">All links</a></header><div class=\"ds-panel-body\"><table class=\"ds-table\"><thead><tr><th><span class=\"ds-col\">Link</span></th><th><span class=\"ds-col\">Collection</span></th><th class=\"ds-num\"><span class=\"ds-col\">Clicks</span></th></tr></thead><tbody><tr><td><span class=\"ds-link\"><strong>CV 2026</strong><span class=\"ds-code\"><span>url.mekhroj.com/</span>cv-2026</span></span></td><td><span class=\"ds-line-name\"><span class=\"ds-line-mark\" style=\"--dot: var(--line-green)\"></span>Job hunt</span></td><td class=\"ds-num\">146</td></tr><tr><td><span class=\"ds-link\"><strong>Channel post: Django</strong><span class=\"ds-code\"><span>url.mekhroj.com/</span>5Qqvypi</span></span></td><td><span class=\"ds-line-name\"><span class=\"ds-line-mark\" style=\"--dot: var(--line-blue)\"></span>Telegram channel</span></td><td class=\"ds-num\">125</td></tr></tbody></table></div></section></div></div>",
+      "css": ".ds-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } .ds-theme-light { --bg: #f3f4f6; --surface: #ffffff; --subtle: #f5f6f8; --sunken: #eceef1; --border: #dfe2e7; --ink: #1b1e23; --ink-2: #4a505b; --ink-3: #5e6470; --focus: #1b1e23; --line-blue: #2b61ab; --line-green: #3a975d; color-scheme: light; } .ds-theme-dark { --bg: #0f1114; --surface: #16181c; --subtle: #1b1e22; --sunken: #22252b; --border: #272a30; --ink: #e6e8eb; --ink-2: #b3b8c0; --ink-3: #8b919b; --focus: #e6e8eb; --line-blue: #5991e2; --line-green: #46a769; color-scheme: dark; } .ds-ground { padding: 20px; background: var(--bg, #f3f4f6); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); color: var(--ink, #1b1e23); } .ds-panel { background: var(--surface, #ffffff); border: 1px solid var(--border, #dfe2e7); border-radius: var(--radius-lg, 10px); } .ds-panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 0; } .ds-panel-header h2 { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.2; } .ds-panel-header a { color: var(--ink, #1b1e23); font-size: 0.8125rem; font-weight: 560; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 3px; } .ds-panel-header a:hover { text-decoration-color: currentColor; } .ds-panel-header a:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-panel-body { padding: 16px 20px 20px; } .ds-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; } .ds-table th { padding: 0 12px 8px; text-align: start; white-space: nowrap; border-bottom: 1px solid var(--border, #dfe2e7); } .ds-table td { padding: 12px; border-bottom: 1px solid var(--sunken, #eceef1); vertical-align: middle; } .ds-table th:first-child, .ds-table td:first-child { padding-inline-start: 0; } .ds-table th:last-child, .ds-table td:last-child { padding-inline-end: 0; } .ds-table tr:last-child td { border-bottom: 0; } .ds-table tbody tr { transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-table tbody tr:hover { background: var(--subtle, #f5f6f8); } .ds-col { font-size: 0.8125rem; font-weight: 500; color: var(--ink-3, #5e6470); } .ds-num { text-align: end !important; font-variant-numeric: tabular-nums; font-weight: 600; } .ds-link { display: grid; gap: 2px; } .ds-link strong { font-weight: 600; } .ds-code { font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.8125rem; font-weight: 500; color: var(--ink, #1b1e23); } .ds-code span { color: var(--ink-3, #5e6470); } .ds-line-name { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2, #4a505b); white-space: nowrap; } .ds-line-mark { position: relative; display: inline-block; flex: none; width: 16px; height: 10px; } .ds-line-mark::before { content: ''; position: absolute; inset-inline: 0 8px; top: 4px; height: 2px; border-radius: 1px; background: var(--dot); } .ds-line-mark::after { content: ''; position: absolute; inset-inline-end: 0; top: 0; width: 10px; height: 10px; box-sizing: border-box; border: 2px solid var(--dot); border-radius: 50%; }"
     },
     {
-      "name": "Tag Chip and Line Name",
+      "name": "Line Mark, Tag Chip and Tag Toggle",
       "kind": "chip",
       "refersTo": "tag-chip",
-      "description": "Collection and tag identity: a line dot in the line colour beside the name; tags as small white pills.",
-      "html": "<div class=\"ds-ids\"><span class=\"ds-line-name\"><span class=\"ds-dot\" style=\"--dot: var(--line-green, #1e9a55)\"></span>Job hunt</span><span class=\"ds-tag\"><span class=\"ds-dot\" style=\"--dot: var(--line-amber, #c7860f)\"></span>Print</span><span class=\"ds-tag\"><span class=\"ds-dot\" style=\"--dot: var(--line-slate, #6b7280)\"></span>Draft</span></div>",
-      "css": ".ds-ids { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); } .ds-dot { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); } .ds-line-name { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2, #4a505b); font-size: 0.875rem; } .ds-tag { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 8px 0 7px; border: 1px solid var(--stone, #d5d9df); border-radius: 999px; background: var(--panel, #ffffff); color: var(--ink-2, #4a505b); font-size: 0.75rem; font-weight: 560; white-space: nowrap; } .ds-tag .ds-dot { width: 7px; height: 7px; }"
+      "description": "Identity in line colours: a collection as a line mark beside its name, a tag as a dot in a pill; a pressed tag toggle fills with Primary and shows a check.",
+      "html": "<div class=\"ds-ids\"><span class=\"ds-line-name\"><span class=\"ds-line-mark\" style=\"--dot: var(--line-green, #3a975d)\"></span>Job hunt</span><span class=\"ds-tag\"><span class=\"ds-dot\" style=\"--dot: var(--line-amber, #af8e2a)\"></span>Print</span><span class=\"ds-tag\"><span class=\"ds-dot\" style=\"--dot: var(--line-slate, #6b7280)\"></span>Draft</span><button class=\"ds-toggle\" aria-pressed=\"true\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Work</button><button class=\"ds-toggle\" aria-pressed=\"false\"><span class=\"ds-dot\" style=\"--dot: var(--line-violet, #7755aa)\"></span>Talks</button></div>",
+      "css": ".ds-ids { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); } .ds-dot { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); } .ds-line-name { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2, #4a505b); font-size: 0.875rem; } .ds-line-mark { position: relative; display: inline-block; flex: none; width: 16px; height: 10px; } .ds-line-mark::before { content: ''; position: absolute; inset-inline: 0 8px; top: 4px; height: 2px; border-radius: 1px; background: var(--dot); } .ds-line-mark::after { content: ''; position: absolute; inset-inline-end: 0; top: 0; width: 10px; height: 10px; box-sizing: border-box; border: 2px solid var(--dot); border-radius: 50%; } .ds-tag { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 8px 0 7px; box-sizing: border-box; border: 1px solid var(--border, #dfe2e7); border-radius: 999px; background: var(--surface, #ffffff); color: var(--ink-2, #4a505b); font-size: 0.75rem; font-weight: 560; white-space: nowrap; } .ds-tag .ds-dot { width: 7px; height: 7px; } .ds-toggle { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border: 1px solid var(--border-strong, #c9ced5); border-radius: 999px; background: var(--surface, #ffffff); color: var(--ink-2, #4a505b); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.8125rem; font-weight: 560; cursor: pointer; transition: background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), border-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-toggle:hover { border-color: var(--control-edge, #8a919c); } .ds-toggle:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-toggle[aria-pressed='true'] { background: var(--primary, #1f2227); border-color: var(--primary, #1f2227); color: var(--on-primary, #f6f7f8); } .ds-toggle .ds-dot { width: 8px; height: 8px; }"
     },
     {
       "name": "Status Badge",
       "kind": "chip",
       "refersTo": "badge-warn",
       "description": "Shown only when a code is not healthy; always an icon and a word on a status tint.",
-      "html": "<div style=\"display:flex;gap:8px\"><span class=\"ds-badge\" data-tone=\"warn\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 6v6l4 2\"/><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>Expires in 3d</span><span class=\"ds-badge\" data-tone=\"off\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"9\" x2=\"15\" y1=\"15\" y2=\"9\"/></svg>Paused</span></div>",
-      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.75rem; font-weight: 600; white-space: nowrap; } .ds-badge[data-tone='warn'] { background: var(--status-warn-bg, #fff1d6); color: var(--status-warn-ink, #7a4a00); } .ds-badge[data-tone='danger'] { background: var(--status-danger-bg, #fdecec); color: var(--status-danger-ink, #9b1c1c); } .ds-badge[data-tone='off'] { background: var(--status-off-bg, #e8ebef); color: var(--status-off-ink, #4a505b); }"
+      "html": "<div style=\"display:flex;flex-wrap:wrap;gap:8px\"><span class=\"ds-badge\" data-tone=\"warn\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>Expires in 3d</span><span class=\"ds-badge\" data-tone=\"danger\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 2h4\"/><path d=\"M4.6 11a8 8 0 0 0 1.7 8.7 8 8 0 0 0 8.7 1.7\"/><path d=\"M7.4 7.4a8 8 0 0 1 10.3 1 8 8 0 0 1 .9 10.2\"/><path d=\"m2 2 20 20\"/><path d=\"M12 12v-2\"/></svg>Expired</span><span class=\"ds-badge\" data-tone=\"off\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"9\" x2=\"15\" y1=\"15\" y2=\"9\"/></svg>Paused</span></div>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); font-size: 0.75rem; font-weight: 600; white-space: nowrap; } .ds-badge[data-tone='warn'] { background: var(--status-warn-bg, #fff1d6); color: var(--status-warn-ink, #7a4a00); } .ds-badge[data-tone='danger'] { background: var(--status-danger-bg, #fdecec); color: var(--status-danger-ink, #9b1c1c); } .ds-badge[data-tone='off'] { background: var(--status-off-bg, #eceef1); color: var(--status-off-ink, #4a505b); } .ds-badge[data-tone='ok'] { background: var(--status-ok-bg, #e3f4ea); color: var(--status-ok-ink, #135c35); }"
     },
     {
       "name": "Line Map",
       "kind": "custom",
       "refersTo": null,
-      "description": "The signature component: a collection drawn as a 4px line in its colour, its links as white stations sized by clicks, with bronze station codes.",
-      "html": "<div class=\"ds-map\"><div class=\"ds-line\" style=\"--line: var(--line-blue, #1c5fb8)\"><div class=\"ds-line-label\"><a href=\"#\"><span class=\"ds-dot\"></span>Telegram channel</a><span>3 links · 203 clicks</span></div><ol class=\"ds-track\"><li class=\"ds-station\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 26px\"></span><span class=\"ds-code\">5Qqvypi</span><span class=\"ds-tip\"><strong>Channel post: Django</strong><span>125 clicks</span></span></a></li><li class=\"ds-station\" data-state=\"expiring\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 20px\"></span><span class=\"ds-code\">tg-post-88</span><span class=\"ds-tip\"><strong>Channel post: Postgres</strong><span>56 clicks</span></span></a></li><li class=\"ds-station\" data-state=\"closed\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 12px\"></span><span class=\"ds-code\">poll-12</span><span class=\"ds-tip\"><strong>Poll</strong><span>0 clicks</span></span></a></li><li class=\"ds-terminus\"><a href=\"#\">+2</a></li></ol></div></div>",
-      "css": ".ds-map { padding: 40px 20px 16px; background: var(--panel, #ffffff); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); color: var(--ink, #1b1e23); } .ds-line { display: grid; grid-template-columns: minmax(150px, 200px) minmax(0, 1fr); align-items: start; gap: 16px; padding: 8px 0; } .ds-line-label { display: grid; gap: 2px; min-width: 0; padding-top: 4px; } .ds-line-label a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink, #1b1e23); font-weight: 620; text-decoration: none; } .ds-line-label a:hover { text-decoration: underline; } .ds-line-label > span { padding-inline-start: 18px; font-size: 0.8125rem; color: var(--ink-3, #5e6470); } .ds-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--line); } .ds-track { position: relative; display: flex; justify-content: space-between; align-items: flex-start; min-height: 52px; margin: 0; padding: 0 4px; list-style: none; } .ds-track::before { content: ''; position: absolute; inset-inline: 0; top: 11px; height: 4px; border-radius: 2px; background: var(--line); } .ds-track::after { content: ''; position: absolute; inset-inline-end: 0; top: 5px; width: 4px; height: 16px; border-radius: 2px; background: var(--line); } .ds-station { position: relative; display: flex; justify-content: center; width: 96px; min-width: 0; } .ds-station a { display: grid; justify-items: center; gap: 6px; width: 100%; color: var(--ink, #1b1e23); text-decoration: none; border-radius: var(--radius-sm, 4px); } .ds-station a:focus-visible { outline: 2px solid var(--focus, #2a2d33); outline-offset: 2px; } .ds-marker { display: grid; place-items: center; width: 26px; height: 26px; } .ds-marker::before { content: ''; width: var(--size); height: var(--size); box-sizing: border-box; border: 3px solid var(--line); border-radius: 50%; background: var(--panel, #ffffff); box-shadow: 0 0 0 2px var(--panel, #ffffff); transition: transform var(--t-base, 200ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-code { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.8125rem; color: var(--bronze, #8c5d28); } .ds-station[data-state='closed'] .ds-marker::before { border-width: 2px; border-style: dashed; border-color: var(--ink-3, #5e6470); } .ds-station[data-state='closed'] .ds-code { color: var(--ink-3, #5e6470); } .ds-station[data-state='expiring'] .ds-marker::before { box-shadow: 0 0 0 2px var(--panel, #ffffff), 0 0 0 4px var(--status-warn-ink, #7a4a00); } .ds-station a:hover .ds-marker::before, .ds-station a:focus-visible .ds-marker::before { background: var(--line); transform: scale(1.12); } .ds-station a:hover .ds-code, .ds-station a:focus-visible .ds-code { color: var(--ink, #1b1e23); font-weight: 600; } .ds-tip { position: absolute; bottom: calc(100% + 4px); left: 50%; translate: -50% 4px; display: grid; gap: 1px; padding: 6px 10px; border-radius: var(--radius, 6px); background: var(--granite, #2a2d33); color: var(--granite-muted, #b7bcc5); font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), translate var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); z-index: 3; } .ds-tip strong { color: var(--granite-ink, #f3f4f6); font-size: 0.8125rem; font-weight: 600; } .ds-station a:hover .ds-tip, .ds-station a:focus-visible .ds-tip { opacity: 1; translate: -50% 0; } .ds-terminus { display: flex; align-items: center; height: 26px; z-index: 1; } .ds-terminus a { display: grid; place-items: center; min-width: 38px; height: 24px; padding: 0 8px; box-sizing: border-box; border: 2px solid var(--line); border-radius: 999px; background: var(--panel, #ffffff); color: var(--ink, #1b1e23); font-size: 0.8125rem; font-weight: 620; text-decoration: none; } .ds-terminus a:hover { background: var(--marble, #eceef1); } @media (prefers-reduced-motion: reduce) { .ds-marker::before, .ds-tip { transition-duration: 0.01ms; } }"
+      "description": "The signature component: a collection drawn as a 2px line in its colour, its links as stations sized by clicks, with a key, closed and expiring states and an overflow terminus.",
+      "html": "<div class=\"ds-map\"><ul class=\"ds-key\" aria-label=\"Map key\"><li><span class=\"ds-key-marker\"></span>Size = clicks in the last 30 days</li><li><span class=\"ds-key-marker\" data-state=\"expiring\"></span>Expires within a week</li><li><span class=\"ds-key-marker\" data-state=\"closed\"></span>Paused or expired</li></ul><div class=\"ds-line\" style=\"--line: var(--line-blue, #2b61ab)\"><div class=\"ds-line-label\"><a href=\"#\"><span class=\"ds-line-mark\"></span>Telegram channel</a><span class=\"ds-line-meta\">5 links · 203 clicks</span></div><ol class=\"ds-track\" aria-label=\"Telegram channel links\"><li class=\"ds-station\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 26px\"></span><span class=\"ds-code\">5Qqvypi</span><span class=\"ds-tip\"><strong>Channel post: Django</strong><span>125 clicks</span></span></a></li><li class=\"ds-station\" data-state=\"expiring\"><a href=\"#\"><span class=\"ds-marker\" style=\"--size: 20px\"></span><span class=\"ds-code\">tg-post-88</span><span class=\"ds-tip\"><strong>Channel post: Postgres</strong><span>56 clicks</span><span class=\"ds-tip-state\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>Expires in 3d</span></span></a></li><li class=\"ds-station\" data-state=\"closed\"><a href=\"#\"><span class=\"ds-marker\" data-quiet=\"true\" style=\"--size: 12px\"></span><span class=\"ds-code\">poll-12</span><span class=\"ds-tip\"><strong>Poll</strong><span>0 clicks</span><span class=\"ds-tip-state\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"9\" x2=\"15\" y1=\"15\" y2=\"9\"/></svg>Paused</span></span></a></li><li class=\"ds-terminus\"><a href=\"#\" aria-label=\"2 more links in Telegram channel\">+2</a></li></ol></div></div>",
+      "css": ".ds-map { display: grid; gap: 12px; padding: 20px; background: var(--surface, #ffffff); font-family: var(--font-ui, 'Golos Text Variable', 'Golos Text', system-ui, sans-serif); color: var(--ink, #1b1e23); } .ds-key { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0; padding: 0 0 8px; border-bottom: 1px solid var(--sunken, #eceef1); list-style: none; font-size: 0.75rem; color: var(--ink-3, #5e6470); } .ds-key li { display: inline-flex; align-items: center; gap: 6px; } .ds-key-marker { width: 12px; height: 12px; box-sizing: border-box; border: 1.5px solid var(--ink-3, #5e6470); border-radius: 50%; background: var(--surface, #ffffff); } .ds-key-marker[data-state='expiring'] { border-color: var(--status-warn-ink, #7a4a00); box-shadow: 0 0 0 2px var(--status-warn-bg, #fff1d6); } .ds-key-marker[data-state='closed'] { border-style: dashed; } .ds-line { display: grid; grid-template-columns: minmax(150px, 200px) minmax(0, 1fr); align-items: start; gap: 16px; padding: 8px 0; } .ds-line-label { display: grid; gap: 2px; min-width: 0; padding-top: 4px; } .ds-line-label a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink, #1b1e23); font-weight: 560; text-decoration: none; } .ds-line-label a:hover { text-decoration: underline; } .ds-line-meta { padding-inline-start: 24px; font-size: 0.8125rem; color: var(--ink-3, #5e6470); } .ds-line-mark { position: relative; display: inline-block; flex: none; width: 16px; height: 10px; } .ds-line-mark::before { content: ''; position: absolute; inset-inline: 0 8px; top: 4px; height: 2px; border-radius: 1px; background: var(--line); } .ds-line-mark::after { content: ''; position: absolute; inset-inline-end: 0; top: 0; width: 10px; height: 10px; box-sizing: border-box; border: 2px solid var(--line); border-radius: 50%; } .ds-track { position: relative; display: flex; justify-content: space-between; align-items: flex-start; min-height: 52px; margin: 0; padding: 0 4px; list-style: none; } .ds-track::before { content: ''; position: absolute; inset-inline: 0; top: 12px; height: 2px; border-radius: 1px; background: var(--line); } .ds-track::after { content: ''; position: absolute; inset-inline-end: 0; top: 7px; width: 2px; height: 12px; border-radius: 1px; background: var(--line); } .ds-station { position: relative; display: flex; justify-content: center; width: 96px; min-width: 0; } .ds-station a { display: grid; justify-items: center; gap: 6px; width: 100%; color: var(--ink, #1b1e23); text-decoration: none; border-radius: var(--radius-sm, 4px); } .ds-station a:focus-visible, .ds-line-label a:focus-visible, .ds-terminus a:focus-visible { outline: 2px solid var(--focus, #1b1e23); outline-offset: 2px; } .ds-marker { display: grid; place-items: center; width: 26px; height: 26px; } .ds-marker::before { content: ''; width: var(--size); height: var(--size); box-sizing: border-box; border: 2px solid var(--line); border-radius: 50%; background: var(--surface, #ffffff); box-shadow: 0 0 0 2px var(--surface, #ffffff); transition: transform var(--t-base, 200ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), background-color var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-marker[data-quiet='true']::before { border-width: 1.5px; } .ds-code { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--font-code, 'Red Hat Mono Variable', 'Red Hat Mono', ui-monospace, monospace); font-size: 0.8125rem; color: var(--ink-2, #4a505b); } .ds-station[data-state='closed'] .ds-marker::before { border-style: dashed; border-color: var(--ink-3, #5e6470); } .ds-station[data-state='closed'] .ds-code { color: var(--ink-3, #5e6470); } .ds-station[data-state='expiring'] .ds-marker::before { box-shadow: 0 0 0 2px var(--surface, #ffffff), 0 0 0 4px var(--status-warn-ink, #7a4a00); } .ds-station a:hover .ds-marker::before, .ds-station a:focus-visible .ds-marker::before { background: var(--line); transform: scale(1.12); } .ds-station a:hover .ds-code, .ds-station a:focus-visible .ds-code { color: var(--ink, #1b1e23); font-weight: 600; } .ds-tip { position: absolute; bottom: calc(100% + 4px); left: 50%; translate: -50% 4px; display: grid; gap: 1px; padding: 6px 10px; border-radius: var(--radius, 6px); background: var(--float, #1f2227); color: var(--float-muted, #b7bcc5); font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)), translate var(--t-fast, 150ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)); z-index: 3; } .ds-tip strong { color: var(--float-ink, #f3f4f6); font-size: 0.8125rem; font-weight: 600; } .ds-tip-state { display: inline-flex; align-items: center; gap: 4px; color: var(--float-warn, #ffd79a); } .ds-station a:hover .ds-tip, .ds-station a:focus-visible .ds-tip { opacity: 1; translate: -50% 0; } .ds-terminus { display: flex; align-items: center; height: 26px; z-index: 1; } .ds-terminus a { display: grid; place-items: center; min-width: 38px; height: 24px; padding: 0 8px; box-sizing: border-box; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface, #ffffff); color: var(--ink, #1b1e23); font-size: 0.8125rem; font-weight: 500; text-decoration: none; } .ds-terminus a:hover { background: var(--subtle, #f5f6f8); } @media (prefers-reduced-motion: reduce) { .ds-marker::before, .ds-tip { transition-duration: 0.01ms; } }"
     }
   ],
   "narrative": {
-    "northStar": "The Tashkent Metro",
-    "overview": "Bekat treats a set of short links as a metro network. Collections are lines, each with its own colour; links are stations along them; clicks are passengers through the turnstiles. The materials are those of a Tashkent Metro station: a polished granite top bar, a cool marble floor, white platform panels edged with hairline stone, bronze station lettering, and one band of glazed ceramic tile. The line colours are the brightest colours in the interface, and apart from the tile band they always mean a collection or a tag.\n\nThe interface is an operating tool, not a showcase. Density is moderate and even: 36px controls, 12px table cell padding, panels on a 20px grid gap, a 1360px page. Standard web controls are used throughout; the world contributes the palette, the two typefaces, the density and one signature component, the line map. Motion is short and confined to state changes. Page content does not animate in on load.\n\nThe world rejects the category default of a grey sidebar, a blue accent, rows of stat tiles and a lone line chart. Navigation sits in a horizontal granite bar, interface accents come from granite and bronze, and the clicks chart is a bar strip in granite with today's bar in bronze.",
+    "northStar": "The Quiet Line",
+    "overview": "Spur is a working tool for a small circle of people who make and share short links, and its surfaces stay quiet so the links and their numbers lead. A cool stone neutral family runs through two composed themes: a pale cool ground under white panels in light, a near-black ground under one-step-lighter panels in dark. Panels are flat and ruled off by hairlines, the one primary action is near-black on light and near-white on dark, and the type never raises its voice. Against that quiet, one device speaks: the line map, where each collection is a thin line in its own colour and its links sit on it as stations sized by clicks. The line colours are the only saturated colour in the interface, and they always mean a collection or a tag.\n\nThe interface is an operating tool, not a showcase. Density is moderate and even: 36px controls, 12px table cell padding, 20px gaps between panels, a 1360px page. Standard web controls are used throughout; the system contributes the two themes, the two typefaces, the density, one signature component and one copper accent that marks exactly three things. Motion is short and confined to state changes, and page content does not animate in on load.\n\nSpur began as a Tashkent Metro station, with a granite bar, marble floor, bronze lettering and a band of ceramic tile, and was quietened at the owner's request: the materials became role tokens, the ornament went, and the metro survives only as the line map and the branch in the wordmark. It refuses the category default of a grey sidebar, a blue accent, rows of stat tiles and a lone line chart, and it refuses ornament.",
     "keyCharacteristics": [
-      "Granite top bar over a marble ground; white panels with 1px stone borders and no resting shadow.",
-      "Seven line colours reserved for collection and tag identity, assigned in a fixed order.",
-      "Bronze for signage: station codes on the line map, table column signs, the spike annotation, link underlines, the wordmark marker.",
+      "A quiet top bar on the surface colour, ruled off by a hairline, over a pale cool ground in light and a near-black ground in dark.",
+      "Two composed themes chosen as System, Light or Dark; dark is its own set of steps, not an inversion.",
+      "Flat panels with 1px hairlines and no resting shadow, the create panel included.",
+      "Seven line colours reserved for collection and tag identity, assigned in a fixed order and tuned per theme.",
+      "One copper accent for today's bar, the spike rule and the wordmark's dot, and nothing else.",
       "Golos Text for the interface; Red Hat Mono for short codes, the short-link host and click times.",
-      "One ornament: a single 18px ceramic tile band under the top bar.",
-      "The line map: collections drawn as 4px coloured lines with links as white stations sized by clicks.",
+      "The line map: collections drawn as 2px coloured lines with links as stations sized by clicks.",
       "150 to 200ms ease-out on state changes; one 240ms arrival when a new link is created."
     ],
     "rules": [
       {
         "name": "The Line Colour Rule",
-        "body": "Line colours mean a collection or a tag and nothing else. Buttons, links, focus rings, selection, charts and status never use them. The ceramic tile band is the one place they appear as ornament, and it repeats all six in their fixed order.",
+        "body": "Line colours mean a collection or a tag and nothing else. Buttons, links, focus rings, selection, charts, status and decoration never use them.",
         "section": "colors"
       },
       {
         "name": "The Fixed Order Rule",
-        "body": "Line colours are offered and assigned in the order red, blue, green, violet, amber, teal, with slate for no collection. The order is part of the identity; do not reshuffle it per screen.",
+        "body": "Line colours are offered and assigned in the order red, blue, green, violet, amber, teal, with slate for no collection. The order is part of the identity; do not reshuffle it per screen or per theme.",
         "section": "colors"
       },
       {
-        "name": "The Bronze Split Rule",
-        "body": "Bronze text uses Station Bronze (#8c5d28, 5.7:1 on white). Bronze Rule (#a26f35, 4.3:1 on white) is for lines, underlines and marks only.",
+        "name": "The Copper Marks Rule",
+        "body": "Copper marks three things: today's bar, the spike onset rule and the wordmark's dot. The spike label is the only copper text, and it uses Copper Ink. Nothing else in the interface is copper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Composed Dark Rule",
+        "body": "Dark is its own set of steps tuned on its own ground, not an inversion of light. Components name a role token, never a hex, so both themes follow; the only literals are the white label on a danger button and the white check on a colour swatch, which stay white in both themes.",
         "section": "colors"
       },
       {
@@ -861,32 +1930,35 @@
         "section": "typography"
       },
       {
-        "name": "The Signage Rule",
-        "body": "Uppercase, letter-spaced bronze labels are column signs in table headers. They are not used as headings or as labels above headings.",
+        "name": "The Quiet Label Rule",
+        "body": "Labels are sentence case and muted: column headers are Ink 3 at 500, so the figures under them lead. Nothing in the interface is uppercase or letter-spaced; the only tracking is negative, on the wordmark and the display figure.",
         "section": "typography"
       },
       {
-        "name": "The Flat Platform Rule",
-        "body": "Panels rest flat on the marble with a stone hairline. Only the page's single creation surface is raised, and only overlays cast the overlay shadow.",
+        "name": "The Flat Panel Rule",
+        "body": "Every panel rests flat on the ground with a hairline, the create panel and the sign-in card included. Only floating layers cast the overlay shadow.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do use Polished Granite (#2a2d33) for every interface accent that is not identity: primary buttons, chart bars, share bars, tooltips, toasts, focus rings.",
-      "Do show a collection or tag as a line dot (10px, 7px in chips) or a 4px line in its line colour, next to its name in text.",
+      "Do reference role tokens (Surface, Ink 2, Hairline) in every component so light and dark both follow, and give any new token its own dark step.",
+      "Do use Primary Fill for the one main action on a surface, and Ink for the focus ring, the current-page underline and active chart marks.",
+      "Do show a collection as a line mark and a tag as a line dot (10px, 7px in chips), always next to its name in text.",
+      "Do draw line colours on Surface; light Line Amber clears 3:1 there only just (3.12:1).",
       "Do set short codes, the host prefix and click times in Red Hat Mono, with the host in Ink 3 and the code in Ink.",
-      "Do separate panels from the marble ground with a 1px Stone (#d5d9df) border, and rows inside panels with 1px Marble Sunken (#e3e6ea).",
+      "Do separate panels from the ground with a 1px Hairline, and rows inside panels with 1px Sunken.",
       "Do keep state transitions at 150 to 200ms on `cubic-bezier(0.16, 1, 0.3, 1)`, and respect reduced motion.",
       "Do pair every status colour with an icon and a word.",
       "Do dim stale data to 60% while it refetches rather than flashing a skeleton.",
-      "Do keep creating a link one step away: the Shorten button in the top bar on every signed-in page."
+      "Do keep creating a link one step away: the Shorten button in the top bar on every signed-in page, and the `n` key anywhere."
     ],
     "donts": [
-      "Don't use a line colour for a button, link, focus ring, chart bar or status.",
-      "Don't add a second ceramic band or any other ornament; the tile band under the top bar is the only one.",
-      "Don't set text in Bronze Rule (#a26f35); bronze text is Station Bronze (#8c5d28).",
-      "Don't put a shadow on a resting panel; Raised is for the single creation surface, Overlay for floating layers.",
-      "Don't use uppercase letter-spaced signage outside table column headers.",
+      "Don't use a line colour for a button, link, focus ring, chart bar, status or decoration.",
+      "Don't add ornament: no tile bands, patterns, textures or decorative colour strips; the line map is the one signature device.",
+      "Don't use Copper for anything but today's bar, the spike rule and label, and the wordmark's dot.",
+      "Don't derive the dark theme by inverting or filtering light values; each role has its own dark step.",
+      "Don't put a shadow on a resting panel, the create panel included; Overlay is for floating layers only.",
+      "Don't set labels in uppercase or letter-spaced type.",
       "Don't add entrance animation to page content on load; panels and rows appear without motion.",
       "Don't show a badge on a healthy link."
     ]

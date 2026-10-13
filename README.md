@@ -1,4 +1,4 @@
-# Bekat
+# Spur
 
 A link shortener for its owner and the people they invite. Visiting `https://url.mekhroj.com/<code>` redirects to the target and records the click; the web app at `https://url.mekhroj.com/app/` creates and organises links (collections and tags) and shows where clicks come from.
 

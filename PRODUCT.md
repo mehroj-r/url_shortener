@@ -40,9 +40,9 @@ The organisation and analytics of a paid link-management tool, on a domain and s
 
 ## Brand Commitments
 
-The product is called **Bekat** (Uzbek for a stop or station), chosen with the Tashkent Metro visual direction after the owner delegated the name. It lives on the domain `url.mekhroj.com`. No logo exists beyond the wordmark's station marker.
+The product is called **Spur** (a short branch off a main line), chosen by the owner on 2026-10-13 to replace the first name, Bekat. It lives on the domain `url.mekhroj.com`. The only logo is the wordmark's mark: a short branch leaving a line, ending in a copper dot.
 
-Must not feel like a generic SaaS admin template, and must not be slow or showy: speed and clarity over effects.
+Must not feel like a generic SaaS admin template, and must not be slow or showy: speed and clarity over effects. The owner asked for a minimal, serious interface with no decoration, and for a dark theme alongside the light one (2026-10-13).
 
 ## Evidence on Hand
 
