@@ -18,12 +18,15 @@ services:
   web:
     build:
       context: .
+      dockerfile: backend/Dockerfile
+      # The API only; the frontend service below serves the app
+      target: base
       args:
         INSTALL_DEV: "true"
     container_name: url-shortener-web
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./src:/app
+      - ./backend/src:/app
     ports:
       - "127.0.0.1:8005:8000"
     depends_on:
@@ -32,5 +35,22 @@ services:
     env_file:
       - .env
 
+  frontend:
+    image: node:26.11.1-alpine
+    container_name: url-shortener-frontend
+    working_dir: /frontend
+    command: sh -c "npm ci --no-audit --no-fund && npm run dev -- --host 0.0.0.0"
+    environment:
+      API_PROXY: http://web:8000
+    volumes:
+      - ./frontend:/frontend
+      # Keep the container's node_modules (built for Alpine) separate from the host's
+      - frontend_modules:/frontend/node_modules
+    ports:
+      - "127.0.0.1:5173:5173"
+    depends_on:
+      - web
+
 volumes:
   db_data:
+  frontend_modules:

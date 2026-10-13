@@ -20,11 +20,14 @@ services:
 
   web:
     container_name: url-shortener-web-prod
-    build: .
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     entrypoint: /app/scripts/entrypoint.sh
     command: gunicorn config.wsgi:application --config python:config.gunicorn
-    volumes:
-      - static_files:/app/staticfiles
+    ports:
+      # The host's reverse proxy forwards here (TLS ends there)
+      - "127.0.0.1:1050:8000"
     depends_on:
       db:
         condition: service_healthy
@@ -35,22 +38,8 @@ services:
     env_file:
       - .env
 
-  nginx:
-    container_name: url-shortener-nginx-prod
-    build: nginx
-    ports:
-      - "127.0.0.1:1050:1050"
-    volumes:
-      - static_files:/app/staticfiles:ro
-    depends_on:
-      - web
-    networks:
-      - url_shortener_net
-    restart: unless-stopped
-
 volumes:
   db_data:
-  static_files:
 
 networks:
   url_shortener_net:

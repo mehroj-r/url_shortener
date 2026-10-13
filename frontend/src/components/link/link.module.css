@@ -1,0 +1,141 @@
+.codes {
+  display: grid;
+  margin: 0 0 var(--s-5);
+  padding: 0;
+  list-style: none;
+}
+
+.codeRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'specimen actions'
+    'meta actions';
+  align-items: center;
+  gap: 4px var(--s-4);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--sunken);
+}
+
+.codeRow:first-child {
+  padding-top: 0;
+}
+
+/* The code is the station name: set large, in the code face */
+.specimen {
+  grid-area: specimen;
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
+  font-family: var(--font-code);
+  font-size: var(--text-xl);
+  line-height: 1.2;
+}
+
+.specimenHost {
+  color: var(--ink-3);
+  font-size: var(--text-lg);
+}
+
+.specimenCode {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.codeRow[data-status='inactive'] .specimenCode,
+.codeRow[data-status='expired'] .specimenCode {
+  color: var(--ink-3);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.codeMeta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.expiry {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.codeActions {
+  grid-area: actions;
+  display: flex;
+  gap: 2px;
+}
+
+.noCodes {
+  margin-bottom: var(--s-4);
+  color: var(--ink-2);
+  font-size: var(--text-md);
+}
+
+.addCode {
+  max-width: 560px;
+}
+
+.addCodeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.host {
+  font-family: var(--font-code);
+  font-size: var(--text-md);
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.codeInput {
+  font-family: var(--font-code);
+}
+
+.qr {
+  display: grid;
+  justify-items: center;
+  gap: var(--s-3);
+}
+
+.qr img {
+  width: 280px;
+  height: 280px;
+  image-rendering: pixelated;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.qrPlaceholder {
+  width: 280px;
+  height: 280px;
+  border-radius: var(--radius);
+  background: var(--subtle);
+}
+
+@media (max-width: 640px) {
+  .codeRow {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'specimen'
+      'meta'
+      'actions';
+  }
+
+  .specimen {
+    font-size: var(--text-lg);
+  }
+
+  .addCodeRow {
+    flex-wrap: wrap;
+  }
+}
