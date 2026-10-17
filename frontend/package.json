@@ -2,6 +2,16 @@
   "name": "spur",
   "private": true,
   "version": "0.1.0",
+  "description": "The Spur web app: create and organise short links and see where their clicks come from.",
+  "license": "MIT",
+  "author": "Mehroj Majidov",
+  "keywords": ["url-shortener", "link-shortener", "click-analytics", "react", "vite", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehroj-r/url-shortener.git",
+    "directory": "frontend"
+  },
+  "bugs": "https://github.com/mehroj-r/url-shortener/issues",
   "type": "module",
   "scripts": {
     "dev": "vite",

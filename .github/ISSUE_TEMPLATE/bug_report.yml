@@ -1,0 +1,59 @@
+name: Bug report
+description: Something isn't working as expected.
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Create a link with a custom short code ...
+        2. Open https://<host>/<code> ...
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Short link redirects
+        - Web app (/app/)
+        - REST API
+        - Click analytics
+        - Sign-in, invites or account
+        - Deployment (Docker, CI)
+    validations:
+      required: true
+  - type: dropdown
+    id: setup
+    attributes:
+      label: Setup
+      options:
+        - Production stack (docker-compose.prod.yml)
+        - Local development (docker compose)
+        - Frontend dev server on the host
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and OS
+      description: For web app issues, e.g. Firefox 140 on Linux, or Safari on iOS 19.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Remove access and refresh tokens, invite links, passwords, `SECRET_KEY` and `SENTRY_DSN` before pasting.
+      render: shell
