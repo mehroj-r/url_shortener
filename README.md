@@ -1,6 +1,11 @@
 # Spur
 
-A link shortener for its owner and the people they invite. Visiting `https://url.mekhroj.uz/<code>` redirects to the target and records the click; the web app at `https://url.mekhroj.uz/app/` creates and organises links (collections and tags) and shows where clicks come from.
+[![CI](https://github.com/mehroj-r/url-shortener/actions/workflows/ci.yml/badge.svg)](https://github.com/mehroj-r/url-shortener/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/)
+[![React 19](https://img.shields.io/badge/react-19-blue.svg)](https://react.dev/)
+
+Spur is a self-hosted, invite-only link shortener with collections, tags, expiring short codes and click analytics, built on Django REST Framework and React. Visiting `https://url.mekhroj.uz/<code>` redirects to the target and records the click; the web app at `https://url.mekhroj.uz/app/` creates and organises links and shows where clicks come from. Only the owner and the people they invite can sign in.
 
 | Directory | What |
 |---|---|
@@ -75,3 +80,11 @@ The server's `.env` must define every variable in `.env.example`; production ref
 ```
 
 The restore command is in the script's header.
+
+## Contributing
+
+Contributions are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). Please report security issues privately as described in [SECURITY.md](SECURITY.md).
+
+## License
+
+Released under the [MIT License](LICENSE).
