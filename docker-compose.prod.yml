@@ -23,6 +23,9 @@ services:
     build:
       context: .
       dockerfile: backend/Dockerfile
+      args:
+        # Set by the deploy job to the release it published
+        APP_VERSION: ${APP_VERSION:-dev}
     entrypoint: /app/scripts/entrypoint.sh
     command: gunicorn config.wsgi:application --config python:config.gunicorn
     ports:

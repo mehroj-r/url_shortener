@@ -90,24 +90,34 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      version: ${{ steps.release.outputs.version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
+        with:
+          # The tags, to find the last release
+          fetch-depth: 0
 
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v10.3.0
-
-      - name: Bump patch version
-        working-directory: backend
-        run: uv version --bump patch --no-sync
-
-      - name: Commit and push version bump
+      # master only takes pull requests, so the version isn't committed back.
+      # Each deploy is a tag and a GitHub release on the merge commit instead
+      - name: Publish the next release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add backend/pyproject.toml backend/uv.lock
-          git commit -m "chore: bump version to $(cd backend && uv version --short) [ci skip]"
-          git push
+          current=$(python3 -c 'import tomllib; print(tomllib.load(open("backend/pyproject.toml", "rb"))["project"]["version"])')
+          last=$(git tag --list 'v*' --sort=-version:refname | head -1)
+          last=${last#v}
+          if [ -n "$last" ] && [ "$(printf '%s\n' "$last" "$current" | sort -V | tail -1)" != "$last" ]; then
+            # Set by hand in pyproject.toml, e.g. a minor bump
+            version=$current
+          else
+            IFS=. read -r major minor patch <<< "${last:-$current}"
+            version="$major.$minor.$((patch + 1))"
+          fi
+          gh release create "v$version" --target "$GITHUB_SHA" --title "v$version" --generate-notes
+          echo "version=$version" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: release
@@ -115,15 +125,19 @@ jobs:
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.5
+        env:
+          APP_VERSION: ${{ needs.release.outputs.version }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: APP_VERSION
           script: |
             set -e
             cd url_shortener
             git pull --ff-only origin master
 
-            # Builds first, then replaces only the containers that changed
+            # Builds first, then replaces only the containers that changed.
+            # APP_VERSION goes into the image (Sentry release, VERSION file)
             docker compose -f docker-compose.prod.yml up -d --build --remove-orphans
             docker image prune -f
