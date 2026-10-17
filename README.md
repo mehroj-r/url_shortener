@@ -62,8 +62,8 @@ Short codes may use letters, digits, `-` and `_`. Codes are never reused, even a
 
 ## Deployment
 
-Every push to `master` runs the backend and frontend checks, bumps the patch version in `backend/pyproject.toml`, then deploys over SSH:
-`git pull` on the server followed by `docker compose -f docker-compose.prod.yml up -d --build`.
+`master` only takes pull requests that pass the backend and frontend checks, and they are squash-merged. Every merge runs the checks again, publishes the next `vX.Y.Z` GitHub release on the merge commit (the last release's patch number plus one, or the version in `backend/pyproject.toml` when that is set higher, e.g. for a minor bump), then deploys over SSH:
+`git pull` on the server followed by `docker compose -f docker-compose.prod.yml up -d --build` with `APP_VERSION` set to that release, which becomes the image's version and the Sentry release.
 The web image builds the frontend into itself (`backend/Dockerfile`, built from the repository root), and migrations and `collectstatic` run when the container starts.
 It listens on `127.0.0.1:1050`. The host's reverse proxy terminates TLS and forwards there, and it must send `X-Forwarded-Proto: https` and append the visitor's address to `X-Forwarded-For` (nginx: `proxy_set_header X-Forwarded-Proto $scheme;` and `proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;`).
 

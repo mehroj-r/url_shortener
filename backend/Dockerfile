@@ -33,7 +33,9 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     if [ "$INSTALL_DEV" = "true" ]; then uv sync --frozen; else uv sync --frozen --no-dev; fi
 
 COPY backend/src ./src
-RUN uv version --short > src/VERSION && chmod +x src/scripts/entrypoint.sh
+# The release CI published (the deploy job sets it); other builds are "dev"
+ARG APP_VERSION=dev
+RUN echo "$APP_VERSION" > src/VERSION && chmod +x src/scripts/entrypoint.sh
 
 # ---- Stage 3: the API runtime (dev compose stops here; Vite serves the app there) ----
 FROM python:${PYTHON_VERSION}-alpine AS base
