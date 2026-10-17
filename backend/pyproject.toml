@@ -1,6 +1,6 @@
 [project]
 name = "urlshortener"
-version = "0.1.26"
+version = "0.1.27"
 description = "Self-hosted, invite-only link shortener with collections, tags, expiring short codes and click analytics, built on Django REST Framework and React."
 license = "MIT"
 authors = [{ name = "Mehroj Majidov" }]
